@@ -43,7 +43,9 @@ export default function Home() {
           ]}
           question='Have you been experiencing any of the following symptoms?'
           type={QuestionType.Radio}
-          onAnswer={() => {}}
+          onAnswer={() => {
+            /* Possibly show the next question depending on answer */
+          }}
         />
       </div>
       <div className='p-2'>
@@ -56,7 +58,9 @@ export default function Home() {
           ]}
           question='Checkbox question?'
           type={QuestionType.Checkbox}
-          onAnswer={values => {}}
+          onAnswer={values => {
+            /* Possibly show the next question depending on answer */
+          }}
         />
       </div>
     </div>
