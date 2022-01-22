@@ -1,8 +1,27 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import { Header, Footer } from '@components';
 
-export default MyApp
+const Application = ({ Component, pageProps }: AppProps) => {
+  return (
+    <div className='w-full h-screen flex flex-col'>
+      <Head>
+        <title>Self Assessment Tool</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Header />
+
+      <main className='flex-grow bg-bcLightBackground flex justify-center md:pt-11 pt-5'>
+        <div className='h-min md:w-layout w-full md:mx-0 mx-2 gap-x-8 mb-12'>
+          <Component {...pageProps} />
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Application;

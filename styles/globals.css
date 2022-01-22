@@ -1,16 +1,14 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: BCSans;
+  src: url('fonts/BC-Sans-Font/BCSans-Regular.woff') format('woff');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: BCSans-Bold;
+  font-weight: bold;
+  src: url('fonts/BC-Sans-Font/BCSans-Bold.woff') format('woff');
 }
