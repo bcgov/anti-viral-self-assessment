@@ -107,7 +107,7 @@ deploy-app:
 	aws s3 sync ./terraform/build/app s3://$(APP_SRC_BUCKET) --delete
 	aws --region $(AWS_REGION) cloudfront create-invalidation --distribution-id $(CLOUDFRONT_ID) --paths "/*"
 
-plan: 
+plan: init-tf
 	# Creating all AWS infrastructure.
 	@terraform -chdir=$(TERRAFORM_DIR) plan
 
