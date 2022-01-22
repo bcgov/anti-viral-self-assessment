@@ -5,7 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format:staged": "pretty-quick --staged",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.0.8",
@@ -15,8 +19,14 @@
   "devDependencies": {
     "@types/node": "17.0.10",
     "@types/react": "17.0.38",
+    "autoprefixer": "10.4.2",
     "eslint": "8.7.0",
+    "husky": "7.0.0",
     "eslint-config-next": "12.0.8",
+    "postcss": "8.4.5",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.1",
+    "tailwindcss": "3.0.15",
     "typescript": "4.5.5"
   }
 }
