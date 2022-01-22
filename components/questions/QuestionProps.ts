@@ -1,7 +1,7 @@
 export interface QuestionProps {
   description: string;
-  key: string;
   question: string;
+  questionKey: string;
   options: {
     key: string;
     label: string;

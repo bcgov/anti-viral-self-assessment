@@ -3,7 +3,7 @@ import { QuestionProps } from './QuestionProps';
 
 export const MultiQuestion: React.FC<QuestionProps> = ({
   description,
-  key,
+  questionKey,
   question,
   options,
   onAnswer,
@@ -33,10 +33,10 @@ export const MultiQuestion: React.FC<QuestionProps> = ({
               className='appearance-none h-4 w-4 border border-bcBlack border-1 rounded-sm bg-white checked:bg-bcBluePrimary checked:border-bcBluePrimary focus:outline-none transition duration-200 mt-1 align-top mr-2 cursor-pointer'
               type='checkbox'
               value={option.key}
-              id={`check-${key}-${index}`}
+              id={`check-${questionKey}-${index}`}
               onClick={evt => onCheck(evt.currentTarget.value, evt.currentTarget.checked)}
             />
-            <label className='inline-block text-gray-800' htmlFor={`check-${key}-${index}`}>
+            <label className='inline-block text-gray-800' htmlFor={`check-${questionKey}-${index}`}>
               {option.label}
             </label>
           </div>
