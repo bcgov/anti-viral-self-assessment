@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**'
+    tags:
+      - dev
 
+env:
+  ENV_NAME: dev
 jobs:
   deploy:
     name: Build and Deploy App to Dev
@@ -15,7 +17,7 @@ jobs:
     environment:
       name: dev
     env:
-      CLOUDFRONT_ID: '${{ secrets.CLOUDFRONT_ID }}'
+      CLOUDFRONT_ID: '${{ secrets.DEV_CLOUDFRONT_ID }}'
     steps:
       - uses: actions/checkout@v2
 
