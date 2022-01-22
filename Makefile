@@ -53,6 +53,23 @@ build:
 ## AWS Deployment
 ####################################################################
 
+# Deployment CMD
+tag-dev:
+ifdef comment
+	@git tag -fa dev -m "Deploy dev: $(comment)"
+else
+	@git tag -fa dev -m "Deploy dev: $(git rev-parse --abbrev-ref HEAD)"
+endif
+	@git push --force origin refs/tags/dev:refs/tags/dev
+
+tag-test:
+ifdef comment
+	@git tag -fa test -m "Deploy test: $(comment)"
+else
+	@git tag -fa test -m "Deploy test: $(git rev-parse --abbrev-ref HEAD)"
+endif
+	@git push --force origin refs/tags/test:refs/tags/test
+
 print-env:
 	@echo NAMESPACE=$(NAMESPACE)
 	@echo AWS_SA_ROLE_ARN=$(AWS_SA_ROLE_ARN)
