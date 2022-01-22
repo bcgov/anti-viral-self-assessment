@@ -23,6 +23,7 @@ export default function Home() {
       <div className='p-2'>
         <Question
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          key='yesno1'
           options={[
             { key: 'yes', label: 'Yes' },
             { key: 'no', label: 'No' },
@@ -37,6 +38,7 @@ export default function Home() {
       <div className='p-2'>
         <Question
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          key='yesno0'
           options={[
             { key: 'yes', label: 'Yes' },
             { key: 'no', label: 'No' },
@@ -51,6 +53,7 @@ export default function Home() {
       <div className='p-2'>
         <Question
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          key='multi1'
           options={[
             { key: 'cold', label: 'Cold' },
             { key: 'flu', label: 'Flu' },

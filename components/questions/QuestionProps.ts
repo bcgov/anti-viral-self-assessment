@@ -1,5 +1,6 @@
 export interface QuestionProps {
   description: string;
+  key: string;
   question: string;
   options: {
     key: string;
