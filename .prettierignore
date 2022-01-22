@@ -3,12 +3,14 @@
 .aws
 # dependencies
 node_modules
+.next
 /.pnp
 .pnp.js
 
 # production
 build
 dist
+.terraform
 
 # misc
 .DS_Store
