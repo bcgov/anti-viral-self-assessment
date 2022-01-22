@@ -49,5 +49,8 @@ jobs:
       - name: Build app
         run: make build-prod-app
 
+      - name: Deploy infra
+        run: make deploy
+
       - name: Deploy app
         run: make deploy-app
