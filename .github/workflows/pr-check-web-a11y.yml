@@ -1,0 +1,53 @@
+name: Web Accessibility PR Checks
+on:
+  pull_request:
+    paths:
+      - '**'
+
+jobs:
+  pr-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+        name: checkout
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Start web app
+        run: make run &
+
+      - name: sleep until webapp is up
+        run: |
+          until $(curl --output /dev/null --silent --fail http://localhost:3000); do
+              echo '.'
+              ((c++)) && ((c==10)) && c=0 && break # don't run more than 10 times
+              sleep 5
+          done
+
+      - name: Accessibility Test web package
+        run: make a11y-test
+
+      - name: generate markdown from test results
+        run: make format-a11y-results
+        if: ${{ failure() }}
+
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const fs = require('fs');
+            const comment = fs.readFileSync('./a11y/results/results.md', 'utf8');
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            })
+        if: ${{ failure() }}

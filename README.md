@@ -11,3 +11,11 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Accessibility
+
+This package handles automated accessibility using the [axe test runner](https://github.com/pa11y/pa11y-runner-axe)
+
+Run tests with `a11y-test`
+
+Screenshots will be output into `/a11y/results` for each tested page.
