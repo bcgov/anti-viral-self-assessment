@@ -18,6 +18,10 @@ export default function Home() {
         <li className='text-bcBlueIndicator'>bcBlueIndicator</li>
         <li className='text-bcLightBackground'>bcLightBackground</li>
       </ul>
+
+      <div className='bg-green-400'>
+        <p className='text-black'>Dev Deployment via tag</p>
+      </div>
     </div>
   );
 }
