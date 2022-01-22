@@ -21,9 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Extract other env vars
-        run: echo "AWS_SA_ROLE_ARN=$(make get-sa-role-arn)" >> $GITHUB_ENV
-
       - name: Print local env
         run: make print-env
 
