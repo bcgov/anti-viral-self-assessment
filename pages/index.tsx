@@ -20,7 +20,7 @@ export default function Home() {
       </ul>
 
       <div className='bg-green-400'>
-        <p className='text-black'>Dev Deployment via tag</p>
+        <p className='text-black'>Test Deployment via tag</p>
       </div>
     </div>
   );
