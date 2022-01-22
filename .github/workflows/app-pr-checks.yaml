@@ -1,0 +1,23 @@
+name: App PR checks
+
+on:
+  pull_request:
+    paths:
+      - /**
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Format
+        run: make format-check
+
+      - name: Lint
+        run: make lint
+
+      - name: Build
+        run: make build-prod-app

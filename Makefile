@@ -37,6 +37,14 @@ run:
 	@echo "+\n++ Make: Running locally ...\n+"
 	@yarn dev
 
+lint:
+	@echo "+\n++ Make: Linting app...\n+"
+	@yarn lint
+
+format-check:
+	@echo "+\n++ Make: Checking app formatting...\n+"
+	@yarn format:check
+
 build:
 	@echo "+\n++ Make: Building static files...\n+"
 	@yarn build && yarn export
