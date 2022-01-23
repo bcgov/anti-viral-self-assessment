@@ -1,62 +1,335 @@
-import { EndOfJourney, Question } from '../components';
-import { QuestionType } from '../components/questions/QuestionProps';
-import { NoBenefit } from '../content/EndOfJourney';
+import React, { useState } from 'react';
+import { EndOfJourney, EndJourneyType, RadioQuestion } from '../components';
+import * as EndContent from '../content/EndOfJourney';
+import * as QuestionContent from '../content/Questions';
 
-const questions = [];
+interface Steps {
+  [key: string]: boolean;
+}
+
+interface Questions {
+  [key: string]: {
+    question: string;
+    description: React.ReactElement;
+    questionKey: string;
+    options: { key: string; label: string }[];
+    actions: {
+      [key: string]: () => void;
+    };
+  };
+}
 
 export default function Form() {
+  const [journeyEnd, setJourneyEnd] = useState<EndJourneyType | null>(null);
+  const [step, setStep] = useState<Steps>({
+    1: true,
+  });
+
+  const stepStrings = ['1', '2', '3', '4', '5', '6', '7', '8a', '8b', '8c', '9b', '9c', '10b'];
+
+  const questions: Questions = {
+    1: {
+      question: QuestionContent.Q1Question,
+      description: QuestionContent.Q1Description,
+      questionKey: '1',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setJourneyEnd(null);
+          setToStep('2');
+        },
+        no: () => {
+          setToStep('1');
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+      },
+    },
+    2: {
+      question: QuestionContent.Q2Question,
+      description: QuestionContent.Q2Content,
+      questionKey: '2',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('2');
+          setJourneyEnd(EndContent.UrgentCare);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('3');
+        },
+      },
+    },
+    3: {
+      question: QuestionContent.Q3Question,
+      description: QuestionContent.Q3Content,
+      questionKey: '3',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setJourneyEnd(null);
+          setToStep('4');
+        },
+        no: () => {
+          setToStep('3');
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+      },
+    },
+    4: {
+      question: QuestionContent.Q4Question,
+      description: QuestionContent.Q4Content,
+      questionKey: '4',
+      options: [
+        { key: 'less7', label: 'In the past week 0-7 days' },
+        { key: 'more7', label: 'I have had symptoms for more than 7 days' }, // TODO: Allow for not-inline options
+      ],
+      actions: {
+        less7: () => {
+          setJourneyEnd(null);
+          setToStep('5');
+        },
+        more7: () => {
+          setToStep('4');
+          setJourneyEnd(EndContent.TooManyDays);
+        },
+      },
+    },
+    5: {
+      question: QuestionContent.Q5Question,
+      description: QuestionContent.Q5Content,
+      questionKey: '5',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('5');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('6');
+        },
+      },
+    },
+    6: {
+      question: QuestionContent.Q6Question,
+      description: QuestionContent.Q6Content,
+      questionKey: '6',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('6');
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('7');
+        },
+      },
+    },
+    7: {
+      question: QuestionContent.Q7Question,
+      description: QuestionContent.Q7Content,
+      questionKey: '',
+      options: [
+        { key: 'under60', label: 'Less than 60 years' },
+        { key: 'under70', label: '60-69 years' },
+        { key: 'over70', label: 'Over 70' },
+      ],
+      actions: {
+        under60: () => {
+          setJourneyEnd(null);
+          setToStep('8a');
+        },
+        under70: () => {
+          setJourneyEnd(null);
+          setToStep('8b');
+        },
+        over70: () => {
+          setJourneyEnd(null);
+          setToStep('8c');
+        },
+      },
+    },
+    '8a': {
+      question: QuestionContent.Q8Under60Question,
+      description: QuestionContent.Q8Under60Content,
+      questionKey: '8a',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+      },
+    },
+    '8b': {
+      question: QuestionContent.Q8Under70Question,
+      description: QuestionContent.Q8Under70Content,
+      questionKey: '8b',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('8b');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('9b');
+        },
+      },
+    },
+    '8c': {
+      question: QuestionContent.Q8SeventyPlusQuestion,
+      description: QuestionContent.Q8SeventyPlusContent,
+      questionKey: '8c',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('8c');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('9c');
+        },
+      },
+    },
+    '9b': {
+      question: QuestionContent.Q9Question,
+      description: QuestionContent.Q9Content,
+      questionKey: '9b',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('9b');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setJourneyEnd(null);
+          setToStep('10b');
+        },
+      },
+    },
+    '9c': {
+      question: QuestionContent.Q9Question,
+      description: QuestionContent.Q9Content,
+      questionKey: '9b',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('9c');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setToStep('9c');
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+      },
+    },
+    '10b': {
+      question: QuestionContent.Q8Under60Question,
+      description: QuestionContent.Q10Content,
+      questionKey: '10b',
+      options: [
+        { key: 'yes', label: 'Yes' },
+        { key: 'no', label: 'No' },
+      ],
+      actions: {
+        yes: () => {
+          setToStep('10b');
+          setJourneyEnd(EndContent.AntiviralBenefit);
+        },
+        no: () => {
+          setToStep('10b');
+          setJourneyEnd(EndContent.NoBenefit);
+        },
+      },
+    },
+  };
+
+  function setToStep(newStep: string) {
+    const index = stepStrings.indexOf(newStep);
+    if (index > -1) {
+      const stepsTaken = stepStrings.slice(0, index + 1);
+      // For the last 3 steps, we should only include matching branches
+      let branch: string | null = null;
+      if (newStep.includes('8') || newStep.includes('9') || newStep.includes('10')) {
+        branch = newStep.slice(-1); // a, b, or c
+      }
+      // I don't love this bit, but late nights and all
+      const steps = stepsTaken.reduce(
+        (acc, step) => ({
+          ...acc,
+          [step]: branch ? (step.length > 1 && step.slice(-1) !== branch ? false : true) : true,
+        }),
+        {}
+      );
+      setStep(steps);
+    } else {
+      setStep({ 1: true });
+    }
+  }
+
+  function processAction(step: string, value: string) {
+    const action = questions[step].actions[value];
+    if (action) {
+      action();
+    }
+  }
+
   return (
     <div className='w-full'>
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'yes', label: 'Yes' },
-            { key: 'no', label: 'No' },
-          ]}
-          question='Have you been experiencing any of the following symptoms?'
-          questionKey='yesno0'
-          type={QuestionType.Radio}
-          onAnswer={() => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
-      </div>
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'yes', label: 'Yes' },
-            { key: 'no', label: 'No' },
-          ]}
-          question='Have you been experiencing any of the following symptoms?'
-          questionKey='yesno1'
-          type={QuestionType.Radio}
-          onAnswer={() => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
-      </div>
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'cold', label: 'Cold' },
-            { key: 'flu', label: 'Flu' },
-            { key: 'headaches', label: 'Headaches' },
-          ]}
-          question='Checkbox question?'
-          questionKey='multi1'
-          type={QuestionType.Checkbox}
-          onAnswer={values => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
-      </div>
-      {/* <EndOfJourney
-        title={NoBenefit.title}
-        content={NoBenefit.content}
-      /> */}
+      {Object.keys(questions).map(questionKey => {
+        if (!(questionKey in questions) || !step[questionKey]) {
+          return null;
+        }
+        const question = questions[questionKey];
+        return (
+          <RadioQuestion
+            key={questionKey}
+            description={question.description}
+            options={question.options}
+            question={question.question}
+            questionKey={question.questionKey}
+            inline
+            onAnswer={value => processAction(questionKey, value)}
+          />
+        );
+      })}
+      {journeyEnd && <EndOfJourney {...journeyEnd} />}
     </div>
   );
 }

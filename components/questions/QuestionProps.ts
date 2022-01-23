@@ -1,12 +1,13 @@
 export interface QuestionProps {
-  description: string;
+  description: React.ReactElement;
   question: string;
   questionKey: string;
   options: {
     key: string;
     label: string;
   }[];
-  onAnswer: (answer: string | string[]) => void;
+  inline?: boolean;
+  onAnswer: (answer: string) => void;
 }
 
 export interface GeneralQuestionProps extends QuestionProps {

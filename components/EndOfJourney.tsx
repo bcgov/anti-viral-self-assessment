@@ -1,3 +1,8 @@
+export interface EndJourneyType {
+  title?: string;
+  content?: React.ReactElement;
+}
+
 interface InfoBoxProps {
   content?: React.ReactElement;
   title?: string;
