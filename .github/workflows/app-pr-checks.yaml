@@ -28,6 +28,9 @@ jobs:
       - name: Lint check
         run: make lint
 
+      - name: Run unit tests
+        run: make test
+
       - name: NextJS Cache
         uses: actions/cache@v2
         with:

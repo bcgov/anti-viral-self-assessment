@@ -49,6 +49,10 @@ build:
 	@echo "+\n++ Make: Building static files...\n+"
 	@yarn build && yarn export
 
+test: 
+	@echo "+\n++ Make: Running unit tests...\n+"
+	@yarn test
+
 
 
 ####################################################################
