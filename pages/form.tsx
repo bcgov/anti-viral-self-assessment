@@ -1,5 +1,6 @@
-import { Question } from '../components';
+import { EndOfJourney, Question } from '../components';
 import { QuestionType } from '../components/questions/QuestionProps';
+import { NoBenefit } from '../content/EndOfJourney';
 
 const questions = [];
 
@@ -52,6 +53,10 @@ export default function Form() {
           }}
         />
       </div>
+      {/* <EndOfJourney
+        title={NoBenefit.title}
+        content={NoBenefit.content}
+      /> */}
     </div>
   );
 }
