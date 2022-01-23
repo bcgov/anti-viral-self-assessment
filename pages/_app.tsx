@@ -14,7 +14,7 @@ const Application = ({ Component, pageProps }: AppProps) => {
       <Header />
 
       <main className='flex-grow bg-bcLightGray flex justify-center md:pt-11 pt-5'>
-        <div className='h-min md:w-layout w-full md:mx-0 mx-2 gap-x-8 mb-12'>
+        <div className='h-min md:w-layout w-full md:mx-0 mx-6 gap-x-8 mb-12'>
           <Component {...pageProps} />
         </div>
       </main>
