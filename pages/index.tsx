@@ -1,7 +1,17 @@
-import { Question } from '../components';
-import { QuestionType } from '../components/questions/QuestionProps';
+import Link from 'next/link';
+import { InfoBox } from '../components';
 
-const questions = [];
+const ActionButton: React.FC<{ href: string }> = ({ href, children }) => {
+  return (
+    <div className='mt-2'>
+      <Link href={href}>
+        <a className='w-full px-20 md:w-auto flex items-center justify-center button rounded-md py-2 border text-white border-bcBluePrimary bg-bcBluePrimary font-bold'>
+          {children}
+        </a>
+      </Link>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
@@ -20,51 +30,27 @@ export default function Home() {
         <li className='text-bcBlueIndicator'>bcBlueIndicator</li>
         <li className='text-bcLightBackground'>bcLightBackground</li>
       </ul> */}
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'yes', label: 'Yes' },
-            { key: 'no', label: 'No' },
-          ]}
-          question='Have you been experiencing any of the following symptoms?'
-          questionKey='yesno0'
-          type={QuestionType.Radio}
-          onAnswer={() => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
-      </div>
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'yes', label: 'Yes' },
-            { key: 'no', label: 'No' },
-          ]}
-          question='Have you been experiencing any of the following symptoms?'
-          questionKey='yesno1'
-          type={QuestionType.Radio}
-          onAnswer={() => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
-      </div>
-      <div className='p-2'>
-        <Question
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-          options={[
-            { key: 'cold', label: 'Cold' },
-            { key: 'flu', label: 'Flu' },
-            { key: 'headaches', label: 'Headaches' },
-          ]}
-          question='Checkbox question?'
-          questionKey='multi1'
-          type={QuestionType.Checkbox}
-          onAnswer={values => {
-            /* Possibly show the next question depending on answer */
-          }}
-        />
+      <h1 className='text-4xl font-bold text-bcBluePrimary leading-relaxed'>Self Screening Tool</h1>
+      <h2 className='text-2xl text-bcBluePrimary leading-relaxed'>
+        Checklist for COVID-19 Therapies
+      </h2>
+      <p className='pt-4 leading-6'>
+        Treatment is available for some people who have tested positive for COVID-19. These
+        medications have been developed specifically for individuals who are at the highest risk of
+        developing more severe illness. There are also other considerations, such as medication
+        interactions that may limit their use for some people. Public health and a clinical care
+        advisory team are working to identify where the treatments can be used most effectively and
+        will update the information in the survey if there are any changes in eligibility criteria.
+      </p>
+      <p className='py-6 leading-6'>
+        The following set of questions will walk you through the criteria and let you know right
+        away if you might be a possible candidate for one of these treatments. If you are a possible
+        candidate, you will be directed to call a nurse who will complete a more detailed
+        assessment.
+      </p>
+      <InfoBox content='If for any reason you are unable to fill out the questionnaire online and would like tocomplete it over the phone with support, please call ServicesBC at xxxxxxxx and someone can assist you.' />
+      <div className='pt-6 flex justify-center items-center w-full'>
+        <ActionButton href='/form'>Start</ActionButton>
       </div>
     </div>
   );
