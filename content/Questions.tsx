@@ -15,10 +15,10 @@ export const Q1Description = (
 export const Q2Question = '2. Do you have any severe symptoms of COVID-19?';
 // TODO: UL needs to be fixed
 export const Q2Content = (
-  <ul className='list-disc list-style-inside'>
+  <ul>
     <li>Find it hard to breath</li>
     <li>Have chest pain</li>
-    <li>Can't drink anything</li>
+    <li>Can&apos;t drink anything</li>
     <li>Feel very sick</li>
     <li>Feel confused</li>
   </ul>
@@ -114,7 +114,7 @@ export const Q8SeventyPlusContent = (
       stroke
     </p>
     <p>Other examples include:</p>
-    <ol>
+    <ul>
       <li>Cystic fibrosis</li>
       <li>Severe COPD or asthma requiring hospitalization in the last year</li>
       <li>
@@ -137,7 +137,7 @@ export const Q8SeventyPlusContent = (
         Neurological or other conditions causing significant muscle weakness around lungs requiring
         the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
       </li>
-    </ol>
+    </ul>
   </div>
 );
 

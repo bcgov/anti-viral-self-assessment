@@ -61,7 +61,6 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
             options={question.options}
             question={question.question}
             questionKey={question.questionKey}
-            inline
             onAnswer={value => processAction(questionKey, value)}
           />
         );

@@ -36,7 +36,7 @@ export const Footer = () => {
         grid grid-cols-12 gap-8'
       >
         <div className='flex flex-col w-full items-start md:flex-col md:items-left md:align-left col-start-2 col-end-12'>
-          <h3 className='text-lg text-bcBluePrimary font-bold mb-1'>Need help?</h3>
+          <h2 className='text-lg text-bcBluePrimary font-bold mb-1'>Need help?</h2>
           <span className='text-sm block mb-4'>Talk to a Service BC agent.</span>
           <span className='text-sm font-bold block mb-1'>Service is available 7:30am to 8pm</span>
 
@@ -59,7 +59,7 @@ export const Footer = () => {
 
           <div className='border-t-2 border-color-gray-300 my-6 w-full' />
 
-          <h3 className='text-lg text-bcBluePrimary font-bold mb-1'>Translation Services</h3>
+          <h2 className='text-lg text-bcBluePrimary font-bold mb-1'>Translation Services</h2>
           <p className='text-sm text-gray-600 mb-1'>
             Available in more than 110+ languages, including
           </p>

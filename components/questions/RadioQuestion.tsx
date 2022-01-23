@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import classnames from 'classnames';
 import { QuestionProps } from './QuestionProps';
 
 export const RadioQuestion: React.FC<QuestionProps> = ({
@@ -6,38 +7,47 @@ export const RadioQuestion: React.FC<QuestionProps> = ({
   options,
   questionKey,
   question,
-  inline, // TODO: Implement
   onAnswer,
 }) => {
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   function onClick(value: string) {
+    setSelectedOption(value);
     onAnswer(value);
   }
 
-  // TODO: Can we make the box clickable instead of just the input-label?
   return (
-    <div className='p-4 bg-white'>
-      <p className='font-bold'>{question}</p>
-      <div>{description}</div>
-      <div className='flex'>
-        {options.map((option, index) => (
-          <div key={index} className='px-8 py-1 border border-bcLightGray mr-4'>
-            <input
-              className='appearance-none rounded-full h-4 w-4 border border-bcBlack border-1  checked:bg-bcBluePrimary checked:border-bcBluePrimary focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer'
-              type='radio'
-              name={`radioOptions-${questionKey}`}
-              id={`inlineRadio-${questionKey}-${index}`}
-              value={option.key}
-              onClick={evt => onClick(evt.currentTarget.value)}
-            />
+    <div className='p-4 mb-5 bg-white rounded'>
+      <fieldset>
+        <legend className='font-bold mb-2'>{question}</legend>
+        <p className='mb-6 text-bcGray'>{description}</p>
+        <div className='flex flex-col md:flex-row gap-2'>
+          {options.map((option, index) => (
             <label
-              className='inline-block text-bcBlack'
+              key={index}
+              className={classnames(
+                `
+                flex items-center justify-start px-5 md:px-10 py-1.5 border border-gray-300 rounded
+                hover:bg-blue-200 transition-all
+              `,
+                {
+                  'bg-blue-200': selectedOption === option.key,
+                }
+              )}
               htmlFor={`inlineRadio-${questionKey}-${index}`}
             >
+              <input
+                className='mr-2 rounded-full h-4 w-4 min-w-4'
+                type='radio'
+                name={`radioOptions-${questionKey}`}
+                id={`inlineRadio-${questionKey}-${index}`}
+                value={option.key}
+                onClick={evt => onClick(evt.currentTarget.value)}
+              />
               {option.label}
             </label>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </fieldset>
     </div>
   );
 };

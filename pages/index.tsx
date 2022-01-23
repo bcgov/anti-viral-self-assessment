@@ -5,7 +5,7 @@ const ActionButton: React.FC<{ href: string }> = ({ href, children }) => {
   return (
     <div className='mt-2'>
       <Link href={href}>
-        <a className='w-full px-20 md:w-auto flex items-center justify-center button rounded-md py-2 border text-white border-bcBluePrimary bg-bcBluePrimary font-bold'>
+        <a className='w-full px-20 md:w-auto flex items-center justify-center button rounded-md py-2 border no-underline text-white border-bcBluePrimary bg-bcBluePrimary font-bold'>
           {children}
         </a>
       </Link>

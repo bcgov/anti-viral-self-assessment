@@ -9,6 +9,9 @@ module.exports = {
       width: {
         layout: '1140px',
       },
+      minWidth: {
+        4: '1rem',
+      },
       colors: {
         bcBluePrimary: '#003366',
         bcYellowPrimary: '#FCBA19',

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <div className='w-full flex justify-center bg-bcBluePrimary border-b-2 border-bcYellowPrimary print:hidden'>
+    <header className='w-full flex justify-center bg-bcBluePrimary border-b-2 border-bcYellowPrimary print:hidden'>
       <div className='gap-0 md:w-layout w-full 2xl:mx-0 md:mx-12 mx-4 flex flex-row items-center align-center h-16 mt-1'>
         <Link href='/'>
           <a>
@@ -17,6 +17,6 @@ export const Header = () => {
           Self Screening Tool
         </h1>
       </div>
-    </div>
+    </header>
   );
 };
