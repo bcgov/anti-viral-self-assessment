@@ -16,6 +16,9 @@ jobs:
     timeout-minutes: 10
     environment:
       name: dev
+    concurrency:
+      group: deploy-dev
+      cancel-in-progress: true
     env:
       CLOUDFRONT_ID: '${{ secrets.DEV_CLOUDFRONT_ID }}'
     steps:
