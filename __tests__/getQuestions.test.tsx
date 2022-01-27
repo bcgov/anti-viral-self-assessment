@@ -231,7 +231,7 @@ describe("getQuestions['6']", () => {
     question.actions.yes();
 
     expect(mockSetToStep).toHaveBeenCalledWith('6');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitWithThirdDose);
   });
 
   it('has an action "no" that sets step to 7 with no end journey', () => {
