@@ -6,6 +6,8 @@ variable "domain" {}
 variable "app_sources_bucket" {}
 variable "max_filesize_mb" {}
 
+variable "target_aws_account_id" {}
+
 variable "region" {
   default = "ca-central-1"
 }
