@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           Treatment is available for some people who have tested positive for COVID-19. These
           treatments have been approved for use in Canada to prevent worsening symptoms in
-          vulnerable patients. . They have been shown to prevent COVID-19 from progressing in high
+          vulnerable patients. They have been shown to prevent COVID-19 from progressing in high
           risk patients with mild to moderate symptoms, if taken within 5 to 7 days of symptom
           onset. They are not used to prevent COVID-19, before or after an exposure. There are
           important considerations, such as medication interactions,that may limit their use for
@@ -67,17 +67,17 @@ export default function Home() {
         <p>
           Please consider and answer each question carefully. Your responses will help to determine
           if it would be safe for you to receive an anti-viral treatment for COVID-19. If it looks
-          like you might benefit from the treatment you will be directed to call ServicesBC so
+          like you might benefit from the treatment you will be directed to call ServiceBC so
           thatthey can startthe assessment process. They will take the time to review these
-          questions in more detailwith you, and may support your connection to a healthcare team who
-          can access your medication and health information, seek more information,and make
+          questions in more detail with you, and may support your connection to a healthcare team
+          who can access your medication and health information, seek more information, and make
           decisions based on their clinical assessment.
         </p>
       </div>
 
       <InfoBox>
         If for any reason you are unable to fill out the questionnaire online and would like to
-        complete it over the phone with support, please call ServicesBC at <ServiceBCLink /> and
+        complete it over the phone with support, please call ServiceBC at <ServiceBCLink /> and
         someone can assist you.
       </InfoBox>
 
