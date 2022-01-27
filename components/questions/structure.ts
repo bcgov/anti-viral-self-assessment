@@ -130,7 +130,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('6');
-        setJourneyEnd(EndJourneyType.NoBenefitWithThirdDose);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
       no: () => {
         setJourneyEnd(null);
@@ -175,7 +175,7 @@ export const getQuestions: ({
         setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
   },
@@ -251,7 +251,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('9c');
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
   },
@@ -270,7 +270,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('10b');
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
   },

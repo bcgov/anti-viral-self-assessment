@@ -231,7 +231,7 @@ describe("getQuestions['6']", () => {
     question.actions.yes();
 
     expect(mockSetToStep).toHaveBeenCalledWith('6');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitWithThirdDose);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 
   it('has an action "no" that sets step to 7 with no end journey', () => {
@@ -321,7 +321,7 @@ describe("getQuestions['8a']", () => {
   it('has an action "no" that sets journey end to "NoBenefit"', () => {
     question.actions.no();
 
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 });
 
@@ -469,7 +469,7 @@ describe("getQuestions['9c']", () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('9c');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 });
 
@@ -506,6 +506,6 @@ describe("getQuestions['10b']", () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('10b');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 });
