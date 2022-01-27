@@ -3,12 +3,7 @@ export interface EndJourneyType {
   content?: React.ReactElement;
 }
 
-interface InfoBoxProps {
-  content?: React.ReactElement;
-  title?: string;
-}
-
-export const EndOfJourney: React.FC<InfoBoxProps> = ({ title, content }) => {
+export const EndOfJourney: React.FC<EndJourneyType> = ({ title, content }) => {
   return (
     <div className='w-full p-6 bg-bcLightBlueBackground'>
       {title && <p className='text-bcBlueLink font-bold'>{title}</p>}
