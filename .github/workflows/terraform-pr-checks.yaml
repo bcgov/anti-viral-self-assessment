@@ -1,0 +1,31 @@
+name: Terraform PR checks
+
+on:
+  pull_request:
+    paths:
+      - 'terraform/**'
+
+jobs:
+  deploy:
+    name: Terraform PR checks
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print local env
+        run: make print-env
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-skip-session-tagging: true
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
+          aws-region: ca-central-1
+          role-to-assume: ${{ env.AWS_SA_ROLE_ARN }}
+          role-duration-seconds: 900
+          role-session-name: ci-deployment
+
+      - name: Deploy app
+        run: make plan

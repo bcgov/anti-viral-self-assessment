@@ -1,0 +1,27 @@
+*.md
+.localstack
+.aws
+# dependencies
+node_modules
+.next
+/.pnp
+.pnp.js
+
+# production
+build
+dist
+.terraform
+
+# misc
+.DS_Store
+*.pem
+.eslintcache
+.vscode
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*

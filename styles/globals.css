@@ -1,0 +1,32 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: BCSans;
+  font-display: swap;
+  src: url('fonts/BC-Sans-Font/BCSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: BCSans-Bold;
+  font-weight: bold;
+  font-display: swap;
+  src: url('fonts/BC-Sans-Font/BCSans-Bold.woff') format('woff');
+}
+
+a {
+  @apply text-bcBlueLink underline;
+}
+
+ul li {
+  @apply flex items-start mb-2.5;
+}
+
+ul li::before {
+  content: '';
+  display: inline-block;
+  min-width: 0.5rem;
+  min-height: 0.5rem;
+  @apply bg-bcBlueLink rounded-full mt-2 mr-2.5 h-2 w-2;
+}
