@@ -64,7 +64,7 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
           />
         );
       })}
-      {journeyEnd && <EndOfJourney {...journeyEnd} />}
+      <EndOfJourney journeyEnd={journeyEnd} />
     </div>
   );
 };

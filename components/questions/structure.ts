@@ -1,5 +1,4 @@
-import { EndJourneyType } from '@components';
-import * as EndContent from '../../content/EndOfJourney';
+import { EndJourneyType } from '../EndOfJourney';
 import * as QuestionContent from '../../content/Questions';
 
 export interface Steps {
@@ -40,7 +39,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('1');
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
     },
   },
@@ -55,7 +54,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('2');
-        setJourneyEnd(EndContent.UrgentCare);
+        setJourneyEnd(EndJourneyType.UrgentCare);
       },
       no: () => {
         setJourneyEnd(null);
@@ -78,7 +77,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('3');
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
     },
   },
@@ -97,7 +96,7 @@ export const getQuestions: ({
       },
       more7: () => {
         setToStep('4');
-        setJourneyEnd(EndContent.TooManyDays);
+        setJourneyEnd(EndJourneyType.TooManyDays);
       },
     },
   },
@@ -112,7 +111,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('5');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setJourneyEnd(null);
@@ -131,7 +130,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('6');
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
       no: () => {
         setJourneyEnd(null);
@@ -173,10 +172,10 @@ export const getQuestions: ({
     ],
     actions: {
       yes: () => {
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
     },
   },
@@ -191,7 +190,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('8b');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setJourneyEnd(null);
@@ -210,7 +209,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('8c');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setJourneyEnd(null);
@@ -229,7 +228,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('9b');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setJourneyEnd(null);
@@ -248,11 +247,11 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('9c');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setToStep('9c');
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
     },
   },
@@ -267,11 +266,11 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('10b');
-        setJourneyEnd(EndContent.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
         setToStep('10b');
-        setJourneyEnd(EndContent.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefit);
       },
     },
   },
