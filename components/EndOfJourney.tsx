@@ -45,7 +45,7 @@ const NoBenefit: React.FC = () => (
       COVID-19 symptoms and require a positive test to be confirmed. As with most medications, there
       can be side effects when they are not used for their intended purpose.If you are experiencing
       symptoms and are at risk of more severe disease due to personal risk factors, you are
-      encouraged to get tested. For more information, go to &#8203;
+      encouraged to get tested. For more information, go to{' '}
       <a
         aria-label='bc cdc when to get a covid test'
         className='font-bold'
@@ -113,7 +113,7 @@ const TooManyDays: React.FC = () => (
       In order to be effective,the antiviral treatments that are currently available need to be
       given within the first 5-7 days of symptom onset. Stay home and away from others until you
       feel well enough to return to your regular activities. You should continue to seek medical
-      care if you feel you need it. For more information, go to &#8203;
+      care if you feel you need it. For more information, go to{' '}
       <a
         className='font-bold'
         href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
