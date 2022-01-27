@@ -130,7 +130,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('6');
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitWithThirdDose);
       },
       no: () => {
         setJourneyEnd(null);

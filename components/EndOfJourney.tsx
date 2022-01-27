@@ -2,9 +2,10 @@ import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
   NoBenefit,
+  NoBenefitWithThirdDose,
   UrgentCare,
-  AntiviralBenefit,
   TooManyDays,
+  AntiviralBenefit,
 }
 
 interface EndOfJourneyProps {
@@ -15,12 +16,14 @@ export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
     case EndJourneyType.NoBenefit:
       return <NoBenefit />;
+    case EndJourneyType.NoBenefitWithThirdDose:
+      return <NoBenefitWithThirdDose />;
     case EndJourneyType.UrgentCare:
       return <UrgentCare />;
-    case EndJourneyType.AntiviralBenefit:
-      return <AntiviralBenefit />;
     case EndJourneyType.TooManyDays:
       return <TooManyDays />;
+    case EndJourneyType.AntiviralBenefit:
+      return <AntiviralBenefit />;
     default:
       return null;
   }
@@ -44,7 +47,7 @@ const NoBenefit: React.FC = () => (
       COVID-19 symptoms and require a positive test to be confirmed. As with most medications, there
       can be side effects when they are not used for their intended purpose.If you are experiencing
       symptoms and are at risk of more severe disease due to personal risk factors, you are
-      encouraged to get tested. For more information, go to &#8203;
+      encouraged to get tested. For more information, go to{' '}
       <a
         aria-label='bc cdc when to get a covid test'
         className='font-bold'
@@ -55,6 +58,46 @@ const NoBenefit: React.FC = () => (
         http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test
       </a>
     </p>
+  </EndOfJourneyContainer>
+);
+
+const NoBenefitWithThirdDose: React.FC = () => (
+  <EndOfJourneyContainer>
+    <EndOfJourneyTitle>
+      Based on your answers you would likely not benefit from antivirals for COVID-19 at this time.
+    </EndOfJourneyTitle>
+    <div className='flex flex-col gap-4'>
+      <p>
+        These treatments are currently being recommended for individuals who are identified as being
+        at increased risk for needing to go to the hospital for COVID-19.
+      </p>
+      <p>This includes:</p>
+      <ul>
+        <li>those who are immunocompromised</li>
+        <li>
+          those who are unvaccinated or partially vaccinated and over 60 with three or more chronic
+          conditions or who are Indigenous
+        </li>
+        <li>
+          those who are unvaccinated or partially vaccinated 70 years and over with one or more
+          chronic condition. Examples of chronic conditions: diabetes, COPD, chronic kidney disease,
+          or heart disease.
+        </li>
+      </ul>
+      <p>
+        You should continue to seek medical care if you feel you need it. For more information, go
+        to{' '}
+        <a
+          aria-label='bc cdc when to get a covid test'
+          className='font-bold'
+          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+          target='_blank'
+          rel='noreferrer'
+        >
+          http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19
+        </a>
+      </p>
+    </div>
   </EndOfJourneyContainer>
 );
 
@@ -72,7 +115,7 @@ const TooManyDays: React.FC = () => (
       In order to be effective,the antiviral treatments that are currently available need to be
       given within the first 5-7 days of symptom onset. Stay home and away from others until you
       feel well enough to return to your regular activities. You should continue to seek medical
-      care if you feel you need it. For more information, go to &#8203;
+      care if you feel you need it. For more information, go to{' '}
       <a
         className='font-bold'
         href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'

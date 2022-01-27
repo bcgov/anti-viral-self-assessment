@@ -8,8 +8,6 @@ describe('Home', () => {
 
     const startButton = screen.getByRole('link', { name: 'Start' });
 
-    console.log(startButton.getAttribute('href'));
-
     expect(startButton).toBeInTheDocument();
   });
 
