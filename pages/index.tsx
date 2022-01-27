@@ -67,7 +67,7 @@ export default function Home() {
         <p>
           Please consider and answer each question carefully. Your responses will help to determine
           if it would be safe for you to receive an anti-viral treatment for COVID-19. If it looks
-          like you might benefit from the treatment you will be directed to call ServicesBC so
+          like you might benefit from the treatment you will be directed to call ServiceBC so
           thatthey can startthe assessment process. They will take the time to review these
           questions in more detailwith you, and may support your connection to a healthcare team who
           can access your medication and health information, seek more information,and make
@@ -77,7 +77,7 @@ export default function Home() {
 
       <InfoBox>
         If for any reason you are unable to fill out the questionnaire online and would like to
-        complete it over the phone with support, please call ServicesBC at <ServiceBCLink /> and
+        complete it over the phone with support, please call ServiceBC at <ServiceBCLink /> and
         someone can assist you.
       </InfoBox>
 

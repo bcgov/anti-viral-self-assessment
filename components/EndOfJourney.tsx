@@ -131,7 +131,7 @@ const TooManyDays: React.FC = () => (
       status)there may be some cases where this timeframe is extended up to 10 days. This would be
       reviewed on a case by case basis.{' '}
       <strong>
-        If you fit into this group, please call ServicesBC so they can start the assessment process.
+        If you fit into this group, please call ServiceBC so they can start the assessment process.
       </strong>
     </p>
   </EndOfJourneyContainer>
