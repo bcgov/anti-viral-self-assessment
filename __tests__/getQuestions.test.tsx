@@ -263,7 +263,7 @@ describe("getQuestions['7']", () => {
   it('to have options under 60, under 70, and over 70', () => {
     expect(question.options).toStrictEqual([
       { key: 'under60', label: 'Less than 60 years' },
-      { key: 'under70', label: '60-69 years' },
+      { key: 'under70', label: '60-70 years' },
       { key: 'over70', label: 'Over 70 years' },
     ]);
   });
