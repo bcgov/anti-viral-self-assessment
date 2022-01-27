@@ -38,7 +38,7 @@ export const Q4Question = '4. When did your symptoms first start?';
 export const Q4Content = <></>;
 
 export const Q5Question =
-  '5. Do you have a medical condition or are you taking medication that suppress or weaken your immune system?';
+  '5. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
 export const Q5Content = (
   <ul>
     <li>
