@@ -69,8 +69,8 @@ export default function Home() {
           if it would be safe for you to receive an anti-viral treatment for COVID-19. If it looks
           like you might benefit from the treatment you will be directed to call ServiceBC so
           thatthey can startthe assessment process. They will take the time to review these
-          questions in more detailwith you, and may support your connection to a healthcare team who
-          can access your medication and health information, seek more information,and make
+          questions in more detail with you, and may support your connection to a healthcare team
+          who can access your medication and health information, seek more information, and make
           decisions based on their clinical assessment.
         </p>
       </div>
