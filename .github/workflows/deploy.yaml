@@ -6,23 +6,21 @@ on:
       - main
     tags:
       - dev
+      - test
 
-env:
-  ENV_NAME: dev
 jobs:
   deploy:
     name: Build and Deploy App to Dev
     runs-on: ubuntu-20.04
     timeout-minutes: 10
-    environment:
-      name: dev
     concurrency:
-      group: deploy-dev
+      group: deploy-${{github.ref_name}}
       cancel-in-progress: true
-    env:
-      CLOUDFRONT_ID: '${{ secrets.DEV_CLOUDFRONT_ID }}'
     steps:
       - uses: actions/checkout@v2
+
+      - name: Extract branch/tag name
+        run: echo "ENV_NAME=${GITHUB_REF_NAME}" >> $GITHUB_ENV
 
       - name: Print local env
         run: make print-env

@@ -11,6 +11,18 @@ TERRAFORM_DIR = terraform
 export AWS_REGION ?= ca-central-1
 export BOOTSTRAP_ENV=terraform/bootstrap
 
+ifeq ($(ENV_NAME), main)
+export ENV_NAME=dev
+endif
+
+ifeq ($(ENV_NAME), dev)
+CLOUDFRONT_ID=ES6O0GJR12MDR
+endif
+
+ifeq ($(ENV_NAME), test)
+CLOUDFRONT_ID=E2DBVSML8NK90J
+endif
+
 define TFVARS_DATA
 target_env = "$(ENV_NAME)"
 tz = "$(TZ)"
