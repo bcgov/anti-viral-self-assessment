@@ -2,7 +2,7 @@ import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
   NoBenefit,
-  NoBenefitWithThirdDose,
+  NoBenefitExtended,
   UrgentCare,
   TooManyDays,
   AntiviralBenefit,
@@ -16,8 +16,8 @@ export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
     case EndJourneyType.NoBenefit:
       return <NoBenefit />;
-    case EndJourneyType.NoBenefitWithThirdDose:
-      return <NoBenefitWithThirdDose />;
+    case EndJourneyType.NoBenefitExtended:
+      return <NoBenefitExtended />;
     case EndJourneyType.UrgentCare:
       return <UrgentCare />;
     case EndJourneyType.TooManyDays:
@@ -61,7 +61,7 @@ const NoBenefit: React.FC = () => (
   </EndOfJourneyContainer>
 );
 
-const NoBenefitWithThirdDose: React.FC = () => (
+const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
       Based on your answers you would likely not benefit from antivirals for COVID-19 at this time.
