@@ -38,17 +38,19 @@ const NoBenefit: React.FC = () => (
       Based on your answer you would likely not benefit from antivirals for COVID-19 at this time.
     </EndOfJourneyTitle>
     <p>
-      As with most medications, there are side effects to taking these oral antivirals if you do not
-      have COVID-19. They have the potential to interfere with other drugs and impact other health
-      conditions. If you are experiencing symptoms and are at risk of more severe disease due to
-      personal risk factors, you are encouraged to get tested. For more information,&nbsp;
+      These medications have been approved specifically for people experiencing mild-moderate
+      COVID-19 symptoms and require a positive test to be confirmed. As with most medications, there
+      can be side effects when they are not used for their intended purpose.If you are experiencing
+      symptoms and are at risk of more severe disease due to personal risk factors, you are
+      encouraged to get tested. For more information, go to &#8203;
       <a
-        className='text-bcBlueLink underline font-bold'
+        aria-label='bc cdc when to get a covid test'
+        className='font-bold'
         href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
         target='_blank'
         rel='noreferrer'
       >
-        go to this website.
+        http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test
       </a>
     </p>
   </EndOfJourneyContainer>
