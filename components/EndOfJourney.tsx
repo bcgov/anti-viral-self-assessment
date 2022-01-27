@@ -1,3 +1,5 @@
+import { ServiceBCLink } from './ServiceBCLink';
+
 export enum EndJourneyType {
   NoBenefit,
   UrgentCare,
@@ -96,13 +98,10 @@ const AntiviralBenefit: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>You may benefit from antiviral treatment.</EndOfJourneyTitle>
     <p>
-      Please call{' '}
-      <a className='text-bcBlueLink font-bold' href='tel:811'>
-        8-1-1
-      </a>{' '}
-      to speak with a nurse and complete further screening questions. Let them know you are calling
-      about antiviral treatment options and that you have completed the online screener. There is a
-      short window of time to deliver these medications so please call right away.
+      Please call <ServiceBCLink /> to speak with a nurse and complete further screening questions.
+      Let them know you are calling about antiviral treatment options and that you have completed
+      the online screener. There is a short window of time to deliver these medications so please
+      call right away.
     </p>
   </EndOfJourneyContainer>
 );
