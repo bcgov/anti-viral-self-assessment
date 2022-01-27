@@ -45,7 +45,7 @@ const NoBenefit: React.FC = () => (
     <p>
       These medications have been approved specifically for people experiencing mild-moderate
       COVID-19 symptoms and require a positive test to be confirmed. As with most medications, there
-      can be side effects when they are not used for their intended purpose.If you are experiencing
+      can be side effects when they are not used for their intended purpose. If you are experiencing
       symptoms and are at risk of more severe disease due to personal risk factors, you are
       encouraged to get tested. For more information, go to{' '}
       <a
