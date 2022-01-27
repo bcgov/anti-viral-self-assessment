@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           Treatment is available for some people who have tested positive for COVID-19. These
           treatments have been approved for use in Canada to prevent worsening symptoms in
-          vulnerable patients. . They have been shown to prevent COVID-19 from progressing in high
+          vulnerable patients. They have been shown to prevent COVID-19 from progressing in high
           risk patients with mild to moderate symptoms, if taken within 5 to 7 days of symptom
           onset. They are not used to prevent COVID-19, before or after an exposure. There are
           important considerations, such as medication interactions,that may limit their use for
