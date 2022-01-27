@@ -66,19 +66,28 @@ const UrgentCare: React.FC = () => (
 
 const TooManyDays: React.FC = () => (
   <EndOfJourneyContainer>
-    <p>
-      In order to be effective, the antiviral treatments that are currently available need to be
+    <p className='mb-4'>
+      In order to be effective,the antiviral treatments that are currently available need to be
       given within the first 5-7 days of symptom onset. Stay home and away from others until you
       feel well enough to return to your regular activities. You should continue to seek medical
-      care if you feel you need it. For more information, go to&nbsp;
+      care if you feel you need it. For more information, go to &#8203;
       <a
-        className='text-bcBlueLink underline font-bold'
+        className='font-bold'
         href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
         target='_blank'
         rel='noreferrer'
       >
-        go to this website.
+        http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19
       </a>
+    </p>
+    <p>
+      For patients who are immunocompromised and have been identified as Clinically Extremely
+      Vulnerable (those who received a letter from Dr. Bonnie Henry notifying you of your CEV
+      status)there may be some cases where this timeframe is extended up to 10 days. This would be
+      reviewed on a case by case basis.{' '}
+      <strong>
+        If you fit into this group, please call ServicesBC so they can start the assessment process.
+      </strong>
     </p>
   </EndOfJourneyContainer>
 );
