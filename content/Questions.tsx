@@ -70,7 +70,8 @@ export const Q6Content = <></>;
 export const Q7Question = 'Please indiciate which age group you belong to?';
 export const Q7Content = <></>;
 
-export const Q8Under60Question = 'Do you have any of the following conditions?';
+export const Q8Under60Question =
+  'Have you been diagnosed by a health care provider with a chronic condition?';
 export const Q8Under60Content = (
   <ul>
     <li>Cystic fibrosis</li>
