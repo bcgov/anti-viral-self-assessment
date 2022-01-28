@@ -1,7 +1,8 @@
 #!make
-export PROJECT := $(or $(PROJECT),avsa)
+export PROJECT = avsa
 ENV_NAME ?= dev
-PROJECT_CODE = avsa
+LZ2_PROJECT = ph4uto
+PROJECT_CODE = $(LZ2_PROJECT)-$(ENV_NAME)-$(PROJECT)
 NAMESPACE = $(PROJECT_CODE)-$(ENV_NAME)
 APP_SRC_BUCKET = $(NAMESPACE)-app
 TZ=America/Los_Angeles
@@ -35,9 +36,9 @@ endef
 export TFVARS_DATA
 
 define TF_BACKEND_CFG
-region="$(AWS_REGION)"
-bucket="$(NAMESPACE)-tf-state"
-dynamodb_table="$(NAMESPACE)-tf-lock"
+workspaces { name = "$(PROJECT_CODE)" }
+hostname     = "app.terraform.io"
+organization = "bcgov"
 endef
 export TF_BACKEND_CFG
 
@@ -107,15 +108,6 @@ print-env:
 	@echo
 	@echo ./$(TERRAFORM_DIR)/backend.hcl:
 	@echo "$$TF_BACKEND_CFG"
-
-bootstrap:
-	## Set-up a S3 bucket for storing terraform state.
-	## Only needs to be run once per environment, globally.
-	terraform -chdir=$(BOOTSTRAP_ENV) init -input=false \
-		-reconfigure \
-		-backend-config='path=$(ENV_NAME).tfstate'
-	terraform -chdir=$(BOOTSTRAP_ENV) apply -auto-approve -input=false \
-		-var='namespace=$(NAMESPACE)'
 
 write-config-tf:
 	@echo "$$TFVARS_DATA" > $(TERRAFORM_DIR)/.auto.tfvars
