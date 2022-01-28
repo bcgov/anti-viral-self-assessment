@@ -24,6 +24,8 @@ ifeq ($(ENV_NAME), test)
 CLOUDFRONT_ID=E2DBVSML8NK90J
 endif
 
+AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AVSA_SA_Role
+
 define TFVARS_DATA
 target_env = "$(ENV_NAME)"
 tz = "$(TZ)"
