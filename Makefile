@@ -2,7 +2,7 @@
 export PROJECT = avsa
 ENV_NAME ?= dev
 LZ2_PROJECT = ph4uto
-PROJECT_CODE = $(LZ2_PROJECT)-$(ENV_NAME)-$(PROJECT)
+TF_WORKSPACE_NAME = $(LZ2_PROJECT)-$(ENV_NAME)-$(PROJECT)
 APP_SRC_BUCKET = $(PROJECT)-$(ENV_NAME)-app
 TZ=America/Los_Angeles
 MAX_FILESIZE=15
@@ -28,7 +28,7 @@ AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AV
 define TFVARS_DATA
 target_env = "$(ENV_NAME)"
 tz = "$(TZ)"
-project_code = "$(PROJECT_CODE)"
+project_code = "$(PROJECT)"
 app_sources = "build/app"
 app_sources_bucket = "$(APP_SRC_BUCKET)"
 max_filesize_mb = "$(MAX_FILESIZE)"
@@ -37,7 +37,7 @@ endef
 export TFVARS_DATA
 
 define TF_BACKEND_CFG
-workspaces { name = "$(PROJECT_CODE)" }
+workspaces { name = "$(TF_WORKSPACE_NAME)" }
 hostname     = "app.terraform.io"
 organization = "bcgov"
 endef
