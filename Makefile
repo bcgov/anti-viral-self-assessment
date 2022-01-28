@@ -3,8 +3,7 @@ export PROJECT = avsa
 ENV_NAME ?= dev
 LZ2_PROJECT = ph4uto
 PROJECT_CODE = $(LZ2_PROJECT)-$(ENV_NAME)-$(PROJECT)
-NAMESPACE = $(PROJECT_CODE)-$(ENV_NAME)
-APP_SRC_BUCKET = $(NAMESPACE)-app
+APP_SRC_BUCKET = $(PROJECT)-$(ENV_NAME)-app
 TZ=America/Los_Angeles
 MAX_FILESIZE=15
 
@@ -102,7 +101,6 @@ endif
 	@git push --force origin refs/tags/test:refs/tags/test
 
 print-env:
-	@echo NAMESPACE=$(NAMESPACE)
 	@echo AWS_SA_ROLE_ARN=$(AWS_SA_ROLE_ARN)
 	@echo
 	@echo ./$(TERRAFORM_DIR)/.auto.tfvars:
