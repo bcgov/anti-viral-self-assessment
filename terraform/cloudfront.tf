@@ -47,6 +47,8 @@ resource "aws_cloudfront_distribution" "app" {
 
   aliases = local.has_domain ? [var.domain] : []
 
+  wait_for_deployment = false
+  
   origin {
     domain_name = aws_s3_bucket.app.bucket_regional_domain_name
     origin_id   = local.s3_origin_id
