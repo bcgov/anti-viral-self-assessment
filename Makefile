@@ -125,6 +125,8 @@ deploy: init-tf
 
 deploy-app:
 	aws s3 sync ./terraform/build/app s3://$(APP_SRC_BUCKET) --delete
+
+deploy-app-manual: deploy-app
 	aws --region $(AWS_REGION) cloudfront create-invalidation --distribution-id $(CLOUDFRONT_ID) --paths "/*"
 
 plan: init-tf
