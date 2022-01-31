@@ -1,9 +1,9 @@
 #!make
-export PROJECT := $(or $(PROJECT),avsa)
+export PROJECT = avsa
 ENV_NAME ?= dev
-PROJECT_CODE = avsa
-NAMESPACE = $(PROJECT_CODE)-$(ENV_NAME)
-APP_SRC_BUCKET = $(NAMESPACE)-app
+LZ2_PROJECT = ph4uto
+TF_WORKSPACE_NAME = $(LZ2_PROJECT)-$(ENV_NAME)-$(PROJECT)
+APP_SRC_BUCKET = $(PROJECT)-$(LZ2_PROJECT)-$(ENV_NAME)-app
 TZ=America/Los_Angeles
 MAX_FILESIZE=15
 
@@ -16,17 +16,20 @@ export ENV_NAME=dev
 endif
 
 ifeq ($(ENV_NAME), dev)
-CLOUDFRONT_ID=ES6O0GJR12MDR
+CLOUDFRONT_ID=EUET6FYAYCRFC
+AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AVSA_SA_Role
 endif
 
 ifeq ($(ENV_NAME), test)
-CLOUDFRONT_ID=E2DBVSML8NK90J
+CLOUDFRONT_ID=E3TEB8F95ANOU3
+AWS_SA_ROLE_ARN=arn:aws:iam::034005029607:role/PBMMOps-BCGOV_test_Project_Role_AVSA_SA_Role
 endif
+
 
 define TFVARS_DATA
 target_env = "$(ENV_NAME)"
 tz = "$(TZ)"
-project_code = "$(PROJECT_CODE)"
+project_code = "$(PROJECT)"
 app_sources = "build/app"
 app_sources_bucket = "$(APP_SRC_BUCKET)"
 max_filesize_mb = "$(MAX_FILESIZE)"
@@ -35,9 +38,9 @@ endef
 export TFVARS_DATA
 
 define TF_BACKEND_CFG
-region="$(AWS_REGION)"
-bucket="$(NAMESPACE)-tf-state"
-dynamodb_table="$(NAMESPACE)-tf-lock"
+workspaces { name = "$(TF_WORKSPACE_NAME)" }
+hostname     = "app.terraform.io"
+organization = "bcgov"
 endef
 export TF_BACKEND_CFG
 
@@ -99,7 +102,6 @@ endif
 	@git push --force origin refs/tags/test:refs/tags/test
 
 print-env:
-	@echo NAMESPACE=$(NAMESPACE)
 	@echo AWS_SA_ROLE_ARN=$(AWS_SA_ROLE_ARN)
 	@echo
 	@echo ./$(TERRAFORM_DIR)/.auto.tfvars:
@@ -108,19 +110,13 @@ print-env:
 	@echo ./$(TERRAFORM_DIR)/backend.hcl:
 	@echo "$$TF_BACKEND_CFG"
 
-bootstrap:
-	## Set-up a S3 bucket for storing terraform state.
-	## Only needs to be run once per environment, globally.
-	terraform -chdir=$(BOOTSTRAP_ENV) init -input=false \
-		-reconfigure \
-		-backend-config='path=$(ENV_NAME).tfstate'
-	terraform -chdir=$(BOOTSTRAP_ENV) apply -auto-approve -input=false \
-		-var='namespace=$(NAMESPACE)'
-
 write-config-tf:
 	@echo "$$TFVARS_DATA" > $(TERRAFORM_DIR)/.auto.tfvars
 	@echo "$$TF_BACKEND_CFG" > $(TERRAFORM_DIR)/backend.hcl
 
+get-sa-role-arn:
+	@echo $(AWS_SA_ROLE_ARN)
+	
 init-tf: write-config-tf
 	# Initializing the terraform environment
 	@terraform -chdir=$(TERRAFORM_DIR) init -input=false \
@@ -133,6 +129,8 @@ deploy: init-tf
 
 deploy-app:
 	aws s3 sync ./terraform/build/app s3://$(APP_SRC_BUCKET) --delete
+
+deploy-app-manual: deploy-app
 	aws --region $(AWS_REGION) cloudfront create-invalidation --distribution-id $(CLOUDFRONT_ID) --paths "/*"
 
 plan: init-tf

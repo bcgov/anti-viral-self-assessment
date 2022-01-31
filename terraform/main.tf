@@ -6,32 +6,24 @@ terraform {
     }
   }
 
-  backend "s3" {
-    key     = "terraform.tfstate"
-    encrypt = true
+  backend "remote" {
+    required_version = "0.14.7"
   }
 }
 
 provider "aws" {
   region = var.region
-  default_tags {
-    tags = {
-      Environment = var.target_env
-      Project     = var.project_code
-      Author      = "FreshWorks Studio"
-    }
+  assume_role {
+    role_arn = "arn:aws:iam::${var.target_aws_account_id}:role/BCGOV_${var.target_env}_Automation_Admin_Role"
   }
 }
 
 provider "aws" {
   alias  = "us-east-1"
   region = "us-east-1"
-  default_tags {
-    tags = {
-      Environment = var.target_env
-      Project     = var.project_code
-      Author      = "FreshWorks Studio"
-    }
+
+  assume_role {
+    role_arn = "arn:aws:iam::${var.target_aws_account_id}:role/BCGOV_${var.target_env}_Automation_Admin_Role"
   }
 }
 

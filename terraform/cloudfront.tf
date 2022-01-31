@@ -42,21 +42,13 @@ resource "aws_cloudfront_function" "request" {
   code    = file("${path.module}/cloudfront/request.js")
 }
 
-
-resource "aws_s3_bucket" "app_logs" {
-  bucket = "${local.app_name}-logs"
-  acl    = "log-delivery-write"
-}
-
 resource "aws_cloudfront_distribution" "app" {
   comment = local.app_name
 
   aliases = local.has_domain ? [var.domain] : []
 
-  logging_config {
-    bucket = aws_s3_bucket.app_logs.bucket_domain_name
-  }
-
+  wait_for_deployment = false
+  
   origin {
     domain_name = aws_s3_bucket.app.bucket_regional_domain_name
     origin_id   = local.s3_origin_id
