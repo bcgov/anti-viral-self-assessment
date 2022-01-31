@@ -17,13 +17,14 @@ endif
 
 ifeq ($(ENV_NAME), dev)
 CLOUDFRONT_ID=EUET6FYAYCRFC
+AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AVSA_SA_Role
 endif
 
 ifeq ($(ENV_NAME), test)
 CLOUDFRONT_ID=E3TEB8F95ANOU3
+AWS_SA_ROLE_ARN=arn:aws:iam::034005029607:role/PBMMOps-BCGOV_test_Project_Role_AVSA_SA_Role
 endif
 
-AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AVSA_SA_Role
 
 define TFVARS_DATA
 target_env = "$(ENV_NAME)"
