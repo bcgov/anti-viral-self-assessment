@@ -28,6 +28,9 @@ jobs:
       - name: Print local env
         run: make print-env
 
+      - name: Extract other env vars
+        run: echo "AWS_SA_ROLE_ARN=$(make get-sa-role-arn)" >> $GITHUB_ENV
+
       - uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: ${{ env.TF_VERSION }}

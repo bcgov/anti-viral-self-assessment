@@ -113,6 +113,9 @@ write-config-tf:
 	@echo "$$TFVARS_DATA" > $(TERRAFORM_DIR)/.auto.tfvars
 	@echo "$$TF_BACKEND_CFG" > $(TERRAFORM_DIR)/backend.hcl
 
+get-sa-role-arn:
+	@echo $(AWS_SA_ROLE_ARN)
+	
 init-tf: write-config-tf
 	# Initializing the terraform environment
 	@terraform -chdir=$(TERRAFORM_DIR) init -input=false \
