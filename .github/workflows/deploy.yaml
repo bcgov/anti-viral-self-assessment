@@ -67,4 +67,4 @@ jobs:
         run: make deploy
 
       - name: Deploy app
-        run: make deploy-app-and-invalidate
+        run: make deploy-app
