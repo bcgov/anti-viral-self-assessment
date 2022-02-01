@@ -35,6 +35,20 @@ resource "aws_cloudfront_function" "response" {
   code    = file("${path.module}/cloudfront/response.js")
 }
 
+resource "aws_cloudfront_function" "response_immutable" {
+  name    = "${local.namespace}-cf-response-immutable"
+  runtime = "cloudfront-js-1.0"
+  comment = "Add immutable caching headers"
+  code    = file("${path.module}/cloudfront/response-immutable.js")
+}
+
+resource "aws_cloudfront_function" "response_nocache" {
+  name    = "${local.namespace}-cf-response-nocache"
+  runtime = "cloudfront-js-1.0"
+  comment = "Add no-cache caching headers"
+  code    = file("${path.module}/cloudfront/response-nocache.js")
+}
+
 resource "aws_cloudfront_function" "request" {
   name    = "${local.namespace}-cf-request"
   runtime = "cloudfront-js-1.0"
@@ -79,6 +93,11 @@ resource "aws_cloudfront_distribution" "app" {
     }
 
     function_association {
+      event_type   = "viewer-response"
+      function_arn = aws_cloudfront_function.response_nocache.arn
+    }
+
+    function_association {
       event_type   = "viewer-request"
       function_arn = aws_cloudfront_function.request.arn
     }
@@ -92,6 +111,16 @@ resource "aws_cloudfront_distribution" "app" {
     target_origin_id       = local.s3_origin_id
     cache_policy_id        = data.aws_cloudfront_cache_policy.optimized.id
     viewer_protocol_policy = "redirect-to-https"
+
+    function_association {
+      event_type   = "viewer-response"
+      function_arn = aws_cloudfront_function.response.arn
+    }
+
+    function_association {
+      event_type   = "viewer-response"
+      function_arn = aws_cloudfront_function.response_immutable.arn
+    }
   }
 
   viewer_certificate {
