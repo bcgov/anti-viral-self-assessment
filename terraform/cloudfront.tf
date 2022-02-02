@@ -77,16 +77,16 @@ resource "aws_cloudfront_distribution" "app" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
-  // Serve the root directory uncached (it has the nextjs .html files in)
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD", "OPTIONS"]
     target_origin_id       = local.s3_origin_id
-    cache_policy_id        = data.aws_cloudfront_cache_policy.disabled.id
+    cache_policy_id        = data.aws_cloudfront_cache_policy.optimized.id
     viewer_protocol_policy = "redirect-to-https"
 
     function_association {
       event_type   = "viewer-response"
+      // Serve the root directory uncached (it has the nextjs .html files in)
       function_arn = aws_cloudfront_function.response_nocache.arn
     }
 
@@ -96,7 +96,6 @@ resource "aws_cloudfront_distribution" "app" {
     }
   }
 
-  // Cache _next directory
   ordered_cache_behavior {
     path_pattern           = "/_next/*"
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
@@ -107,6 +106,7 @@ resource "aws_cloudfront_distribution" "app" {
 
     function_association {
       event_type   = "viewer-response"
+      // Cache _next directory
       function_arn = aws_cloudfront_function.response_immutable.arn
     }
   }
