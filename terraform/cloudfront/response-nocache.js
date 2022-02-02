@@ -12,6 +12,7 @@ function handler(event) {
   headers['x-content-type-options'] = { value: 'nosniff' };
   headers['x-frame-options'] = { value: 'DENY' };
   headers['x-xss-protection'] = { value: '1; mode=block' };
+  headers['cache-control'] = { value: 'no-cache, no-store, must-revalidate' };
 
   // Return the response to viewers
   return response;

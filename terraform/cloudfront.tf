@@ -27,12 +27,24 @@ resource "aws_cloudfront_origin_access_identity" "app" {
   comment = local.app_name
 }
 
-
-resource "aws_cloudfront_function" "response" {
-  name    = "${local.namespace}-cf-response"
+// TODO there is repetition in these two response javascript files for security headers.
+// Best approach would probably be imports and webpack as part of the build process
+// to generate these files. Maybe. I could also just put an "if" condition in 
+// a single file but I didn't like the idea of encoding the domain knowledge of 
+// the structure of _next apps in two places, rather than just
+// having it here in the CF origin config
+resource "aws_cloudfront_function" "response_immutable" {
+  name    = "${local.namespace}-cf-response-immutable"
   runtime = "cloudfront-js-1.0"
-  comment = "Add security headers"
-  code    = file("${path.module}/cloudfront/response.js")
+  comment = "Add security and immutable caching headers"
+  code    = file("${path.module}/cloudfront/response-immutable.js")
+}
+
+resource "aws_cloudfront_function" "response_nocache" {
+  name    = "${local.namespace}-cf-response-nocache"
+  runtime = "cloudfront-js-1.0"
+  comment = "Add security and no-cache caching headers"
+  code    = file("${path.module}/cloudfront/response-nocache.js")
 }
 
 resource "aws_cloudfront_function" "request" {
@@ -65,17 +77,17 @@ resource "aws_cloudfront_distribution" "app" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
-  // Serve the root directory uncached (it has the nextjs .html files in)
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD", "OPTIONS"]
     target_origin_id       = local.s3_origin_id
-    cache_policy_id        = data.aws_cloudfront_cache_policy.disabled.id
+    cache_policy_id        = data.aws_cloudfront_cache_policy.optimized.id
     viewer_protocol_policy = "redirect-to-https"
 
     function_association {
       event_type   = "viewer-response"
-      function_arn = aws_cloudfront_function.response.arn
+      // Serve the root directory uncached (it has the nextjs .html files in)
+      function_arn = aws_cloudfront_function.response_nocache.arn
     }
 
     function_association {
@@ -84,7 +96,6 @@ resource "aws_cloudfront_distribution" "app" {
     }
   }
 
-  // Cache _next directory
   ordered_cache_behavior {
     path_pattern           = "/_next/*"
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
@@ -92,6 +103,12 @@ resource "aws_cloudfront_distribution" "app" {
     target_origin_id       = local.s3_origin_id
     cache_policy_id        = data.aws_cloudfront_cache_policy.optimized.id
     viewer_protocol_policy = "redirect-to-https"
+
+    function_association {
+      event_type   = "viewer-response"
+      // Cache _next directory
+      function_arn = aws_cloudfront_function.response_immutable.arn
+    }
   }
 
   viewer_certificate {
