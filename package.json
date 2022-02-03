@@ -14,7 +14,7 @@
     "format-a11y-results": "echo 'Generating markdown test output' && node a11y/format_results a11y/results/results.json"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
+    "classnames": "2.3.1",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2"
