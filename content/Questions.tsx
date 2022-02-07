@@ -35,7 +35,7 @@ export const Q3Content = (
 );
 
 export const Q4Question = '4. When did your symptoms first start?';
-export const Q4Content = <></>;
+export const Q4Content = null;
 
 export const Q5Question =
   '5. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
@@ -65,10 +65,10 @@ export const Q5Content = (
 );
 
 export const Q6Question = '6. Have you had 3 doses of the vaccine?';
-export const Q6Content = <></>;
+export const Q6Content = null;
 
 export const Q7Question = 'Please indiciate which age group you belong to?';
-export const Q7Content = <></>;
+export const Q7Content = null;
 
 export const Q8Under60Question =
   'Have you been diagnosed by a health care provider with a chronic condition?';
@@ -147,7 +147,7 @@ export const Q8SeventyPlusContent = (
 );
 
 export const Q9Question = 'Do you identify as Indigenous?';
-export const Q9Content = <></>;
+export const Q9Content = null;
 
 export const Q10Content = (
   <ul>

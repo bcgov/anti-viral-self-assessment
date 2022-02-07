@@ -1,5 +1,5 @@
 export interface QuestionProps {
-  description: React.ReactElement;
+  description: React.ReactElement | null;
   question: string;
   questionKey: string;
   options: {

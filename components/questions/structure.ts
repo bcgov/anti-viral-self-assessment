@@ -7,7 +7,7 @@ export interface Steps {
 
 export interface Question {
   question: string;
-  description: React.ReactElement;
+  description: React.ReactElement | null;
   questionKey: string;
   options: { key: string; label: string }[];
   actions: {
