@@ -1,19 +1,20 @@
 export const Q1Question = '1.	Please confirm you are 12 years or older? born 2010 or earlier';
 export const Q1Description = null;
 
-export const Q2Question = '2. Have you recently tested positive for COVID-19?';
-export const Q2Description = (
-  <p>
-    For more information on types of COVID-19 tests,{' '}
+export const Q2Question = (
+  <>
+    2. Have you recently tested positive for COVID-19? For more information on types of COVID-19
+    tests,{' '}
     <a
-      className='underline'
-      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/types-of-tests'
+      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+      target='_blank'
+      rel='noreferrer'
     >
-      go to this link
+      review information from the BCCDC.
     </a>
-    .
-  </p>
+  </>
 );
+export const Q2Description = null;
 
 export const Q3Question = '3. Do you have any severe symptoms of COVID-19?';
 // TODO: UL needs to be fixed
