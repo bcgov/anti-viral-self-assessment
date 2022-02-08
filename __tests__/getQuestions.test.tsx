@@ -27,11 +27,11 @@ describe("getQuestions['1']", () => {
   });
 
   it('returns question 1', () => {
-    expect(question.question).toBe(QuestionContent.Q1Question);
+    expect(question.question).toBe(QuestionContent.Q2Question);
   });
 
   it('returns question 1 content', () => {
-    expect(question.description).toBe(QuestionContent.Q1Description);
+    expect(question.description).toBe(QuestionContent.Q2Description);
   });
 
   it('has the question key "1"', () => {
@@ -63,11 +63,11 @@ describe("getQuestions['2']", () => {
   });
 
   it('returns question 2', () => {
-    expect(question.question).toBe(QuestionContent.Q2Question);
+    expect(question.question).toBe(QuestionContent.Q3Question);
   });
 
   it('returns question 2 content', () => {
-    expect(question.description).toBe(QuestionContent.Q2Content);
+    expect(question.description).toBe(QuestionContent.Q3Content);
   });
 
   it('has the question key "2"', () => {
@@ -99,11 +99,11 @@ describe("getQuestions['3']", () => {
   });
 
   it('returns question 3', () => {
-    expect(question.question).toBe(QuestionContent.Q3Question);
+    expect(question.question).toBe(QuestionContent.Q4Question);
   });
 
   it('returns question 3 content', () => {
-    expect(question.description).toBe(QuestionContent.Q3Content);
+    expect(question.description).toBe(QuestionContent.Q4Content);
   });
 
   it('has the question key "3"', () => {
@@ -135,11 +135,11 @@ describe("getQuestions['4']", () => {
   });
 
   it('returns question 4', () => {
-    expect(question.question).toBe(QuestionContent.Q4Question);
+    expect(question.question).toBe(QuestionContent.Q5Question);
   });
 
   it('returns question 4 content', () => {
-    expect(question.description).toBe(QuestionContent.Q4Content);
+    expect(question.description).toBe(QuestionContent.Q5Content);
   });
 
   it('has the question key "4"', () => {
@@ -175,11 +175,11 @@ describe("getQuestions['5']", () => {
   });
 
   it('returns question 5', () => {
-    expect(question.question).toBe(QuestionContent.Q5Question);
+    expect(question.question).toBe(QuestionContent.Q6Question);
   });
 
   it('returns question 5 content', () => {
-    expect(question.description).toBe(QuestionContent.Q5Content);
+    expect(question.description).toBe(QuestionContent.Q6Content);
   });
 
   it('has the question key "5"', () => {
@@ -212,11 +212,11 @@ describe("getQuestions['6']", () => {
   });
 
   it('returns question 6', () => {
-    expect(question.question).toBe(QuestionContent.Q6Question);
+    expect(question.question).toBe(QuestionContent.Q7Question);
   });
 
   it('returns question 6 content', () => {
-    expect(question.description).toBe(QuestionContent.Q6Content);
+    expect(question.description).toBe(QuestionContent.Q7Content);
   });
 
   it('has the question key "6"', () => {
@@ -249,11 +249,11 @@ describe("getQuestions['7']", () => {
   });
 
   it('returns question 7', () => {
-    expect(question.question).toBe(QuestionContent.Q7Question);
+    expect(question.question).toBe(QuestionContent.Q8Question);
   });
 
   it('returns question 7 content', () => {
-    expect(question.description).toBe(QuestionContent.Q7Content);
+    expect(question.description).toBe(QuestionContent.Q8Content);
   });
 
   it('has the question key "7"', () => {
@@ -297,11 +297,11 @@ describe("getQuestions['8a']", () => {
   });
 
   it('returns question 8 under 60', () => {
-    expect(question.question).toBe(QuestionContent.Q8Under60Question);
+    expect(question.question).toBe(QuestionContent.Q9Under60Question);
   });
 
   it('returns question 8 under 60 content', () => {
-    expect(question.description).toBe(QuestionContent.Q8Under60Content);
+    expect(question.description).toBe(QuestionContent.Q9Under60Content);
   });
 
   it('has the question key "8a"', () => {
@@ -332,11 +332,11 @@ describe("getQuestions['8b']", () => {
   });
 
   it('returns question 8 under 70', () => {
-    expect(question.question).toBe(QuestionContent.Q8Under70Question);
+    expect(question.question).toBe(QuestionContent.Q9Under70Question);
   });
 
   it('returns question 8b content', () => {
-    expect(question.description).toBe(QuestionContent.Q8Under70Content);
+    expect(question.description).toBe(QuestionContent.Q9Under70Content);
   });
 
   it('has the question key "8b"', () => {
@@ -369,11 +369,11 @@ describe("getQuestions['8c']", () => {
   });
 
   it('returns question 8 70 plus', () => {
-    expect(question.question).toBe(QuestionContent.Q8SeventyPlusQuestion);
+    expect(question.question).toBe(QuestionContent.Q9SeventyPlusQuestion);
   });
 
   it('returns question 8c content', () => {
-    expect(question.description).toBe(QuestionContent.Q8SeventyPlusContent);
+    expect(question.description).toBe(QuestionContent.Q9SeventyPlusContent);
   });
 
   it('has the question key "8c"', () => {
@@ -406,11 +406,11 @@ describe("getQuestions['9b']", () => {
   });
 
   it('returns question 9', () => {
-    expect(question.question).toBe(QuestionContent.Q9Question);
+    expect(question.question).toBe(QuestionContent.Q10Question);
   });
 
   it('returns question 9 content', () => {
-    expect(question.description).toBe(QuestionContent.Q9Content);
+    expect(question.description).toBe(QuestionContent.Q10Content);
   });
 
   it('has the question key "9b"', () => {
@@ -443,11 +443,11 @@ describe("getQuestions['9c']", () => {
   });
 
   it('returns question 9', () => {
-    expect(question.question).toBe(QuestionContent.Q9Question);
+    expect(question.question).toBe(QuestionContent.Q10Question);
   });
 
   it('returns question 9 content', () => {
-    expect(question.description).toBe(QuestionContent.Q9Content);
+    expect(question.description).toBe(QuestionContent.Q10Content);
   });
 
   it('has the question key "9c"', () => {
@@ -480,11 +480,11 @@ describe("getQuestions['10b']", () => {
   });
 
   it('returns question 8 under 60', () => {
-    expect(question.question).toBe(QuestionContent.Q8Under60Question);
+    expect(question.question).toBe(QuestionContent.Q9Under60Question);
   });
 
   it('returns question 10b content', () => {
-    expect(question.description).toBe(QuestionContent.Q10Content);
+    expect(question.description).toBe(QuestionContent.Q11Content);
   });
 
   it('has the question key "10b"', () => {
