@@ -31,11 +31,21 @@ export const Q3Content = (
 export const Q4Question =
   '4. COVID-19 symptoms can range from mild to moderate. Mild and moderate symptoms are symptoms that can be managed at home. Do you have any symptoms of COVID-19?';
 export const Q4Content = (
-  <p>
-    Symptoms of COVID-19 include: Fever or chills, Cough, Loss of sense of smell or taste,
-    Difficulty breathing, Sore throat, Loss of appetite, Extreme fatigue or tiredness, Headache,
-    Body aches, Nausea or vomiting, Diarrhea.
-  </p>
+  <>
+    <p className='mb-2'>Symptoms of COVID-19 include:</p>
+    <ul>
+      <li>Fever or chills</li>
+      <li>Cough</li>
+      <li>Loss of sense of smell or taste</li>
+      <li>Sore throat</li>
+      <li>Loss of appetite</li>
+      <li>Extreme fatigue or tiredness</li>
+      <li>Headache</li>
+      <li>Body aches</li>
+      <li>Nausea or vomiting</li>
+      <li>Diarrhea</li>
+    </ul>
+  </>
 );
 
 export const Q5Question = '5. When did your symptoms first start?';
