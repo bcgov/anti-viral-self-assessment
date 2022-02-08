@@ -58,7 +58,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('2');
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitNoPositiveTest);
       },
     },
   },

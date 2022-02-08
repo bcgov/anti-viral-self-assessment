@@ -3,6 +3,7 @@ import { ServiceBCLink } from './ServiceBCLink';
 export enum EndJourneyType {
   NoBenefit,
   NoBenefitUnder12,
+  NoBenefitNoPositiveTest,
   NoBenefitExtended,
   UrgentCare,
   TooManyDays,
@@ -19,6 +20,8 @@ export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
       return <NoBenefit />;
     case EndJourneyType.NoBenefitUnder12:
       return <NoBenefitUnder12 />;
+    case EndJourneyType.NoBenefitNoPositiveTest:
+      return <NoBenefitNoPositiveTest />;
     case EndJourneyType.NoBenefitExtended:
       return <NoBenefitExtended />;
     case EndJourneyType.UrgentCare:
@@ -61,6 +64,33 @@ const NoBenefit: React.FC = () => (
         http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test
       </a>
     </p>
+  </EndOfJourneyContainer>
+);
+
+const NoBenefitNoPositiveTest: React.FC = () => (
+  <EndOfJourneyContainer>
+    <EndOfJourneyTitle>
+      Based on your answer you would likely not benefit from the available therapeutics t for
+      COVID-19 at this time.
+    </EndOfJourneyTitle>
+    <div className='flex flex-col gap-4'>
+      <p>
+        These treatments have been approved specifically for people experiencing mild to moderate
+        COVID-19 symptoms, and require a positive test. As with most medications, there can be side
+        effects if they are not used correctly.
+      </p>
+      <p>
+        If you are experiencing symptoms and are at risk of more severe disease due to personal risk
+        factors, you are encouraged to get tested. Visit the{' '}
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
+        >
+          BCCDC website for more information about COVID-19 testing.
+        </a>
+      </p>
+    </div>
   </EndOfJourneyContainer>
 );
 
