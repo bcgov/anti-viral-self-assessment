@@ -106,8 +106,8 @@ export const Q9Under60Content = (
   </ul>
 );
 
-export const Q9Under70Question = 'Do you have three or more chronic conditions?';
-export const Q9Under70Content = (
+export const ThreeOrMoreConditionsQuestion = 'Do you have three or more chronic conditions?';
+export const ThreeOrMoreConditionsQuestionContent = (
   <p>
     e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
     stroke

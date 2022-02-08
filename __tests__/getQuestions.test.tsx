@@ -367,12 +367,12 @@ describe("getQuestions['9b']", () => {
     setQuestion(questionKey);
   });
 
-  it('returns question 9 under 70', () => {
-    expect(question.question).toBe(QuestionContent.Q9Under70Question);
+  it('asks indigenous identification question', () => {
+    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
   });
 
-  it('returns question 9b content', () => {
-    expect(question.description).toBe(QuestionContent.Q9Under70Content);
+  it('has indigenous identification content', () => {
+    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
   });
 
   it('has the question key "9b"', () => {
@@ -441,12 +441,12 @@ describe("getQuestions['10b']", () => {
     setQuestion(questionKey);
   });
 
-  it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
+  it('asks three or more conditions question', () => {
+    expect(question.question).toBe(QuestionContent.ThreeOrMoreConditionsQuestion);
   });
 
-  it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
+  it('has three or more conditions content', () => {
+    expect(question.description).toBe(QuestionContent.ThreeOrMoreConditionsQuestionContent);
   });
 
   it('has the question key "10b"', () => {

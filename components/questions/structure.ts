@@ -199,8 +199,8 @@ export const getQuestions: ({
     },
   },
   '9b': {
-    question: QuestionContent.Q9Under70Question,
-    description: QuestionContent.Q9Under70Content,
+    question: QuestionContent.IndigenousQuestion,
+    description: QuestionContent.IndigenousQuestionContent,
     questionKey: '9b',
     options: [
       { key: 'yes', label: 'Yes' },
@@ -237,8 +237,8 @@ export const getQuestions: ({
     },
   },
   '10b': {
-    question: QuestionContent.Q10Question,
-    description: QuestionContent.Q10Content,
+    question: QuestionContent.ThreeOrMoreConditionsQuestion,
+    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
     questionKey: '10b',
     options: [
       { key: 'yes', label: 'Yes' },
@@ -256,8 +256,8 @@ export const getQuestions: ({
     },
   },
   '10c': {
-    question: QuestionContent.Q10Question,
-    description: QuestionContent.Q10Content,
+    question: QuestionContent.IndigenousQuestion,
+    description: QuestionContent.IndigenousQuestionContent,
     questionKey: '10c',
     options: [
       { key: 'yes', label: 'Yes' },
