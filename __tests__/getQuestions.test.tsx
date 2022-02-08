@@ -405,11 +405,11 @@ describe("getQuestions['9c']", () => {
   });
 
   it('returns question 9 70 plus', () => {
-    expect(question.question).toBe(QuestionContent.Q9SeventyPlusQuestion);
+    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
   });
 
   it('returns question 9c content', () => {
-    expect(question.description).toBe(QuestionContent.Q9SeventyPlusContent);
+    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
   });
 
   it('has the question key "9c"', () => {
@@ -479,11 +479,11 @@ describe("getQuestions['10c']", () => {
   });
 
   it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
+    expect(question.question).toBe(QuestionContent.OneOrMoreConditionsQuestion);
   });
 
   it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
+    expect(question.description).toBe(QuestionContent.OneOrMoreConditionsQuestionContent);
   });
 
   it('has the question key "10c"', () => {
