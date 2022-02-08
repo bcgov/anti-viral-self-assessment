@@ -1,3 +1,6 @@
+export const Q1Question = '1.	Please confirm you are 12 years or older? born 2010 or earlier';
+export const Q1Description = null;
+
 export const Q2Question = '2. Have you recently tested positive for COVID-19?';
 export const Q2Description = (
   <p>

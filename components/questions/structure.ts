@@ -24,6 +24,25 @@ export const getQuestions: ({
   setToStep: (step: string) => void;
   setJourneyEnd: (journeyEnd: EndJourneyType | null) => void;
 }) => Questions = ({ setToStep, setJourneyEnd }) => ({
+  1: {
+    question: QuestionContent.Q1Question,
+    description: QuestionContent.Q1Description,
+    questionKey: '1',
+    options: [
+      { key: 'yes', label: 'Yes' },
+      { key: 'no', label: 'No' },
+    ],
+    actions: {
+      yes: () => {
+        setJourneyEnd(null);
+        setToStep('2');
+      },
+      no: () => {
+        setToStep('1');
+        setJourneyEnd(EndJourneyType.NoBenefit);
+      },
+    },
+  },
   2: {
     question: QuestionContent.Q2Question,
     description: QuestionContent.Q2Description,

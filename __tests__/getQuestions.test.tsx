@@ -21,6 +21,42 @@ const setQuestion = (key: string) => {
   })[key];
 };
 
+describe("getQuestions['1']", () => {
+  beforeEach(() => {
+    setQuestion('1');
+  });
+
+  it('returns question 1', () => {
+    expect(question.question).toBe(QuestionContent.Q1Question);
+  });
+
+  it('returns question 1 content', () => {
+    expect(question.description).toBe(QuestionContent.Q1Description);
+  });
+
+  it('has the question key "1"', () => {
+    expect(question.questionKey).toBe('1');
+  });
+
+  it('to have options for yes and no', () => {
+    expect(question.options).toStrictEqual(yesNoOptions);
+  });
+
+  it('has an action "yes" that sets step to 2 with no end journey', () => {
+    question.actions.yes();
+
+    expect(mockSetToStep).toHaveBeenCalledWith('2');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
+  });
+
+  it('has an action "no" that sets step to 1 and journey end to "NoBenefit"', () => {
+    question.actions.no();
+
+    expect(mockSetToStep).toHaveBeenCalledWith('1');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+  });
+});
+
 describe("getQuestions['2']", () => {
   beforeEach(() => {
     setQuestion('2');

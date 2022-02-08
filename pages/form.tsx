@@ -10,7 +10,7 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
   const [journeyEnd, setJourneyEnd] = useState<EndJourneyType | null>(null);
   const [step, setStep] = useState<Steps>(
     initialSteps || {
-      2: true,
+      1: true,
     }
   );
 
