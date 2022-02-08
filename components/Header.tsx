@@ -14,7 +14,7 @@ export const Header = () => {
           </a>
         </Link>
         <h1 className='md:ml-5 md:pl-5 pl-2 md:py-2 font-semibold tracking-wider text-white border-l-2 border-bcYellowPrimary lg:text-2xl sm:text-lg text-sm focus:outline-none'>
-          Self Screening Tool
+          Self-Screening Questionnaire
         </h1>
       </div>
     </header>
