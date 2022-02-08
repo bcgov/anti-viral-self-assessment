@@ -149,8 +149,8 @@ export const Q9SeventyPlusContent = (
   </div>
 );
 
-export const Q10Question = 'Do you identify as Indigenous?';
-export const Q10Content = null;
+export const IndigenousQuestion = 'Do you identify as Indigenous?';
+export const IndigenousQuestionContent = null;
 
 export const Q11Content = (
   <ul>

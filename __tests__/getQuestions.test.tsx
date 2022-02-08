@@ -442,11 +442,11 @@ describe("getQuestions['10b']", () => {
   });
 
   it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.Q10Question);
+    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
   });
 
   it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.Q10Content);
+    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
   });
 
   it('has the question key "10b"', () => {
@@ -479,11 +479,11 @@ describe("getQuestions['10c']", () => {
   });
 
   it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.Q10Question);
+    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
   });
 
   it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.Q10Content);
+    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
   });
 
   it('has the question key "10c"', () => {
