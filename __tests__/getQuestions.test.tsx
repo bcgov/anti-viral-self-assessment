@@ -53,7 +53,7 @@ describe("getQuestions['1']", () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('1');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitUnder12);
   });
 });
 
