@@ -232,7 +232,7 @@ const TooManyDays: React.FC = () => (
 
 const AntiviralBenefit: React.FC = () => (
   <EndOfJourneyContainer>
-    <EndOfJourneyTitle>You may benefit from treatment.</EndOfJourneyTitle>
+    <EndOfJourneyTitle>You may benefit from COVID19 treatment.</EndOfJourneyTitle>
     <p>
       Please call Service BC at <ServiceBCLink /> immediately so they can start the assessment
       process. Tell them you are calling about antiviral treatment options and that you have
