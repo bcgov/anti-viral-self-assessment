@@ -192,26 +192,25 @@ const UrgentCare: React.FC = () => (
 const TooManyDays: React.FC = () => (
   <EndOfJourneyContainer>
     <p className='mb-4'>
-      In order to be effective,the antiviral treatments that are currently available need to be
-      given within the first 5-7 days of symptom onset. Stay home and away from others until you
-      feel well enough to return to your regular activities. You should continue to seek medical
-      care if you feel you need it. For more information, go to{' '}
+      Stay home and away from others until you feel well enough to return to your regular
+      activities. You should continue to seek medical care if you feel you need it. For more
+      information,{' '}
       <a
         className='font-bold'
-        href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+        href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
         target='_blank'
         rel='noreferrer'
       >
-        http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19
+        visit the BCCDC website
       </a>
     </p>
     <p>
       For patients who are immunocompromised and have been identified as Clinically Extremely
-      Vulnerable (those who received a letter from Dr. Bonnie Henry notifying you of your CEV
-      status)there may be some cases where this timeframe is extended up to 10 days. This would be
-      reviewed on a case by case basis.{' '}
+      Vulnerable (you received a letter from Dr. Bonnie Henry notifying you of your CEV status),
+      this timeframe may be extended up to 10 days. This is reviewed on a case-by-case basis.{' '}
       <strong>
-        If you fit into this group, please call ServiceBC so they can start the assessment process.
+        If you are Clinically Extremely Vulnerable, please call Service BC at <ServiceBCLink /> so
+        they can start the assessment process.
       </strong>
     </p>
   </EndOfJourneyContainer>

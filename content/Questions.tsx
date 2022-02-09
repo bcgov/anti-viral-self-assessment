@@ -17,7 +17,6 @@ export const Q2Question = (
 export const Q2Description = null;
 
 export const Q3Question = '3. Do you have any severe symptoms of COVID-19?';
-// TODO: UL needs to be fixed
 export const Q3Content = (
   <ul>
     <li>Find it hard to breath</li>
