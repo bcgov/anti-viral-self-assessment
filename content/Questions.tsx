@@ -6,7 +6,7 @@ export const Q2Question = (
     2. Have you recently tested positive for COVID-19? For more information on types of COVID-19
     tests,{' '}
     <a
-      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/types-of-tests'
       target='_blank'
       rel='noreferrer'
     >
@@ -95,7 +95,7 @@ export const Q9Under60Content = (
       hypertension; severe pulmonary fibrosis/interstitial lungdisease
     </li>
     <li>
-      Diagnosed with a rare blood disorder:: urea cycle defects; methylmalonic aciduria; propionic
+      Diagnosed with a rare blood disorder: urea cycle defects; methylmalonic aciduria; propionic
       aciduria; glutaric aciduria; maple syrup urine disease
     </li>
     <li>Have had a splenectomy (removal of your spleen) </li>
@@ -141,7 +141,7 @@ export const OneOrMoreConditionsQuestionContent = (
         hypertension; severe pulmonary fibrosis/interstitial lungdisease
       </li>
       <li>
-        Diagnosed with a rare blood disorder:: urea cycle defects; methylmalonic aciduria; propionic
+        Diagnosed with a rare blood disorder: urea cycle defects; methylmalonic aciduria; propionic
         aciduria; glutaric aciduria; maple syrup urine disease
       </li>
       <li>Have had a splenectomy (removal of your spleen) </li>
@@ -172,7 +172,7 @@ export const Q11Content = (
       hypertension; severe pulmonary fibrosis/interstitial lungdisease
     </li>
     <li>
-      Diagnosed with a rare blood disorder:: urea cycle defects; methylmalonic aciduria; propionic
+      Diagnosed with a rare blood disorder: urea cycle defects; methylmalonic aciduria; propionic
       aciduria; glutaric aciduria; maple syrup urine disease
     </li>
     <li>Have had a splenectomy (removal of your spleen) </li>

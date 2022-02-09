@@ -73,8 +73,8 @@ const NoBenefit: React.FC = () => (
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics t for
-      COVID-19 at this time.
+      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      at this time.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
@@ -106,7 +106,14 @@ const NoBenefitUnder12: React.FC = () => (
     <div className='flex flex-col gap-4'>
       <p>
         You should continue to seek medical care if you feel you need it. For more information,
-        visit the BCCDC website.
+        visit the
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+        >
+          BCCDC website.
+        </a>
       </p>
     </div>
   </EndOfJourneyContainer>
@@ -128,7 +135,7 @@ const NoBenefitNoSymptoms: React.FC = () => (
       <p>
         If you start to experience symptoms and are at risk of developing more severe disease due to
         personal risk factors, you should re-visit this screening tool or call Service BC at
-        1-888-COVID19. Visit the{' '}
+        <ServiceBCLink />. Visit the{' '}
         <a
           target='_blank'
           rel='noreferrer'
