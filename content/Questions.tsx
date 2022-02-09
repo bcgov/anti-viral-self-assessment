@@ -114,8 +114,8 @@ export const ThreeOrMoreConditionsQuestionContent = (
   </p>
 );
 
-export const Q9SeventyPlusQuestion = 'Do you have one or more chronic conditions?';
-export const Q9SeventyPlusContent = (
+export const OneOrMoreConditionsQuestion = 'Do you have one or more chronic conditions?';
+export const OneOrMoreConditionsQuestionContent = (
   <div>
     <p>
       e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous

@@ -218,8 +218,8 @@ export const getQuestions: ({
     },
   },
   '9c': {
-    question: QuestionContent.Q9SeventyPlusQuestion,
-    description: QuestionContent.Q9SeventyPlusContent,
+    question: QuestionContent.IndigenousQuestion,
+    description: QuestionContent.IndigenousQuestionContent,
     questionKey: '9c',
     options: [
       { key: 'yes', label: 'Yes' },
@@ -256,8 +256,8 @@ export const getQuestions: ({
     },
   },
   '10c': {
-    question: QuestionContent.IndigenousQuestion,
-    description: QuestionContent.IndigenousQuestionContent,
+    question: QuestionContent.OneOrMoreConditionsQuestion,
+    description: QuestionContent.OneOrMoreConditionsQuestionContent,
     questionKey: '10c',
     options: [
       { key: 'yes', label: 'Yes' },
