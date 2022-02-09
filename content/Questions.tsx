@@ -106,16 +106,16 @@ export const Q9Under60Content = (
   </ul>
 );
 
-export const Q9Under70Question = 'Do you have three or more chronic conditions?';
-export const Q9Under70Content = (
+export const ThreeOrMoreConditionsQuestion = 'Do you have three or more chronic conditions?';
+export const ThreeOrMoreConditionsQuestionContent = (
   <p>
     e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
     stroke
   </p>
 );
 
-export const Q9SeventyPlusQuestion = 'Do you have one or more chronic conditions?';
-export const Q9SeventyPlusContent = (
+export const OneOrMoreConditionsQuestion = 'Do you have one or more chronic conditions?';
+export const OneOrMoreConditionsQuestionContent = (
   <div>
     <p>
       e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
@@ -149,8 +149,8 @@ export const Q9SeventyPlusContent = (
   </div>
 );
 
-export const Q10Question = 'Do you identify as Indigenous?';
-export const Q10Content = null;
+export const IndigenousQuestion = 'Do you identify as Indigenous?';
+export const IndigenousQuestionContent = null;
 
 export const Q11Content = (
   <ul>
