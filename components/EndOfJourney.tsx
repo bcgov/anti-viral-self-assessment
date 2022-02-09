@@ -144,40 +144,47 @@ const NoBenefitNoSymptoms: React.FC = () => (
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answers you would likely not benefit from antivirals for COVID-19 at this time.
+      Based on your answers you would likely not benefit from the available therapeutics for
+      COVID-19 at this time.
     </EndOfJourneyTitle>
-    <div className='flex flex-col gap-4'>
-      <p>
-        These treatments are currently being recommended for individuals who are identified as being
-        at increased risk for needing to go to the hospital for COVID-19.
-      </p>
-      <p>This includes:</p>
-      <ul>
-        <li>those who are immunocompromised</li>
-        <li>
-          those who are unvaccinated or partially vaccinated and over 60 with three or more chronic
-          conditions or who are Indigenous
-        </li>
-        <li>
-          those who are unvaccinated or partially vaccinated 70 years and over with one or more
-          chronic condition. Examples of chronic conditions: diabetes, COPD, chronic kidney disease,
-          or heart disease.
-        </li>
-      </ul>
-      <p>
-        You should continue to seek medical care if you feel you need it. For more information, go
-        to{' '}
-        <a
-          aria-label='bc cdc when to get a covid test'
-          className='font-bold'
-          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
-          target='_blank'
-          rel='noreferrer'
-        >
-          http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19
-        </a>
-      </p>
-    </div>
+    <p>
+      These treatments are currently being recommended for individuals who are identified as being
+      at increased risk of hospitalization for COVID-19.
+    </p>
+    <p className='mb-2'>This includes people who are:</p>
+    <ul>
+      <li>Immunocompromised</li>
+      <li>
+        Unvaccinated or partially vaccinated, over age 60 and have three or more chronic conditions
+      </li>
+      <li>Indigenous people who are unvaccinated or partially vaccinated and over age 60</li>
+      <li>
+        <div>
+          <p>
+            Unvaccinated or partially vaccinated, 70 years and over with one or more chronic
+            condition.
+          </p>
+          <p className='mb-2'>Examples of chronic conditions include:</p>
+          <ul>
+            <li>Diabetes</li>
+            <li>COPD</li>
+            <li>Chronic kidney disease</li>
+            <li>Heart disease</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <p>
+      You should continue to seek medical care if you feel you need it. For more information, visit
+      the{' '}
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+      >
+        BCCDC website.
+      </a>
+    </p>
   </EndOfJourneyContainer>
 );
 
