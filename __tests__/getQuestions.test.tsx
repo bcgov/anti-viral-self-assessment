@@ -161,7 +161,7 @@ describe("getQuestions['4']", () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('4');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitNoSymptoms);
   });
 });
 
