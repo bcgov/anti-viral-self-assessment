@@ -83,8 +83,7 @@ export const Q7Content = null;
 export const Q8Question = 'Please indiciate which age group you belong to?';
 export const Q8Content = null;
 
-export const Q9Under60Question =
-  'Have you been diagnosed by a health care provider with a chronic condition?';
+export const Q9Under60Question = 'Do you have any of the following conditions?';
 export const Q9Under60Content = (
   <ul>
     <li>Cystic fibrosis</li>
