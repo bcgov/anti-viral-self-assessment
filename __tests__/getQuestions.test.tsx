@@ -49,7 +49,7 @@ describe("getQuestions['1']", () => {
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 
-  it('has an action "no" that sets step to 1 and journey end to "NoBenefit"', () => {
+  it('has an action "no" that sets step to 1 and journey end to "NoBenefitUnder12"', () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('1');
@@ -157,7 +157,7 @@ describe("getQuestions['4']", () => {
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 
-  it('has an action "no" that sets journey end to "NoBenefit"', () => {
+  it('has an action "no" that sets journey end to "NoBenefitNoSymptoms"', () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('4');
@@ -354,7 +354,7 @@ describe("getQuestions['9a']", () => {
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 
-  it('has an action "no" that sets journey end to "NoBenefit"', () => {
+  it('has an action "no" that sets journey end to "NoBenefitExtended"', () => {
     question.actions.no();
 
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);

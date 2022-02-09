@@ -1,7 +1,6 @@
 import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
-  NoBenefit,
   NoBenefitUnder12,
   NoBenefitNoPositiveTest,
   NoBenefitNoSymptoms,
@@ -17,8 +16,6 @@ interface EndOfJourneyProps {
 
 export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
-    case EndJourneyType.NoBenefit:
-      return <NoBenefit />;
     case EndJourneyType.NoBenefitUnder12:
       return <NoBenefitUnder12 />;
     case EndJourneyType.NoBenefitNoPositiveTest:
@@ -45,30 +42,6 @@ const EndOfJourneyContainer: React.FC = ({ children }) => {
 const EndOfJourneyTitle: React.FC = ({ children }) => {
   return <p className='text-bcBlueLink font-bold mb-2'>{children}</p>;
 };
-
-const NoBenefit: React.FC = () => (
-  <EndOfJourneyContainer>
-    <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from antivirals for COVID-19 at this time.
-    </EndOfJourneyTitle>
-    <p>
-      These medications have been approved specifically for people experiencing mild-moderate
-      COVID-19 symptoms and require a positive test to be confirmed. As with most medications, there
-      can be side effects when they are not used for their intended purpose. If you are experiencing
-      symptoms and are at risk of more severe disease due to personal risk factors, you are
-      encouraged to get tested. For more information, go to{' '}
-      <a
-        aria-label='bc cdc when to get a covid test'
-        className='font-bold'
-        href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
-        target='_blank'
-        rel='noreferrer'
-      >
-        http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test
-      </a>
-    </p>
-  </EndOfJourneyContainer>
-);
 
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
