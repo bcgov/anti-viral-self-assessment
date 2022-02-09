@@ -17,69 +17,75 @@ const ActionButton: React.FC<{ href: string }> = ({ href, children }) => {
 export default function Home() {
   return (
     <div className='w-full'>
-      <h1 className='text-4xl font-bold text-bcBluePrimary leading-relaxed'>Self Screening Tool</h1>
+      <h1 className='text-4xl font-bold text-bcBluePrimary leading-relaxed'>
+        Self-Screening Questionnaire
+      </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>
-          Treatment is available for some people who have tested positive for COVID-19. These
-          treatments have been approved for use in Canada to prevent worsening symptoms in
-          vulnerable patients. They have been shown to prevent COVID-19 from progressing in high
-          risk patients with mild to moderate symptoms, if taken within 5 to 7 days of symptom
-          onset. They are not used to prevent COVID-19, before or after an exposure. There are
-          important considerations, such as medication interactions,that may limit their use for
-          some people.
-        </p>
+        <p>This guidance is based on known evidence as of January 25, 2022</p>
 
-        <p>
-          Public health and a clinical care advisory team are working to identify where the
-          treatments can be used most effectively and will update this information if there are any
-          changes. These treatments are currently being recommended for individuals who are
-          identified as being at increased risk for needing to go to the hospital for COVID-19.
-        </p>
+        <div>
+          <p>
+            COVID therapeutics are currently available in B.C. and may benefit some people who have
+            tested positive for COVID-19.
+          </p>
+          <p>
+            They have been shown to prevent COVID-19 from getting worse in high-risk patients with
+            mild to moderate symptoms, if taken within 5 to 7 days of symptoms starting.
+          </p>
+        </div>
 
-        <p>This includes:</p>
+        <div>
+          <p>
+            These treatments do not prevent COVID-19, before or after an exposure. Important safety
+            considerations, like how they interact with other medications, may limit their use for
+            some people.
+          </p>
+          <p>
+            Currently, these treatments are recommended for people who are identified as having an
+            increased risk for needing to go to the hospital for COVID-19.
+          </p>
+        </div>
 
+        <p>This includes people who are:</p>
         <ul>
-          <li>those who are immunocompromised</li>
+          <li>Immunocompromised</li>
           <li>
-            those who are unvaccinated or partially vaccinated and over 60 with three or more
-            chronic conditions or who are Indigenous
+            Unvaccinated or partially vaccinated, over age 60 and have three or more chronic
+            conditions{' '}
           </li>
+          <li>Indigenous people who are unvaccinated or partially vaccinated and over age 60</li>
           <li>
-            <div className='flex-flex-col'>
-              <p>
-                those who are unvaccinated or partially vaccinated 70 years and overwith one or more
-                chronic condition.
-              </p>
-              <p>
-                Examples of chronic conditions: diabetes, COPD, chronic kidney disease, or heart
-                disease.
-              </p>
+            <div>
+              Unvaccinated or partially vaccinated, 70 years and over with one or more chronic
+              condition. Examples of chronic conditions include:
+              <ul>
+                <li>Diabetes</li>
+                <li>COPD</li>
+                <li>Chronic kidney disease</li>
+                <li>Heart disease</li>
+              </ul>
             </div>
           </li>
         </ul>
 
-        <p className='text-bcBlueLink font-bold'>
-          The following set of questions will help to determine if you might benefit from an
-          anti-viral treatment.
-        </p>
-
+        <p className='text-bcBlueAccent font-bold'>Find out if you might benefit from treatment.</p>
         <p>
-          Please consider and answer each question carefully. Your responses will help to determine
-          if it would be safe for you to receive an anti-viral treatment for COVID-19. If it looks
-          like you might benefit from the treatment you will be directed to call ServiceBC so
-          thatthey can startthe assessment process. They will take the time to review these
-          questions in more detail with you, and may support your connection to a healthcare team
-          who can access your medication and health information, seek more information, and make
+          Answer each question carefully. Your responses will help to determine if it would be safe
+          for you to receive treatment for COVID-19.
+        </p>
+        <p>
+          If it looks like you might benefit from the treatment, you will be directed to call
+          Service BC at 1-888-COVID19 for further assessment. They will review these questions in
+          more detail with you, and may connect you to a healthcare team who can access your
+          medication and health information. The healthcare team will seek more information and make
           decisions based on their clinical assessment.
         </p>
+        <InfoBox>
+          If you are unable to fill out the questionnaire online and need help to complete it over
+          the phone, please call Service BC at <ServiceBCLink />.
+        </InfoBox>
       </div>
-
-      <InfoBox>
-        If for any reason you are unable to fill out the questionnaire online and would like to
-        complete it over the phone with support, please call ServiceBC at <ServiceBCLink /> and
-        someone can assist you.
-      </InfoBox>
 
       <div className='pt-6 flex justify-center items-center w-full'>
         <ActionButton href='/form'>Start</ActionButton>
