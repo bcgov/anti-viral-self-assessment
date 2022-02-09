@@ -6,7 +6,7 @@ export const Q2Question = (
     2. Have you recently tested positive for COVID-19? For more information on types of COVID-19
     tests,{' '}
     <a
-      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+      href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/types-of-tests'
       target='_blank'
       rel='noreferrer'
     >
