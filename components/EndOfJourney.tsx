@@ -178,6 +178,10 @@ const UrgentCare: React.FC = () => (
 
 const TooManyDays: React.FC = () => (
   <EndOfJourneyContainer>
+    <p>
+      To be effective, the COVID-19 therapeutics that are currently available must be taken within
+      the first 5 to 7 days of symptoms starting.
+    </p>
     <p className='mb-4'>
       Stay home and away from others until you feel well enough to return to your regular
       activities. You should continue to seek medical care if you feel you need it. For more
@@ -208,9 +212,9 @@ const AntiviralBenefit: React.FC = () => (
     <EndOfJourneyTitle>You may benefit from COVID19 treatment.</EndOfJourneyTitle>
     <p>
       Please call Service BC at <ServiceBCLink /> immediately so they can start the assessment
-      process. Tell them you are calling about antiviral treatment options and that you have
-      completed the online screener. There is a short window of time to deliver these medications,
-      so please call right away.
+      process. Tell them you are calling about COVID19 treatment options and that you have completed
+      the online screener. There is a short window of time to deliver these medications, so please
+      call right away.
     </p>
   </EndOfJourneyContainer>
 );
