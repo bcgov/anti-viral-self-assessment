@@ -73,8 +73,8 @@ const NoBenefit: React.FC = () => (
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics t for
-      COVID-19 at this time.
+      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      at this time.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
