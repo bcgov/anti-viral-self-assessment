@@ -106,7 +106,14 @@ const NoBenefitUnder12: React.FC = () => (
     <div className='flex flex-col gap-4'>
       <p>
         You should continue to seek medical care if you feel you need it. For more information,
-        visit the BCCDC website.
+        visit the
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19'
+        >
+          BCCDC website.
+        </a>
       </p>
     </div>
   </EndOfJourneyContainer>
