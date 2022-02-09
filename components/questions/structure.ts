@@ -162,9 +162,9 @@ export const getQuestions: ({
     description: QuestionContent.Q8Content,
     questionKey: '8',
     options: [
-      { key: 'under60', label: 'Less than 60 years' },
-      { key: 'under70', label: '60-70 years' },
-      { key: 'over70', label: 'Aged 70 or over' },
+      { key: 'under60', label: "I'm 59 years or younger (born 2010-1963)" },
+      { key: 'under70', label: "I'm 60 to 69 years old (born-1962-1953)" },
+      { key: 'over70', label: "I'm 70 years or older (born on or before 1952)" },
     ],
     actions: {
       under60: () => {
