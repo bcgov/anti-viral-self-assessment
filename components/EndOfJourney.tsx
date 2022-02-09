@@ -2,6 +2,7 @@ import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
   NoBenefit,
+  NoBenefitUnder12,
   NoBenefitExtended,
   UrgentCare,
   TooManyDays,
@@ -16,6 +17,8 @@ export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
     case EndJourneyType.NoBenefit:
       return <NoBenefit />;
+    case EndJourneyType.NoBenefitUnder12:
+      return <NoBenefitUnder12 />;
     case EndJourneyType.NoBenefitExtended:
       return <NoBenefitExtended />;
     case EndJourneyType.UrgentCare:
@@ -58,6 +61,21 @@ const NoBenefit: React.FC = () => (
         http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test
       </a>
     </p>
+  </EndOfJourneyContainer>
+);
+
+const NoBenefitUnder12: React.FC = () => (
+  <EndOfJourneyContainer>
+    <EndOfJourneyTitle>
+      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      at this time. These treatments have only been approved for ages 12 years and older.{' '}
+    </EndOfJourneyTitle>
+    <div className='flex flex-col gap-4'>
+      <p>
+        You should continue to seek medical care if you feel you need it. For more information,
+        visit the BCCDC website.
+      </p>
+    </div>
   </EndOfJourneyContainer>
 );
 

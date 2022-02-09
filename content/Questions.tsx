@@ -1,5 +1,8 @@
-export const Q1Question = '1. Have you recently tested positive for COVID-19?';
-export const Q1Description = (
+export const Q1Question = '1.	Please confirm you are 12 years or older? born 2010 or earlier';
+export const Q1Description = null;
+
+export const Q2Question = '2. Have you recently tested positive for COVID-19?';
+export const Q2Description = (
   <p>
     For more information on types of COVID-19 tests,{' '}
     <a
@@ -12,9 +15,9 @@ export const Q1Description = (
   </p>
 );
 
-export const Q2Question = '2. Do you have any severe symptoms of COVID-19?';
+export const Q3Question = '3. Do you have any severe symptoms of COVID-19?';
 // TODO: UL needs to be fixed
-export const Q2Content = (
+export const Q3Content = (
   <ul>
     <li>Find it hard to breath</li>
     <li>Have chest pain</li>
@@ -24,9 +27,9 @@ export const Q2Content = (
   </ul>
 );
 
-export const Q3Question =
-  '3. COVID-19 symptoms can range from mild to moderate. Mild and moderate symptoms are symptoms that can be managed at home. Do you have any symptoms of COVID-19?';
-export const Q3Content = (
+export const Q4Question =
+  '4. COVID-19 symptoms can range from mild to moderate. Mild and moderate symptoms are symptoms that can be managed at home. Do you have any symptoms of COVID-19?';
+export const Q4Content = (
   <p>
     Symptoms of COVID-19 include: Fever or chills, Cough, Loss of sense of smell or taste,
     Difficulty breathing, Sore throat, Loss of appetite, Extreme fatigue or tiredness, Headache,
@@ -34,12 +37,12 @@ export const Q3Content = (
   </p>
 );
 
-export const Q4Question = '4. When did your symptoms first start?';
-export const Q4Content = <></>;
+export const Q5Question = '5. When did your symptoms first start?';
+export const Q5Content = null;
 
-export const Q5Question =
-  '5. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
-export const Q5Content = (
+export const Q6Question =
+  '6. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
+export const Q6Content = (
   <ul>
     <li>
       Have received a solid organ transplant and are taking immunosuppressive (anti-rejection)
@@ -64,15 +67,15 @@ export const Q5Content = (
   </ul>
 );
 
-export const Q6Question = '6. Have you had 3 doses of the vaccine?';
-export const Q6Content = <></>;
+export const Q7Question = '7. Have you had 3 doses of the vaccine?';
+export const Q7Content = null;
 
-export const Q7Question = 'Please indiciate which age group you belong to?';
-export const Q7Content = <></>;
+export const Q8Question = 'Please indiciate which age group you belong to?';
+export const Q8Content = null;
 
-export const Q8Under60Question =
+export const Q9Under60Question =
   'Have you been diagnosed by a health care provider with a chronic condition?';
-export const Q8Under60Content = (
+export const Q9Under60Content = (
   <ul>
     <li>Cystic fibrosis</li>
     <li>Severe COPD or asthma requiring hospitalization in the last year</li>
@@ -103,16 +106,16 @@ export const Q8Under60Content = (
   </ul>
 );
 
-export const Q8Under70Question = 'Do you have three or more chronic conditions?';
-export const Q8Under70Content = (
+export const Q9Under70Question = 'Do you have three or more chronic conditions?';
+export const Q9Under70Content = (
   <p>
     e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
     stroke
   </p>
 );
 
-export const Q8SeventyPlusQuestion = 'Do you have one or more chronic conditions?';
-export const Q8SeventyPlusContent = (
+export const Q9SeventyPlusQuestion = 'Do you have one or more chronic conditions?';
+export const Q9SeventyPlusContent = (
   <div>
     <p>
       e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
@@ -146,10 +149,10 @@ export const Q8SeventyPlusContent = (
   </div>
 );
 
-export const Q9Question = 'Do you identify as Indigenous?';
-export const Q9Content = <></>;
+export const Q10Question = 'Do you identify as Indigenous?';
+export const Q10Content = null;
 
-export const Q10Content = (
+export const Q11Content = (
   <ul>
     <li>Cystic fibrosis</li>
     <li>Severe COPD or asthma requiring hospitalization in the last year</li>

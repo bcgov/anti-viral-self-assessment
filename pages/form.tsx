@@ -23,7 +23,7 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
       const stepsTaken = stepStrings.slice(0, index + 1);
       // For the last 3 steps, we should only include matching branches
       let branch: string | null = null;
-      if (newStep.includes('8') || newStep.includes('9') || newStep.includes('10')) {
+      if (newStep.includes('9') || newStep.includes('10') || newStep.includes('11')) {
         branch = newStep.slice(-1); // a, b, or c
       }
       const steps = stepsTaken.reduce(
