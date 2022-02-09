@@ -128,7 +128,7 @@ const NoBenefitNoSymptoms: React.FC = () => (
       <p>
         If you start to experience symptoms and are at risk of developing more severe disease due to
         personal risk factors, you should re-visit this screening tool or call Service BC at
-        1-888-COVID19. Visit the{' '}
+        <ServiceBCLink />. Visit the{' '}
         <a
           target='_blank'
           rel='noreferrer'
