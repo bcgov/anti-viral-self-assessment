@@ -1,6 +1,6 @@
 export interface QuestionProps {
   description: React.ReactElement | null;
-  question: string;
+  question: React.ReactElement | string;
   questionKey: string;
   options: {
     key: string;

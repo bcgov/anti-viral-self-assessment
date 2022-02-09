@@ -85,11 +85,11 @@ describe("getQuestions['2']", () => {
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 
-  it('has an action "no" that sets step to 2 and journey end to "NoBenefit"', () => {
+  it('has an action "no" that sets step to 2 and journey end to "NoBenefitNoPositiveTest"', () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('2');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitNoPositiveTest);
   });
 });
 

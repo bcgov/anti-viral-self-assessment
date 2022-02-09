@@ -6,7 +6,7 @@ export interface Steps {
 }
 
 export interface Question {
-  question: string;
+  question: React.ReactElement | string;
   description: React.ReactElement | null;
   questionKey: string;
   options: { key: string; label: string }[];
@@ -58,7 +58,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('2');
-        setJourneyEnd(EndJourneyType.NoBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitNoPositiveTest);
       },
     },
   },
