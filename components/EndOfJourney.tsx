@@ -200,12 +200,12 @@ const TooManyDays: React.FC = () => (
 
 const AntiviralBenefit: React.FC = () => (
   <EndOfJourneyContainer>
-    <EndOfJourneyTitle>You may benefit from COVID19 treatment.</EndOfJourneyTitle>
+    <EndOfJourneyTitle>You may benefit from COVID-19 treatment.</EndOfJourneyTitle>
     <p>
-      Please call Service BC at <ServiceBCLink /> immediately so they can start the assessment
-      process. Tell them you are calling about COVID19 treatment options and that you have completed
-      the online screener. There is a short window of time to deliver these medications, so please
-      call right away.
+      Please call Service BC at <ServiceBCLink /> immediately so they can continue the assessment
+      process. Tell them you are calling about COVID-19 treatment options and that you have
+      completed the online screener. There is a short window of time to deliver these medications,
+      so please call right away.
     </p>
   </EndOfJourneyContainer>
 );
