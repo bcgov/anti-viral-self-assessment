@@ -80,7 +80,7 @@ export const Q6Content = (
 export const Q7Question = '7. Have you had 3 doses of the vaccine?';
 export const Q7Content = null;
 
-export const Q8Question = 'Please indiciate which age group you belong to?';
+export const Q8Question = 'Please indicate which age group you belong to?';
 export const Q8Content = null;
 
 export const Q9Under60Question = 'Do you have any of the following conditions?';
