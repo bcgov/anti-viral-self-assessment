@@ -167,7 +167,7 @@ export const getQuestions: ({
         label: (
           <div>
             <span className='block w-max '>I&apos;m 59 years or younger</span>
-            <span className='block'>(born 2010-1963)</span>
+            <span className='block'>(born 1963 to 2010)</span>
           </div>
         ),
       },
@@ -176,7 +176,7 @@ export const getQuestions: ({
         label: (
           <div>
             <span className='block w-max '>I&apos;m 60 to 69 years old</span>
-            <span className='block'>(born-1962-1953)</span>
+            <span className='block'>(born 1953 to 1962)</span>
           </div>
         ),
       },
@@ -185,7 +185,7 @@ export const getQuestions: ({
         label: (
           <div>
             <span className='block w-max '>I&apos;m 70 years or older</span>
-            <span className='block'>(born on or before 1952)</span>
+            <span className='block'>(born in or before 1952)</span>
           </div>
         ),
       },
