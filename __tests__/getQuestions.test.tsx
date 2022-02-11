@@ -184,7 +184,7 @@ describe("getQuestions['5']", () => {
 
   it('to have options for "less than 7 days" or "more than 7 days"', () => {
     expect(question.options).toStrictEqual([
-      { key: 'less7', label: 'In the past week 0-7 days' },
+      { key: 'less7', label: 'In the past week (0 to 7 days)' },
       { key: 'more7', label: 'I have had symptoms for more than 7 days' },
     ]);
   });

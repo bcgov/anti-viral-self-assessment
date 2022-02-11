@@ -105,7 +105,7 @@ export const getQuestions: ({
     description: QuestionContent.Q5Content,
     questionKey: '5',
     options: [
-      { key: 'less7', label: 'In the past week 0-7 days' },
+      { key: 'less7', label: 'In the past week (0 to 7 days)' },
       { key: 'more7', label: 'I have had symptoms for more than 7 days' },
     ],
     actions: {
