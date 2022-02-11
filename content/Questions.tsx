@@ -104,8 +104,8 @@ export const Q9Under60Content = (
       Living (CSIL) or Community Living British Columbia(CLBC)
     </li>
     <li>
-      Pregnant and have a serious heart disease, congenital or acquired, that requiresobservation by
-      a cardiac specialist throughout pregnancy
+      Pregnant and have a serious heart disease, congenital or acquired, that requires observation
+      by a cardiac specialist throughout pregnancy
     </li>
     <li>
       Neurological or other conditions causing significant muscle weakness around lungs requiring
