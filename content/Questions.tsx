@@ -158,7 +158,7 @@ export const OneOrMoreConditionsQuestionContent = (
   </div>
 );
 
-export const IndigenousQuestion = 'Do you identify as Indigenous?';
+export const IndigenousQuestion = 'Do you self-identify as Indigenous?';
 export const IndigenousQuestionContent = null;
 
 export const Q11Content = (
