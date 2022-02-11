@@ -73,13 +73,13 @@ const NoBenefitNoPositiveTest: React.FC = () => (
 const NoBenefitUnder12: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
       at this time. These treatments have only been approved for ages 12 years and older.{' '}
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         You should continue to seek medical care if you feel you need it. For more information,
-        visit the
+        visit the{' '}
         <a
           target='_blank'
           rel='noreferrer'
@@ -95,7 +95,7 @@ const NoBenefitUnder12: React.FC = () => (
 const NoBenefitNoSymptoms: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
       at this time.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
@@ -124,8 +124,8 @@ const NoBenefitNoSymptoms: React.FC = () => (
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answers you would likely not benefit from the available therapeutics for
-      COVID-19 at this time.
+      Based on your answers you would likely not benefit from the available treatments for COVID-19
+      at this time.
     </EndOfJourneyTitle>
     <p>
       These treatments are currently being recommended for individuals who are identified as being
@@ -179,8 +179,8 @@ const UrgentCare: React.FC = () => (
 const TooManyDays: React.FC = () => (
   <EndOfJourneyContainer>
     <p>
-      To be effective, the COVID-19 therapeutics that are currently available must be taken within
-      the first 5 to 7 days of symptoms starting.
+      To be effective, the COVID-19 treatments that are currently available must be taken within the
+      first 5 to 7 days of symptoms starting.
     </p>
     <p className='mb-4'>
       Stay home and away from others until you feel well enough to return to your regular

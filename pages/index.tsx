@@ -26,7 +26,7 @@ export default function Home() {
 
         <div>
           <p>
-            COVID therapeutics are currently available in B.C. and may benefit some people who have
+            COVID treatments are currently available in B.C. and may benefit some people who have
             tested positive for COVID-19.
           </p>
           <p>
