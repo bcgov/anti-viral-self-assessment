@@ -133,12 +133,14 @@ export const ThreeOrMoreConditionsQuestionContent = (
 export const OneOrMoreConditionsQuestion = 'Do you have one or more chronic conditions?';
 export const OneOrMoreConditionsQuestionContent = (
   <div>
-    <p>
-      e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
-      stroke
-    </p>
-    <p>Other examples include:</p>
+    <p>Examples of chronic conditions include:</p>
+
     <ul>
+      <li>Obesity</li>
+      <li>Diabetes</li>
+      <li>Chronic respiratory condition</li>
+      <li>Kidney disease</li>
+      <li>Previous stroke</li>
       <li>Cystic fibrosis</li>
       <li>Severe COPD or asthma requiring hospitalization in the last year</li>
       <li>
