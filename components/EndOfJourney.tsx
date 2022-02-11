@@ -122,29 +122,6 @@ const NoBenefitExtended: React.FC = () => (
       These treatments are currently being recommended for individuals who are identified as being
       at increased risk of hospitalization for COVID-19.
     </p>
-    <p className='mb-2'>This includes people who are:</p>
-    <ul>
-      <li>Immunocompromised</li>
-      <li>
-        Unvaccinated or partially vaccinated, over age 60 and have three or more chronic conditions
-      </li>
-      <li>Indigenous people who are unvaccinated or partially vaccinated and over age 60</li>
-      <li>
-        <div>
-          <p>
-            Unvaccinated or partially vaccinated, 70 years and over with one or more chronic
-            condition.
-          </p>
-          <p className='mb-2'>Examples of chronic conditions include:</p>
-          <ul>
-            <li>Diabetes</li>
-            <li>COPD</li>
-            <li>Chronic kidney disease</li>
-            <li>Heart disease</li>
-          </ul>
-        </div>
-      </li>
-    </ul>
     <p>
       You should continue to seek medical care if you feel you need it. For more information, visit
       the{' '}
