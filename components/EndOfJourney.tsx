@@ -46,14 +46,13 @@ const EndOfJourneyTitle: React.FC = ({ children }) => {
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
-      at this time.
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
+      at this time. You need a positive test result.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         These treatments have been approved specifically for people experiencing mild to moderate
-        COVID-19 symptoms, and require a positive test. As with most medications, there can be side
-        effects if they are not used correctly.
+        COVID-19 symptoms, and require a positive test.
       </p>
       <p>
         If you are experiencing symptoms and are at risk of more severe disease due to personal risk
