@@ -8,7 +8,7 @@ const Application = ({ Component, pageProps }: AppProps) => {
   return (
     <div className='w-full h-screen flex flex-col'>
       <Head>
-        <title>Self-Screening Questionnaire</title>
+        <title>COVID-19 Treatment Self-Assessment</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />

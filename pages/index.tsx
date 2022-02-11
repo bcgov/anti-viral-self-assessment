@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className='w-full'>
       <h1 className='text-4xl font-bold text-bcBluePrimary leading-relaxed'>
-        Self-Screening Questionnaire
+        COVID-19 Treatment Self-Assessment
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
