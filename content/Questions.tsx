@@ -143,16 +143,15 @@ export const OneOrMoreConditionsQuestionContent = (
       <li>Cystic fibrosis</li>
       <li>Severe COPD or asthma requiring hospitalization in the last year</li>
       <li>
-        You are taking biologics for asthma, severe lung disease and at least one of thefollowing:
+        You are taking biologics for asthma, severe lung disease and at least one of the following:
         long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
-        hypertension; severe pulmonary fibrosis/interstitial lungdisease
+        hypertension; severe pulmonary fibrosis/interstitial lung disease
       </li>
       <li>
         Diagnosed with a rare blood disorder: urea cycle defects; methylmalonic aciduria; propionic
         aciduria; glutaric aciduria; maple syrup urine disease
       </li>
       <li>Have had a splenectomy (removal of your spleen) </li>
-      <li>Diabetes treated with Insulin</li>
       <li>
         Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
         Developmental Disability (IDD), or receiving supports from: Community Supports for
