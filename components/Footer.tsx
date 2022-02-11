@@ -20,7 +20,7 @@ export const Footer = () => {
         className='md:w-layout w-full 2xl:mx-0 md:mx-0 sm:mx-12 py-12
         grid grid-cols-12 gap-8'
       >
-        <div className='flex flex-col w-full items-start md:flex-col md:items-left md:align-left col-start-1 col-end-12 gap-4'>
+        <div className='flex flex-col w-full items-start md:flex-col md:items-left md:align-left col-start-2 md:col-start-1 col-end-12 gap-4'>
           <h2 className='text-lg text-bcBluePrimary font-bold mb-1'>Help in other languages</h2>
 
           <p className='text-sm'>
