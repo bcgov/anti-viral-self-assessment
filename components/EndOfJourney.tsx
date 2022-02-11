@@ -46,14 +46,13 @@ const EndOfJourneyTitle: React.FC = ({ children }) => {
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
-      at this time.
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
+      at this time. You need a positive test result.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         These treatments have been approved specifically for people experiencing mild to moderate
-        COVID-19 symptoms, and require a positive test. As with most medications, there can be side
-        effects if they are not used correctly.
+        COVID-19 symptoms, and require a positive test.
       </p>
       <p>
         If you are experiencing symptoms and are at risk of more severe disease due to personal risk
@@ -73,13 +72,13 @@ const NoBenefitNoPositiveTest: React.FC = () => (
 const NoBenefitUnder12: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
       at this time. These treatments have only been approved for ages 12 years and older.{' '}
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         You should continue to seek medical care if you feel you need it. For more information,
-        visit the
+        visit the{' '}
         <a
           target='_blank'
           rel='noreferrer'
@@ -95,27 +94,19 @@ const NoBenefitUnder12: React.FC = () => (
 const NoBenefitNoSymptoms: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available therapeutics for COVID-19
+      Based on your answer you would likely not benefit from the available treatments for COVID-19
       at this time.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
-        These medications have been approved specifically for people experiencing mild to moderate
+        These treatments have been approved specifically for people experiencing mild to moderate
         COVID-19 symptoms. As with most medications, there may be side effects to taking these
         treatments if you do not have COVID-19 symptoms.
       </p>
 
       <p>
         If you start to experience symptoms and are at risk of developing more severe disease due to
-        personal risk factors, you should re-visit this screening tool or call Service BC at
-        <ServiceBCLink />. Visit the{' '}
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
-        >
-          BCCDC website for more information about COVID-19 testing.
-        </a>
+        personal risk factors, you should re-visit this screening tool.
       </p>
     </div>
   </EndOfJourneyContainer>
@@ -124,36 +115,13 @@ const NoBenefitNoSymptoms: React.FC = () => (
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answers you would likely not benefit from the available therapeutics for
-      COVID-19 at this time.
+      Based on your answers you would likely not benefit from the available treatments for COVID-19
+      at this time.
     </EndOfJourneyTitle>
     <p>
       These treatments are currently being recommended for individuals who are identified as being
       at increased risk of hospitalization for COVID-19.
     </p>
-    <p className='mb-2'>This includes people who are:</p>
-    <ul>
-      <li>Immunocompromised</li>
-      <li>
-        Unvaccinated or partially vaccinated, over age 60 and have three or more chronic conditions
-      </li>
-      <li>Indigenous people who are unvaccinated or partially vaccinated and over age 60</li>
-      <li>
-        <div>
-          <p>
-            Unvaccinated or partially vaccinated, 70 years and over with one or more chronic
-            condition.
-          </p>
-          <p className='mb-2'>Examples of chronic conditions include:</p>
-          <ul>
-            <li>Diabetes</li>
-            <li>COPD</li>
-            <li>Chronic kidney disease</li>
-            <li>Heart disease</li>
-          </ul>
-        </div>
-      </li>
-    </ul>
     <p>
       You should continue to seek medical care if you feel you need it. For more information, visit
       the{' '}
@@ -179,8 +147,8 @@ const UrgentCare: React.FC = () => (
 const TooManyDays: React.FC = () => (
   <EndOfJourneyContainer>
     <p>
-      To be effective, the COVID-19 therapeutics that are currently available must be taken within
-      the first 5 to 7 days of symptoms starting.
+      To be effective, the COVID-19 treatments that are currently available must be taken within the
+      first 5 to 7 days of symptoms starting.
     </p>
     <p className='mb-4'>
       Stay home and away from others until you feel well enough to return to your regular
@@ -201,7 +169,7 @@ const TooManyDays: React.FC = () => (
       this timeframe may be extended up to 10 days. This is reviewed on a case-by-case basis.{' '}
       <strong>
         If you are Clinically Extremely Vulnerable, please call Service BC at <ServiceBCLink /> so
-        they can start the assessment process.
+        they can continue the assessment process.
       </strong>
     </p>
   </EndOfJourneyContainer>
@@ -209,12 +177,12 @@ const TooManyDays: React.FC = () => (
 
 const AntiviralBenefit: React.FC = () => (
   <EndOfJourneyContainer>
-    <EndOfJourneyTitle>You may benefit from COVID19 treatment.</EndOfJourneyTitle>
+    <EndOfJourneyTitle>You may benefit from COVID-19 treatment.</EndOfJourneyTitle>
     <p>
-      Please call Service BC at <ServiceBCLink /> immediately so they can start the assessment
-      process. Tell them you are calling about COVID19 treatment options and that you have completed
-      the online screener. There is a short window of time to deliver these medications, so please
-      call right away.
+      Please call Service BC at <ServiceBCLink /> immediately so they can continue the assessment
+      process. Tell them you are calling about COVID-19 treatment options and that you have
+      completed the online screener. There is a short window of time to deliver these medications,
+      so please call right away.
     </p>
   </EndOfJourneyContainer>
 );

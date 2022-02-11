@@ -4,7 +4,7 @@ export interface QuestionProps {
   questionKey: string;
   options: {
     key: string;
-    label: string;
+    label: React.ReactElement | string;
   }[];
   inline?: boolean;
   onAnswer: (answer: string) => void;

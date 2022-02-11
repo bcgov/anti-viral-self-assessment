@@ -1,4 +1,4 @@
-export const Q1Question = '1.	Please confirm you are 12 years or older? born 2010 or earlier';
+export const Q1Question = '1.	Please confirm you are 12 years or older (born 2010 or earlier.)';
 export const Q1Description = null;
 
 export const Q2Question = (
@@ -19,7 +19,7 @@ export const Q2Description = null;
 export const Q3Question = '3. Do you have any severe symptoms of COVID-19?';
 export const Q3Content = (
   <ul>
-    <li>Find it hard to breath</li>
+    <li>Find it hard to breathe</li>
     <li>Have chest pain</li>
     <li>Can&apos;t drink anything</li>
     <li>Feel very sick</li>
@@ -71,8 +71,8 @@ export const Q6Content = (
       (e.g. cyclophosphamide, cisplatin, methotrexate)
     </li>
     <li>
-      Have received a letter from Dr. Bonnie Henry stating that you are clinically extremely
-      vulnerable (CEV) because you are immunocompromised
+      Have received a letter from Dr. Bonnie Henry stating that you are Clinically Extremely
+      Vulnerable (CEV) because you are immunocompromised
     </li>
   </ul>
 );
@@ -80,7 +80,7 @@ export const Q6Content = (
 export const Q7Question = '7. Have you had 3 doses of the vaccine?';
 export const Q7Content = null;
 
-export const Q8Question = 'Please indiciate which age group you belong to?';
+export const Q8Question = 'Please indicate which age group you belong to?';
 export const Q8Content = null;
 
 export const Q9Under60Question = 'Do you have any of the following conditions?';
@@ -117,21 +117,30 @@ export const Q9Under60Content = (
 
 export const ThreeOrMoreConditionsQuestion = 'Do you have three or more chronic conditions?';
 export const ThreeOrMoreConditionsQuestionContent = (
-  <p>
-    e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
-    stroke
-  </p>
+  <div>
+    <p>Examples of chronic conditions include:</p>
+    <ul>
+      <li>Obesity</li>
+      <li>Diabetes</li>
+      <li>Heart failure</li>
+      <li>Chronic respiratory condition</li>
+      <li>Kidney disease</li>
+      <li>Previous stroke</li>
+    </ul>
+  </div>
 );
 
 export const OneOrMoreConditionsQuestion = 'Do you have one or more chronic conditions?';
 export const OneOrMoreConditionsQuestionContent = (
   <div>
-    <p>
-      e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
-      stroke
-    </p>
-    <p>Other examples include:</p>
+    <p>Examples of chronic conditions include:</p>
+
     <ul>
+      <li>Obesity</li>
+      <li>Diabetes</li>
+      <li>Chronic respiratory condition</li>
+      <li>Kidney disease</li>
+      <li>Previous stroke</li>
       <li>Cystic fibrosis</li>
       <li>Severe COPD or asthma requiring hospitalization in the last year</li>
       <li>
@@ -158,7 +167,7 @@ export const OneOrMoreConditionsQuestionContent = (
   </div>
 );
 
-export const IndigenousQuestion = 'Do you identify as Indigenous?';
+export const IndigenousQuestion = 'Do you self-identify as Indigenous?';
 export const IndigenousQuestionContent = null;
 
 export const Q11Content = (

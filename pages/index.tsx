@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className='w-full'>
       <h1 className='text-4xl font-bold text-bcBluePrimary leading-relaxed'>
-        Self-Screening Questionnaire
+        COVID-19 Treatment Self-Assessment
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
@@ -26,7 +26,7 @@ export default function Home() {
 
         <div>
           <p>
-            COVID therapeutics are currently available in B.C. and may benefit some people who have
+            COVID treatments are currently available in B.C. and may benefit some people who have
             tested positive for COVID-19.
           </p>
           <p>

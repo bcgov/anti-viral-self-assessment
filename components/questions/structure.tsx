@@ -9,7 +9,7 @@ export interface Question {
   question: React.ReactElement | string;
   description: React.ReactElement | null;
   questionKey: string;
-  options: { key: string; label: string }[];
+  options: { key: string; label: React.ReactElement | string }[];
   actions: {
     [key: string]: () => void;
   };
@@ -105,7 +105,7 @@ export const getQuestions: ({
     description: QuestionContent.Q5Content,
     questionKey: '5',
     options: [
-      { key: 'less7', label: 'In the past week 0-7 days' },
+      { key: 'less7', label: 'In the past week (0 to 7 days)' },
       { key: 'more7', label: 'I have had symptoms for more than 7 days' },
     ],
     actions: {
@@ -162,9 +162,33 @@ export const getQuestions: ({
     description: QuestionContent.Q8Content,
     questionKey: '8',
     options: [
-      { key: 'under60', label: "I'm 59 years or younger (born 2010-1963)" },
-      { key: 'under70', label: "I'm 60 to 69 years old (born-1962-1953)" },
-      { key: 'over70', label: "I'm 70 years or older (born on or before 1952)" },
+      {
+        key: 'under60',
+        label: (
+          <div>
+            <span className='block w-max '>I&apos;m 59 years or younger</span>
+            <span className='block'>(born 2010-1963)</span>
+          </div>
+        ),
+      },
+      {
+        key: 'under70',
+        label: (
+          <div>
+            <span className='block w-max '>I&apos;m 60 to 69 years old</span>
+            <span className='block'>(born-1962-1953)</span>
+          </div>
+        ),
+      },
+      {
+        key: 'over70',
+        label: (
+          <div>
+            <span className='block w-max '>I&apos;m 70 years or older</span>
+            <span className='block'>(born on or before 1952)</span>
+          </div>
+        ),
+      },
     ],
     actions: {
       under60: () => {
