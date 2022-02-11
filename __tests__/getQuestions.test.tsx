@@ -297,11 +297,9 @@ describe("getQuestions['8']", () => {
   });
 
   it('to have options under 60, under 70, and over 70', () => {
-    expect(question.options).toStrictEqual([
-      { key: 'under60', label: "I'm 59 years or younger (born 2010-1963)" },
-      { key: 'under70', label: "I'm 60 to 69 years old (born-1962-1953)" },
-      { key: 'over70', label: "I'm 70 years or older (born on or before 1952)" },
-    ]);
+    expect(question.options[0].key).toBe('under60');
+    expect(question.options[1].key).toBe('under70');
+    expect(question.options[2].key).toBe('over70');
   });
 
   it('has an action "under60" that sets step to 9a with no end journey', () => {
