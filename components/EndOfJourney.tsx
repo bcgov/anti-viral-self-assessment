@@ -99,22 +99,14 @@ const NoBenefitNoSymptoms: React.FC = () => (
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
-        These medications have been approved specifically for people experiencing mild to moderate
+        These treatments have been approved specifically for people experiencing mild to moderate
         COVID-19 symptoms. As with most medications, there may be side effects to taking these
         treatments if you do not have COVID-19 symptoms.
       </p>
 
       <p>
         If you start to experience symptoms and are at risk of developing more severe disease due to
-        personal risk factors, you should re-visit this screening tool or call Service BC at
-        <ServiceBCLink />. Visit the{' '}
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/when-to-get-a-covid-19-test'
-        >
-          BCCDC website for more information about COVID-19 testing.
-        </a>
+        personal risk factors, you should re-visit this screening tool.
       </p>
     </div>
   </EndOfJourneyContainer>
