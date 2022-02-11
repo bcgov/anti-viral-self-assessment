@@ -117,10 +117,17 @@ export const Q9Under60Content = (
 
 export const ThreeOrMoreConditionsQuestion = 'Do you have three or more chronic conditions?';
 export const ThreeOrMoreConditionsQuestionContent = (
-  <p>
-    e.g. obesity, diabetes, heart failure, chronic respiratory condition, kidney disease, previous
-    stroke
-  </p>
+  <div>
+    <p>Examples of chronic conditions include:</p>
+    <ul>
+      <li>Obesity</li>
+      <li>Diabetes</li>
+      <li>Heart failure</li>
+      <li>Chronic respiratory condition</li>
+      <li>Kidney disease</li>
+      <li>Previous stroke</li>
+    </ul>
+  </div>
 );
 
 export const OneOrMoreConditionsQuestion = 'Do you have one or more chronic conditions?';
