@@ -169,7 +169,7 @@ const TooManyDays: React.FC = () => (
       this timeframe may be extended up to 10 days. This is reviewed on a case-by-case basis.{' '}
       <strong>
         If you are Clinically Extremely Vulnerable, please call Service BC at <ServiceBCLink /> so
-        they can start the assessment process.
+        they can continue the assessment process.
       </strong>
     </p>
   </EndOfJourneyContainer>
