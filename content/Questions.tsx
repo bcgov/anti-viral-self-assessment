@@ -71,8 +71,8 @@ export const Q6Content = (
       (e.g. cyclophosphamide, cisplatin, methotrexate)
     </li>
     <li>
-      Have received a letter from Dr. Bonnie Henry stating that you are clinically extremely
-      vulnerable (CEV) because you are immunocompromised
+      Have received a letter from Dr. Bonnie Henry stating that you are Clinically Extremely
+      Vulnerable (CEV) because you are immunocompromised
     </li>
   </ul>
 );
