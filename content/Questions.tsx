@@ -19,7 +19,7 @@ export const Q2Description = null;
 export const Q3Question = '3. Do you have any severe symptoms of COVID-19?';
 export const Q3Content = (
   <ul>
-    <li>Find it hard to breath</li>
+    <li>Find it hard to breathe</li>
     <li>Have chest pain</li>
     <li>Can&apos;t drink anything</li>
     <li>Feel very sick</li>
