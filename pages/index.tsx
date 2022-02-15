@@ -79,10 +79,10 @@ export default function Home() {
         </p>
         <p>
           If it looks like you might benefit from the treatment, you will be directed to call
-          Service BC at <ServiceBCLink /> for further assessment. They will review these questions
-          in more detail with you, and may connect you to a healthcare team who can access your
-          medication and health information. The healthcare team will seek more information and make
-          decisions based on their clinical assessment.
+          Service BC for further assessment. They will review these questions in more detail with
+          you, and may connect you to a healthcare team who can access your medication and health
+          information. The healthcare team will seek more information and make decisions based on
+          their clinical assessment.
         </p>
         <InfoBox>
           If you are unable to fill out the questionnaire online and need help to complete it over
