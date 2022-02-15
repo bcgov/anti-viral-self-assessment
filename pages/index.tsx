@@ -69,7 +69,10 @@ export default function Home() {
           </li>
         </ul>
 
-        <p className='text-bcBlueAccent font-bold'>Find out if you might benefit from treatment.</p>
+        <p className='text-bcBlueAccent font-bold text-lg'>
+          Find out if you might benefit from treatment
+        </p>
+
         <p>
           Answer each question carefully. Your responses will help to determine if it would be safe
           for you to receive treatment for COVID-19.
