@@ -27,7 +27,7 @@ export default function Home() {
         <div>
           <p>
             COVID-19 treatments are currently available in B.C. and may benefit some people who have
-            tested positive for COVID-19.
+            recently tested positive for COVID-19.
           </p>
           <p>
             They have been shown to prevent COVID-19 from getting worse in high-risk patients with
