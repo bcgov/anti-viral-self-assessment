@@ -22,12 +22,12 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of January 25, 2022</p>
+        <p>This guidance is based on known evidence as of January 25, 2022.</p>
 
         <div>
           <p>
             COVID-19 treatments are currently available in B.C. and may benefit some people who have
-            tested positive for COVID-19.
+            recently tested positive for COVID-19.
           </p>
           <p>
             They have been shown to prevent COVID-19 from getting worse in high-risk patients with
@@ -69,17 +69,20 @@ export default function Home() {
           </li>
         </ul>
 
-        <p className='text-bcBlueAccent font-bold'>Find out if you might benefit from treatment.</p>
+        <p className='text-bcBlueAccent font-bold text-lg'>
+          Find out if you might benefit from treatment
+        </p>
+
         <p>
           Answer each question carefully. Your responses will help to determine if it would be safe
           for you to receive treatment for COVID-19.
         </p>
         <p>
           If it looks like you might benefit from the treatment, you will be directed to call
-          Service BC at <ServiceBCLink /> for further assessment. They will review these questions
-          in more detail with you, and may connect you to a healthcare team who can access your
-          medication and health information. The healthcare team will seek more information and make
-          decisions based on their clinical assessment.
+          Service BC for further assessment. They will review these questions in more detail with
+          you, and may connect you to a healthcare team who can access your medication and health
+          information. The healthcare team will seek more information and make decisions based on
+          their clinical assessment.
         </p>
         <InfoBox>
           If you are unable to fill out the questionnaire online and need help to complete it over

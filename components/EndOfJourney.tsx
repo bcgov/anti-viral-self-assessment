@@ -160,7 +160,7 @@ const TooManyDays: React.FC = () => (
         target='_blank'
         rel='noreferrer'
       >
-        visit the BCCDC website
+        visit the BCCDC website.
       </a>
     </p>
     <p>
