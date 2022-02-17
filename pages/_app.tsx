@@ -3,6 +3,9 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { Header, Footer } from '@components';
+import { Maintenance } from 'components/Maintenance';
+
+const isMaintenanceMode = false;
 
 const Application = ({ Component, pageProps }: AppProps) => {
   return (
@@ -15,7 +18,7 @@ const Application = ({ Component, pageProps }: AppProps) => {
 
       <main className='flex-grow bg-bcLightGray flex justify-center py-12 px-4'>
         <div className='w-layout'>
-          <Component {...pageProps} />
+          {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
         </div>
       </main>
 
