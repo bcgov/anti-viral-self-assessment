@@ -29,12 +29,10 @@ export const Footer = () => {
 
           <p className='text-sm'>國粵語 | ਪੰਜਾਬੀ | عربى | Français | Español</p>
 
-          <p className='text-sm font-bold'>
-            Service is available every day: 7 am to 7 pm or 9 am to 5 pm on holidays.
-          </p>
+          <p className='text-sm font-bold'>Service is available every day: 7:30 am to 9pm.</p>
 
           <div className='flex flex-col gap-2'>
-            <FooterLink href='tel:+18338382323'>Call: 1-833-838-2323 (toll free)</FooterLink>
+            <FooterLink href='tel:+18882684319'>Call: 1-888-268-4319 (toll free)</FooterLink>
             <FooterLink href='tel:711'>Telephone for the deaf: Dial 711</FooterLink>
           </div>
 
