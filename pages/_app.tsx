@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { Header, Footer } from '@components';
 import { Maintenance } from 'components/Maintenance';
 
-const isMaintenanceMode = false;
+const isMaintenanceMode = true;
 
 const Application = ({ Component, pageProps }: AppProps) => {
   return (
