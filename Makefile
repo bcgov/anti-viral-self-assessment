@@ -14,6 +14,7 @@ export BOOTSTRAP_ENV=terraform/bootstrap
 ifeq ($(ENV_NAME), prod)
 CLOUDFRONT_ID=E2BYEBNWTHDBAT
 AWS_SA_ROLE_ARN=arn:aws:iam::492251179215:role/PBMMOps-BCGOV_prod_Project_Role_AVSA_SA_Role
+DOMAIN=covidtreatments.freshworks.club
 endif
 
 ifeq ($(ENV_NAME), dev)
