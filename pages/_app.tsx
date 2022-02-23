@@ -5,7 +5,8 @@ import Head from 'next/head';
 import { Header, Footer } from '@components';
 import { Maintenance } from 'components/Maintenance';
 
-const isMaintenanceMode = true;
+// TODO should be an ENV var
+const isMaintenanceMode = false;
 
 const Application = ({ Component, pageProps }: AppProps) => {
   return (
