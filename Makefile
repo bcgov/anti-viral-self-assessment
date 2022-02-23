@@ -12,7 +12,7 @@ export AWS_REGION ?= ca-central-1
 export BOOTSTRAP_ENV=terraform/bootstrap
 
 ifeq ($(ENV_NAME), prod)
-CLOUDFRONT_ID=MEMES
+CLOUDFRONT_ID=E2BYEBNWTHDBAT
 AWS_SA_ROLE_ARN=arn:aws:iam::492251179215:role/PBMMOps-BCGOV_prod_Project_Role_AVSA_SA_Role
 endif
 
