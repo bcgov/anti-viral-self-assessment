@@ -160,16 +160,16 @@ const TooManyDays: React.FC = () => (
         target='_blank'
         rel='noreferrer'
       >
-        visit the BCCDC website
+        visit the BCCDC website.
       </a>
     </p>
     <p>
       For patients who are immunocompromised and have been identified as Clinically Extremely
-      Vulnerable (you received a letter from Dr. Bonnie Henry notifying you of your CEV status),
-      this timeframe may be extended up to 10 days. This is reviewed on a case-by-case basis.{' '}
+      Vulnerable (you received a letter from Dr. Bonnie Henry notifying you of your CEV status or
+      have been told by a healthcare professional), this timeframe may be extended up to 10 days.{' '}
       <strong>
-        If you are Clinically Extremely Vulnerable, please call Service BC at <ServiceBCLink /> so
-        they can continue the assessment process.
+        This is reviewed on a case-by-case basis. If you are Clinically Extremely Vulnerable, please
+        call Service BC at <ServiceBCLink /> so they can continue the assessment process.
       </strong>
     </p>
   </EndOfJourneyContainer>
