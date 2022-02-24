@@ -118,13 +118,47 @@ const NoBenefitExtended: React.FC = () => (
       Based on your answers you would likely not benefit from the available treatments for COVID-19
       at this time.
     </EndOfJourneyTitle>
-    <p>
-      These treatments are currently being recommended for individuals who are identified as being
-      at increased risk of hospitalization for COVID-19.
+
+    <p className='mb-2'>
+      Based on your answers you&apos;re not able to move forward in the process. These treatments
+      are currently being recommended for individuals who are identified as being at increased risk
+      of hospitalization for COVID-19.
     </p>
+
+    <p className='mb-2'>
+      To help you manage your symptoms and slow the spread of COVID-19, please make sure to:
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          Follow the{' '}
+          <a
+            href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/self-isolation'
+            target='_blank'
+            rel='noreferrer'
+          >
+            self-isolation guidelines
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Learn how to{' '}
+          <a
+            href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/if-you-have-covid-19#manage'
+            target='_blank'
+            rel='noreferrer'
+          >
+            manage your COVID-19 symptoms at home
+          </a>
+        </p>
+      </li>
+      <li>Call 8-1-1 if your symptoms get worse</li>
+    </ul>
+
     <p>
-      You should continue to seek medical care if you feel you need it. For more information, visit
-      the{' '}
+      You should seek medical care if you feel you need it. For more information, visit the
       <a
         target='_blank'
         rel='noreferrer'
