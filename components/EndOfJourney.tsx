@@ -120,9 +120,9 @@ const NoBenefitExtended: React.FC = () => (
     </EndOfJourneyTitle>
 
     <p className='mb-2'>
-      Based on your answers you&apos;re not able to move forward in the process. These treatments
-      are currently being recommended for individuals who are identified as being at increased risk
-      of hospitalization for COVID-19.
+      Based on your answers this treatment isn&apos;t the right option for you. These treatments are
+      currently being recommended for individuals who are identified as being at increased risk of
+      hospitalization for COVID-19.
     </p>
 
     <p className='mb-2'>
