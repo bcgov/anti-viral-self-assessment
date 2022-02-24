@@ -7,7 +7,7 @@ function handler(event) {
   headers['strict-transport-security'] = { value: 'max-age=63072000; includeSubdomains; preload' };
   headers['content-security-policy'] = {
     value:
-      "default-src 'self' s3.ca-central-1.amazonaws.com; frame-ancestors 'self'; form-action 'self';",
+      "default-src 'self' s3.ca-central-1.amazonaws.com www2.gov.bc.ca spm.apps.gov.bc.ca; frame-ancestors 'self'; form-action 'self';",
   };
   headers['x-content-type-options'] = { value: 'nosniff' };
   headers['x-frame-options'] = { value: 'DENY' };
