@@ -114,11 +114,6 @@ const NoBenefitNoSymptoms: React.FC = () => (
 
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
-    <EndOfJourneyTitle>
-      Based on your answers you would likely not benefit from the available treatments for COVID-19
-      at this time.
-    </EndOfJourneyTitle>
-
     <p className='mb-2'>
       Based on your answers this treatment isn&apos;t the right option for you. These treatments are
       currently being recommended for individuals who are identified as being at increased risk of
