@@ -50,7 +50,7 @@ export TF_BACKEND_CFG
 
 run:
 	@echo "+\n++ Make: Running locally ...\n+"
-	@yarn dev
+	@NEXT_PUBLIC_ENV_NAME=$(ENV_NAME) yarn dev
 
 lint:
 	@echo "+\n++ Make: Linting app...\n+"
