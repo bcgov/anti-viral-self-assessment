@@ -45,12 +45,18 @@ endef
 export TF_BACKEND_CFG
 
 ####################################################################
+## Front End Environment Variables
+####################################################################
+
+export NEXT_PUBLIC_ENV_NAME = $(ENV_NAME)
+
+####################################################################
 ## Local Development
 ####################################################################
 
 run:
 	@echo "+\n++ Make: Running locally ...\n+"
-	@NEXT_PUBLIC_ENV_NAME=$(ENV_NAME) yarn dev
+	@yarn dev
 
 lint:
 	@echo "+\n++ Make: Linting app...\n+"
