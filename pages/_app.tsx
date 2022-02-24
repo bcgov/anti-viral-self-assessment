@@ -4,11 +4,28 @@ import Head from 'next/head';
 
 import { Header, Footer } from '@components';
 import { Maintenance } from 'components/Maintenance';
+import Script from 'next/script';
 
 // TODO should be an ENV var
 const isMaintenanceMode = false;
 
+const envName = process.env.NEXT_PUBLIC_ENV_NAME;
+
+const getAnalyticsScriptPath = (envName?: string) => {
+  switch (envName) {
+    case 'dev':
+    case 'test':
+      return 'analytics/snowplow.dev.js';
+    case 'prod':
+      return null;
+    default:
+      return null;
+  }
+};
+
 const Application = ({ Component, pageProps }: AppProps) => {
+  const analyticsScriptPath = getAnalyticsScriptPath(envName);
+
   return (
     <div className='w-full h-screen flex flex-col'>
       <Head>
@@ -24,6 +41,8 @@ const Application = ({ Component, pageProps }: AppProps) => {
       </main>
 
       <Footer />
+
+      {analyticsScriptPath ? <Script src={analyticsScriptPath} /> : null}
     </div>
   );
 };
