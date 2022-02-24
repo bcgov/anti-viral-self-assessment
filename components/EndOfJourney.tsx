@@ -154,11 +154,15 @@ const NoBenefitExtended: React.FC = () => (
           </a>
         </p>
       </li>
-      <li>Call 8-1-1 if your symptoms get worse</li>
+      <li>
+        <p>
+          Call <a href='tel:+811'>8-1-1</a> if your symptoms get worse
+        </p>
+      </li>
     </ul>
 
     <p>
-      You should seek medical care if you feel you need it. For more information, visit the
+      You should seek medical care if you feel you need it. For more information, visit the{' '}
       <a
         target='_blank'
         rel='noreferrer'
