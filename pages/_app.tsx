@@ -14,7 +14,6 @@ const envName = process.env.NEXT_PUBLIC_ENV_NAME;
 const getAnalyticsScriptPath = (envName?: string) => {
   switch (envName) {
     case 'dev':
-      return 'analytics/snowplow.dev.js';
     case 'test':
       return 'analytics/snowplow.dev.js';
     case 'prod':
