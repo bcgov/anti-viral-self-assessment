@@ -15,7 +15,7 @@ const getAnalyticsScriptPath = (envName?: string) => {
   switch (envName) {
     case 'dev':
     case 'test':
-      return 'analytics/snowplow.dev.js';
+      return 'analytics/snowplow.prod.js';
     case 'prod':
       return null;
     default:
