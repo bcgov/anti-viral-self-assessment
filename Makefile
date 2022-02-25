@@ -109,6 +109,14 @@ else
 endif
 	@git push --force origin refs/tags/test:refs/tags/test
 
+tag-prod:
+ifdef comment
+	@git tag -fa prod -m "Deploy prod: $(comment)"
+else
+	@git tag -fa prod -m "Deploy prod: $(git rev-parse --abbrev-ref HEAD)"
+endif
+	@git push --force origin refs/tags/prod:refs/tags/prod
+
 print-env:
 	@echo AWS_SA_ROLE_ARN=$(AWS_SA_ROLE_ARN)
 	@echo
