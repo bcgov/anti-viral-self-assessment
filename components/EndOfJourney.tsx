@@ -45,6 +45,7 @@ const EndOfJourneyTitle: React.FC = ({ children }) => {
 
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
+    <EndOfJourneyTitle>You need a positive test result.</EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         These treatments have been approved specifically for people experiencing mild to moderate
@@ -67,6 +68,9 @@ const NoBenefitNoPositiveTest: React.FC = () => (
 
 const NoBenefitUnder12: React.FC = () => (
   <EndOfJourneyContainer>
+    <EndOfJourneyTitle>
+      These treatments have only been approved for ages 12 years and older.
+    </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         You should continue to seek medical care if you feel you need it. For more information,
