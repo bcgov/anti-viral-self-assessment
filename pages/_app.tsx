@@ -3,11 +3,8 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { Header, Footer } from '@components';
-import { Maintenance } from 'components/Maintenance';
+import { Maintenance, MAINTENANCE_STATUSES } from 'components/Maintenance';
 import Script from 'next/script';
-
-// TODO should be an ENV var
-const isMaintenanceMode = false;
 
 const envName = process.env.NEXT_PUBLIC_ENV_NAME;
 
@@ -22,8 +19,19 @@ const getAnalyticsScriptPath = (envName?: string) => {
   }
 };
 
+const getMaintenanceStatus = (envName?: string): MAINTENANCE_STATUSES | null => {
+  switch (envName) {
+    case 'dev':
+    case 'test':
+    case 'prod':
+    default:
+      return null;
+  }
+};
+
 const Application = ({ Component, pageProps }: AppProps) => {
   const analyticsScriptPath = getAnalyticsScriptPath(envName);
+  const maintenanceStatus = getMaintenanceStatus(envName);
 
   return (
     <div className='w-full h-screen flex flex-col'>
@@ -35,7 +43,11 @@ const Application = ({ Component, pageProps }: AppProps) => {
 
       <main className='flex-grow bg-bcLightGray flex justify-center py-12 px-4'>
         <div className='w-layout'>
-          {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
+          {maintenanceStatus ? (
+            <Maintenance status={maintenanceStatus} />
+          ) : (
+            <Component {...pageProps} />
+          )}
         </div>
       </main>
 
