@@ -45,10 +45,7 @@ const EndOfJourneyTitle: React.FC = ({ children }) => {
 
 const NoBenefitNoPositiveTest: React.FC = () => (
   <EndOfJourneyContainer>
-    <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available treatments for COVID-19
-      at this time. You need a positive test result.
-    </EndOfJourneyTitle>
+    <EndOfJourneyTitle>You need a positive test result.</EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
         These treatments have been approved specifically for people experiencing mild to moderate
@@ -72,8 +69,7 @@ const NoBenefitNoPositiveTest: React.FC = () => (
 const NoBenefitUnder12: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      Based on your answer you would likely not benefit from the available treatments for COVID-19
-      at this time. These treatments have only been approved for ages 12 years and older.{' '}
+      These treatments have only been approved for ages 12 years and older.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
@@ -115,9 +111,9 @@ const NoBenefitNoSymptoms: React.FC = () => (
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <p className='mb-2'>
-      Based on your answers this treatment isn&apos;t the right option for you. These treatments are
-      currently being recommended for individuals who are identified as being at increased risk of
-      hospitalization for COVID-19.
+      Based on your answers, Sotrovimab or Paxlovid aren&apos;t the right treatments for you at this
+      time. These treatments are currently being recommended for individuals who are identified as
+      being at increased risk of hospitalization for COVID-19.
     </p>
 
     <p className='mb-2'>

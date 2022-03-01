@@ -96,7 +96,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('4');
-        setJourneyEnd(EndJourneyType.NoBenefitNoSymptoms);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
   },
