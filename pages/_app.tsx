@@ -19,14 +19,11 @@ const getAnalyticsScriptPath = (envName?: string) => {
   }
 };
 
-const getMaintenanceStatus = (envName?: string) => {
+const getMaintenanceStatus = (envName?: string): MAINTENANCE_STATUSES | null => {
   switch (envName) {
     case 'dev':
-      return MAINTENANCE_STATUSES.WITH_PHONE;
     case 'test':
-      return MAINTENANCE_STATUSES.WITHOUT_PHONE;
     case 'prod':
-      return null;
     default:
       return null;
   }
