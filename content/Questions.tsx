@@ -88,6 +88,7 @@ export const Q9Under60Content = (
   <ul>
     <li>Cystic fibrosis</li>
     <li>Severe COPD or asthma requiring hospitalization in the last year</li>
+    <li>Diabetes treated with Insulin</li>
     <li>
       You are taking biologics for asthma, severe lung disease and at least one of the following:
       long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
