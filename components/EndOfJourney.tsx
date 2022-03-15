@@ -207,11 +207,19 @@ const TooManyDays: React.FC = () => (
 const AntiviralBenefit: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>You may benefit from COVID-19 treatment.</EndOfJourneyTitle>
-    <p>
-      Please call Service BC at <ServiceBCLink /> immediately so they can continue the assessment
-      process. Tell them you are calling about COVID-19 treatment options and that you have
-      completed the online screener. There is a short window of time to deliver these medications,
-      so please call right away.
+    <p className='mb-2'>
+      If you have a family doctor, nurse practitioner or specialist, please contact them immediately
+      so they can continue the assessment process.
+    </p>
+    <p className='mb-2'>
+      If you do not have a family doctor, nurse practitioner or specialist, or you are unable to see
+      them immediately, please call Service BC at <ServiceBCLink /> to start the assessment process.
+      Tell them you are calling about COVID-19 treatment options and that you have completed the
+      online screener.
+    </p>
+    <p className='mb-2'>
+      There is a short window of time (normally up to five days since symptom onset) to deliver
+      these medications, so please call right away.
     </p>
   </EndOfJourneyContainer>
 );
