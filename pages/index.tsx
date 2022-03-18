@@ -48,11 +48,11 @@ export default function Home() {
         </div>
 
         <p>
-          <strong>Who can access treatments?</strong>
+          <span className='font-bold'>Who can access treatments?</span>
         </p>
         <p>
           At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
-          <strong>any</strong> of the following circumstances:
+          <span className='font-bold'>any</span> of the following circumstances:
         </p>
         <ul>
           <li>
@@ -75,7 +75,7 @@ export default function Home() {
           </li>
           <li>
             <div>
-              70 years or older <strong>and</strong> with three or more{' '}
+              70 years or older <span className='font-bold'>and</span> with three or more{' '}
               <a
                 target='_blank'
                 rel='noreferrer'
@@ -87,13 +87,13 @@ export default function Home() {
           </li>
           <li>
             <div>
-              70 years or older <strong>and</strong> self-identify as Indigenous
+              70 years or older <span className='font-bold'>and</span> self-identify as Indigenous
             </div>
           </li>
           <li>
             <div>
               Individuals who are unvaccinated or have not received their third booster dose{' '}
-              <strong>and</strong>
+              <span className='font-bold'>and</span>
               <ul>
                 <li>
                   <div>
