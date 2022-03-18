@@ -79,7 +79,7 @@ export const Q6Content = (
 
 export const Q7Question =
   '7. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
-export const Q7Content = = (
+export const Q7Content = (
   <div>
     <p>Examples of chronic conditions include:</p>
     <ul>
@@ -93,20 +93,20 @@ export const Q7Content = = (
         long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
         hypertension; severe pulmonary fibrosis/interstitial lung disease
       </li>
-      <li>
-        Diagnosed with a rare blood disorder
-      </li>
+      <li>Diagnosed with a rare blood disorder</li>
       <li>Have had a splenectomy (removal of your spleen)</li>
       <li>
         Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
         Developmental Disability (IDD), or receiving supports from: Community Supports for
         Independent Living (CSIL) or Community Living British Columbia (CLBC)
       </li>
-      <li>Pregnant and have a serious heart disease, congenital or acquired, that requires 
-        observation by a cardiac specialist throughout pregnancy
+      <li>
+        Pregnant and have a serious heart disease, congenital or acquired, that requires observation
+        by a cardiac specialist throughout pregnancy
       </li>
-      <li>Neurological or other conditions causing significant muscle weakness around 
-        lungs requiring the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
+      <li>
+        Neurological or other conditions causing significant muscle weakness around lungs requiring
+        the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
       </li>
     </ul>
   </div>
