@@ -48,49 +48,65 @@ export default function Home() {
         </div>
 
         <p>
-          <strong>
-            Who can access treatments?
-          </strong>
+          <strong>Who can access treatments?</strong>
         </p>
-        <p>At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in 
-          <strong>any</strong> of the following circumstances:</p>
+        <p>
+          At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
+          <strong>any</strong> of the following circumstances:
+        </p>
         <ul>
-          <li> <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#immunocompromised'
-        >
-          Immunocompromised
-        </a></li>
-          <li> <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-        >
-          Clinically extremely vulnerable
-        </a></li>
           <li>
-            70 years or older <strong>and</strong> with three or more <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-        >
-          chronic conditions
-        </a>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#immunocompromised'
+            >
+              Immunocompromised
+            </a>
           </li>
-          <li>70 years or older <strong>and</strong> self-identify as Indigenous</li>
           <li>
-            <div
-              Individuals who are unvaccinated or have not received their third 
-                 booster dose <strong>and</strong>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+            >
+              Clinically extremely vulnerable
+            </a>
+          </li>
+          <li>
+            <div>
+              70 years or older <strong>and</strong> with three or more{' '}
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+              >
+                chronic conditions
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              70 years or older <strong>and</strong> self-identify as Indigenous
+            </div>
+          </li>
+          <li>
+            <div>
+              Individuals who are unvaccinated or have not received their third booster dose{' '}
+              <strong>and</strong>
               <ul>
-                <li>Have three or more <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-        >
-          chronic conditions
-        </a></li>
+                <li>
+                  <div>
+                    Have three or more{' '}
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+                    >
+                      chronic conditions
+                    </a>
+                  </div>
+                </li>
                 <li>Are 50 years or older</li>
                 <li>Self-identify as indigenous</li>
               </ul>
