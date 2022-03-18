@@ -154,7 +154,7 @@ export const Q11Content = (
     <li>
       Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
       Developmental Disability (IDD), or receiving supports from: Community Supports for Independent
-      Living (CSIL) or Community Living British Columbia(CLBC)
+      Living (CSIL) or Community Living British Columbia (CLBC)
     </li>
     <li>
       Neurological or other conditions causing significant muscle weakness around lungs requiring
