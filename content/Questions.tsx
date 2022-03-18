@@ -116,7 +116,7 @@ export const Q8Question = 'Please indicate which age group you belong to?';
 export const Q8Content = null;
 
 export const ThreeDosesQuestion = 'Have you had 3 doses of the vaccine?';
-export const ThreeDosesQuestion = null;
+export const ThreeDosesQuestionContent = null;
 
 export const ThreeOrMoreConditionsQuestion = 'Do you have three or more chronic conditions?';
 export const ThreeOrMoreConditionsQuestionContent = (
