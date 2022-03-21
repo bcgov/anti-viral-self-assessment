@@ -282,8 +282,8 @@ export const getQuestions: ({
     },
   },
   '10c': {
-    question: QuestionContent.OneOrMoreConditionsQuestion,
-    description: QuestionContent.OneOrMoreConditionsQuestionContent,
+    question: QuestionContent.ThreeOrMoreConditionsQuestion,
+    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
     questionKey: '10c',
     options: [
       { key: 'yes', label: 'Yes' },
