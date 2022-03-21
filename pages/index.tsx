@@ -52,7 +52,7 @@ export default function Home() {
         </p>
         <p>
           At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
-          <span className='font-bold'>any</span> of the following circumstances:
+          <span className='font-bold'>any</span> of the following situations:
         </p>
         <ul>
           <li>Immunocompromised</li>
@@ -71,13 +71,13 @@ export default function Home() {
           <li>
             <div>
               Individuals who are unvaccinated or have not received their third booster dose{' '}
-              <span className='font-bold'>and</span>
+              <span className='font-bold'>and any of</span>
               <ul>
                 <li>
                   <div>Have three or more chronic conditions</div>
                 </li>
                 <li>Are 50 years or older</li>
-                <li>Self-identify as indigenous</li>
+                <li>Self-identify as Indigenous</li>
               </ul>
             </div>
           </li>
