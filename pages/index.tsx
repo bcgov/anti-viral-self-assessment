@@ -79,7 +79,7 @@ export default function Home() {
               <a
                 target='_blank'
                 rel='noreferrer'
-                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#chronic'
               >
                 chronic conditions
               </a>
@@ -101,7 +101,7 @@ export default function Home() {
                     <a
                       target='_blank'
                       rel='noreferrer'
-                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#chronic'
                     >
                       chronic conditions
                     </a>
