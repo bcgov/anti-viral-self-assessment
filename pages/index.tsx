@@ -55,16 +55,12 @@ export default function Home() {
           <span className='font-bold'>any</span> of the following circumstances:
         </p>
         <ul>
-          <li>
-              Immunocompromised
-          </li>
-          <li>
-              Clinically extremely vulnerable
-          </li>
+          <li>Immunocompromised</li>
+          <li>Clinically extremely vulnerable</li>
           <li>
             <div>
-              70 years or older <span className='font-bold'>and</span> with three or more{' '}
-                chronic conditions
+              70 years or older <span className='font-bold'>and</span> with three or more chronic
+              conditions
             </div>
           </li>
           <li>
@@ -78,9 +74,7 @@ export default function Home() {
               <span className='font-bold'>and</span>
               <ul>
                 <li>
-                  <div>
-                    Have three or more{' '} chronic conditions
-                  </div>
+                  <div>Have three or more chronic conditions</div>
                 </li>
                 <li>Are 50 years or older</li>
                 <li>Self-identify as indigenous</li>
