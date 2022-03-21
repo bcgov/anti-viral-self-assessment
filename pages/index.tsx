@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         <p>
-          <span className='font-bold'>Who can access treatments?</span>
+          <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
           At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
