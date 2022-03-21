@@ -267,7 +267,7 @@ describe("getQuestions['7']", () => {
     question.actions.yes();
 
     expect(mockSetToStep).toHaveBeenCalledWith('7');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 
   it('has an action "no" that sets step to 8 with no end journey', () => {
@@ -297,13 +297,13 @@ describe("getQuestions['8']", () => {
   });
 
   it('to have options under 60, under 70, and over 70', () => {
-    expect(question.options[0].key).toBe('under60');
+    expect(question.options[0].key).toBe('under50');
     expect(question.options[1].key).toBe('under70');
     expect(question.options[2].key).toBe('over70');
   });
 
-  it('has an action "under60" that sets step to 9a with no end journey', () => {
-    question.actions.under60();
+  it('has an action "under50" that sets step to 9a with no end journey', () => {
+    question.actions.under50();
 
     expect(mockSetToStep).toHaveBeenCalledWith('9a');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
@@ -331,11 +331,11 @@ describe("getQuestions['9a']", () => {
   });
 
   it('returns question 9 under 60', () => {
-    expect(question.question).toBe(QuestionContent.Q9Under60Question);
+    expect(question.question).toBe(QuestionContent.ThreeDosesQuestion);
   });
 
   it('returns question 9 under 60 content', () => {
-    expect(question.description).toBe(QuestionContent.Q9Under60Content);
+    expect(question.description).toBe(QuestionContent.ThreeDosesQuestionContent);
   });
 
   it('has the question key "9a"', () => {
@@ -349,13 +349,14 @@ describe("getQuestions['9a']", () => {
   it('has an action "yes" that sets journey end to "AntiviralBenefit"', () => {
     question.actions.yes();
 
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
+    expect(mockSetToStep).toHaveBeenCalledWith('9a');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 
   it('has an action "no" that sets journey end to "NoBenefitExtended"', () => {
     question.actions.no();
 
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
+    expect(mockSetToStep).toHaveBeenCalledWith('10a');
   });
 });
 
@@ -366,11 +367,11 @@ describe("getQuestions['9b']", () => {
   });
 
   it('asks indigenous identification question', () => {
-    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
+    expect(question.question).toBe(QuestionContent.ThreeDosesQuestion);
   });
 
   it('has indigenous identification content', () => {
-    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
+    expect(question.description).toBe(QuestionContent.ThreeDosesQuestionContent);
   });
 
   it('has the question key "9b"', () => {
@@ -385,14 +386,14 @@ describe("getQuestions['9b']", () => {
     question.actions.yes();
 
     expect(mockSetToStep).toHaveBeenCalledWith('9b');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 
   it('has an action "no" that sets step to 9b with no end journey', () => {
     question.actions.no();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('10b');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
+    expect(mockSetToStep).toHaveBeenCalledWith('9b');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 });
 
@@ -433,8 +434,8 @@ describe("getQuestions['9c']", () => {
   });
 });
 
-describe("getQuestions['10b']", () => {
-  const questionKey = '10b';
+describe("getQuestions['10a']", () => {
+  const questionKey = '10a';
   beforeEach(() => {
     setQuestion(questionKey);
   });
@@ -447,25 +448,25 @@ describe("getQuestions['10b']", () => {
     expect(question.description).toBe(QuestionContent.ThreeOrMoreConditionsQuestionContent);
   });
 
-  it('has the question key "10b"', () => {
-    expect(question.questionKey).toBe('10b');
+  it('has the question key "10a"', () => {
+    expect(question.questionKey).toBe('10a');
   });
 
   it('to have options for yes and no', () => {
     expect(question.options).toStrictEqual(yesNoOptions);
   });
 
-  it('has an action "yes" that sets step to 10b with no end journey', () => {
+  it('has an action "yes" that sets step to 10a with no end journey', () => {
     question.actions.yes();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('10b');
+    expect(mockSetToStep).toHaveBeenCalledWith('10a');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 
-  it('has an action "no" that sets step to 10b with no end journey', () => {
+  it('has an action "no" that sets step to 10a with no end journey', () => {
     question.actions.no();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('11b');
+    expect(mockSetToStep).toHaveBeenCalledWith('11a');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 });
@@ -477,11 +478,11 @@ describe("getQuestions['10c']", () => {
   });
 
   it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.OneOrMoreConditionsQuestion);
+    expect(question.question).toBe(QuestionContent.ThreeDosesQuestion);
   });
 
   it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.OneOrMoreConditionsQuestionContent);
+    expect(question.description).toBe(QuestionContent.ThreeDosesQuestionContent);
   });
 
   it('has the question key "10c"', () => {
@@ -495,51 +496,88 @@ describe("getQuestions['10c']", () => {
   it('has an action "yes" that sets step to 10c with no end journey', () => {
     question.actions.yes();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('10c');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
+    expect(mockSetToStep).toHaveBeenCalledWith('11c');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 
   it('has an action "no" that sets step to 10c with no end journey', () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('10c');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 });
 
-describe("getQuestions['11b']", () => {
-  const questionKey = '11b';
+describe("getQuestions['11a']", () => {
+  const questionKey = '11a';
   beforeEach(() => {
     setQuestion(questionKey);
   });
 
-  it('returns question 8 under 60', () => {
-    expect(question.question).toBe(QuestionContent.Q9Under60Question);
+  it('returns indigenous question', () => {
+    expect(question.question).toBe(QuestionContent.IndigenousQuestion);
   });
 
-  it('returns question 11b content', () => {
-    expect(question.description).toBe(QuestionContent.Q11Content);
+  it('returns indigenous question content', () => {
+    expect(question.description).toBe(QuestionContent.IndigenousQuestionContent);
   });
 
-  it('has the question key "11b"', () => {
-    expect(question.questionKey).toBe('11b');
+  it('has the question key "11a"', () => {
+    expect(question.questionKey).toBe('11a');
   });
 
   it('to have options for yes and no', () => {
     expect(question.options).toStrictEqual(yesNoOptions);
   });
 
-  it('has an action "yes" that sets step to 11b with no end journey', () => {
+  it('has an action "yes" that sets step to 11a with no end journey', () => {
     question.actions.yes();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('11b');
+    expect(mockSetToStep).toHaveBeenCalledWith('11a');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
   });
 
-  it('has an action "no" that sets step to 11b with no end journey', () => {
+  it('has an action "no" that sets step to 11a with no end journey', () => {
     question.actions.no();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('11b');
+    expect(mockSetToStep).toHaveBeenCalledWith('11a');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
+  });
+});
+
+describe("getQuestions['11c']", () => {
+  const questionKey = '11c';
+  beforeEach(() => {
+    setQuestion(questionKey);
+  });
+
+  it('returns indigenous question', () => {
+    expect(question.question).toBe(QuestionContent.ThreeOrMoreConditionsQuestion);
+  });
+
+  it('returns indigenous question content', () => {
+    expect(question.description).toBe(QuestionContent.ThreeOrMoreConditionsQuestionContent);
+  });
+
+  it('has the question key "11c"', () => {
+    expect(question.questionKey).toBe('11c');
+  });
+
+  it('to have options for yes and no', () => {
+    expect(question.options).toStrictEqual(yesNoOptions);
+  });
+
+  it('has an action "yes" that sets step to 11c with no end journey', () => {
+    question.actions.yes();
+
+    expect(mockSetToStep).toHaveBeenCalledWith('11c');
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
+  });
+
+  it('has an action "no" that sets step to 11c with no end journey', () => {
+    question.actions.no();
+
+    expect(mockSetToStep).toHaveBeenCalledWith('11c');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 });
