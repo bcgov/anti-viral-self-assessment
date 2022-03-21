@@ -22,7 +22,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of March 17, 2022.</p>
+        <p>This guidance is based on known evidence as of March 23, 2022.</p>
 
         <div>
           <p>
@@ -48,41 +48,19 @@ export default function Home() {
         </div>
 
         <p>
-          <span className='font-bold'>Who can access treatments?</span>
+          <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
           At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
           <span className='font-bold'>any</span> of the following circumstances:
         </p>
         <ul>
-          <li>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#immunocompromised'
-            >
-              Immunocompromised
-            </a>
-          </li>
-          <li>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-            >
-              Clinically extremely vulnerable
-            </a>
-          </li>
+          <li>Immunocompromised</li>
+          <li>Clinically extremely vulnerable</li>
           <li>
             <div>
-              70 years or older <span className='font-bold'>and</span> with three or more{' '}
-              <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-              >
-                chronic conditions
-              </a>
+              70 years or older <span className='font-bold'>and</span> with three or more chronic
+              conditions
             </div>
           </li>
           <li>
@@ -96,16 +74,7 @@ export default function Home() {
               <span className='font-bold'>and</span>
               <ul>
                 <li>
-                  <div>
-                    Have three or more{' '}
-                    <a
-                      target='_blank'
-                      rel='noreferrer'
-                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-                    >
-                      chronic conditions
-                    </a>
-                  </div>
+                  <div>Have three or more chronic conditions</div>
                 </li>
                 <li>Are 50 years or older</li>
                 <li>Self-identify as indigenous</li>
