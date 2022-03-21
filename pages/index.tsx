@@ -56,33 +56,15 @@ export default function Home() {
         </p>
         <ul>
           <li>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#immunocompromised'
-            >
               Immunocompromised
-            </a>
           </li>
           <li>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
-            >
               Clinically extremely vulnerable
-            </a>
           </li>
           <li>
             <div>
               70 years or older <span className='font-bold'>and</span> with three or more{' '}
-              <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#chronic'
-              >
                 chronic conditions
-              </a>
             </div>
           </li>
           <li>
@@ -97,14 +79,7 @@ export default function Home() {
               <ul>
                 <li>
                   <div>
-                    Have three or more{' '}
-                    <a
-                      target='_blank'
-                      rel='noreferrer'
-                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#chronic'
-                    >
-                      chronic conditions
-                    </a>
+                    Have three or more{' '} chronic conditions
                   </div>
                 </li>
                 <li>Are 50 years or older</li>
