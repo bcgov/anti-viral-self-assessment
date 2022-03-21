@@ -80,8 +80,6 @@ export const Q6Content = (
 export const Q7Question =
   '7. Do you have any of the following conditions?';
 export const Q7Content = (
-  <div>
-    <p>Examples of chronic conditions include:</p>
     <ul>
       <li>Cystic fibrosis</li>
       <li>Severe COPD or asthma requiring hospitalization in the last year</li>
