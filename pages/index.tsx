@@ -22,7 +22,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of January 25, 2022.</p>
+        <p>This guidance is based on known evidence as of March 17, 2022.</p>
 
         <div>
           <p>
@@ -47,23 +47,68 @@ export default function Home() {
           </p>
         </div>
 
-        <p>This includes people who are:</p>
+        <p>
+          <span className='font-bold'>Who can access treatments?</span>
+        </p>
+        <p>
+          At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
+          <span className='font-bold'>any</span> of the following circumstances:
+        </p>
         <ul>
-          <li>Immunocompromised</li>
           <li>
-            Unvaccinated or partially vaccinated, over age 60 and have three or more chronic
-            conditions{' '}
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#immunocompromised'
+            >
+              Immunocompromised
+            </a>
           </li>
-          <li>Indigenous people who are unvaccinated or partially vaccinated and over age 60</li>
+          <li>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+            >
+              Clinically extremely vulnerable
+            </a>
+          </li>
           <li>
             <div>
-              Unvaccinated or partially vaccinated, 70 years and over with one or more chronic
-              condition. Examples of chronic conditions include:
+              70 years or older <span className='font-bold'>and</span> with three or more{' '}
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+              >
+                chronic conditions
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              70 years or older <span className='font-bold'>and</span> self-identify as Indigenous
+            </div>
+          </li>
+          <li>
+            <div>
+              Individuals who are unvaccinated or have not received their third booster dose{' '}
+              <span className='font-bold'>and</span>
               <ul>
-                <li>Diabetes</li>
-                <li>COPD</li>
-                <li>Chronic kidney disease</li>
-                <li>Heart disease</li>
+                <li>
+                  <div>
+                    Have three or more{' '}
+                    <a
+                      target='_blank'
+                      rel='noreferrer'
+                      href='https://www2.gov.bc.ca/gov/content/covid-19/vaccine/treatments#cev'
+                    >
+                      chronic conditions
+                    </a>
+                  </div>
+                </li>
+                <li>Are 50 years or older</li>
+                <li>Self-identify as indigenous</li>
               </ul>
             </div>
           </li>
