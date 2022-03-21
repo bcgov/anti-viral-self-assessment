@@ -77,37 +77,35 @@ export const Q6Content = (
   </ul>
 );
 
-export const Q7Question =
-  '7. Do you have any of the following conditions?';
+export const Q7Question = '7. Do you have any of the following conditions?';
 export const Q7Content = (
-    <ul>
-      <li>Cystic fibrosis</li>
-      <li>Severe COPD or asthma requiring hospitalization in the last year</li>
-      <li>Diabetes treated with Insulin</li>
-      <li>Severe kidney disease or are on dialysis</li>
-      <li>Chronic respiratory condition</li>
-      <li>
-        You are taking biologics for asthma, severe lung disease and at least one of the following:
-        long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
-        hypertension; severe pulmonary fibrosis/interstitial lung disease
-      </li>
-      <li>Diagnosed with a rare blood disorder</li>
-      <li>Have had a splenectomy (removal of your spleen)</li>
-      <li>
-        Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
-        Developmental Disability (IDD), or receiving supports from: Community Supports for
-        Independent Living (CSIL) or Community Living British Columbia (CLBC)
-      </li>
-      <li>
-        Pregnant and have a serious heart disease, congenital or acquired, that requires observation
-        by a cardiac specialist throughout pregnancy
-      </li>
-      <li>
-        Neurological or other conditions causing significant muscle weakness around lungs requiring
-        the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li>Cystic fibrosis</li>
+    <li>Severe COPD or asthma requiring hospitalization in the last year</li>
+    <li>Diabetes treated with Insulin</li>
+    <li>Severe kidney disease or are on dialysis</li>
+    <li>Chronic respiratory condition</li>
+    <li>
+      You are taking biologics for asthma, severe lung disease and at least one of the following:
+      long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
+      hypertension; severe pulmonary fibrosis/interstitial lung disease
+    </li>
+    <li>Diagnosed with a rare blood disorder</li>
+    <li>Have had a splenectomy (removal of your spleen)</li>
+    <li>
+      Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
+      Developmental Disability (IDD), or receiving supports from: Community Supports for Independent
+      Living (CSIL) or Community Living British Columbia (CLBC)
+    </li>
+    <li>
+      Pregnant and have a serious heart disease, congenital or acquired, that requires observation
+      by a cardiac specialist throughout pregnancy
+    </li>
+    <li>
+      Neurological or other conditions causing significant muscle weakness around lungs requiring
+      the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
+    </li>
+  </ul>
 );
 
 export const Q8Question = 'Please indicate which age group you belong to?';
