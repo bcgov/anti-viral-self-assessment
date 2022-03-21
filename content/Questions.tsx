@@ -78,7 +78,7 @@ export const Q6Content = (
 );
 
 export const Q7Question =
-  '7. Do you have a medical condition or are you taking medications that suppress or weaken your immune system?';
+  '7. Do you have any of the following conditions?';
 export const Q7Content = (
   <div>
     <p>Examples of chronic conditions include:</p>
