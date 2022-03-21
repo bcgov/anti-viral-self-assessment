@@ -282,8 +282,8 @@ export const getQuestions: ({
     },
   },
   '10c': {
-    question: QuestionContent.ThreeOrMoreConditionsQuestion,
-    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
+    question: QuestionContent.ThreeDosesQuestion,
+    description: QuestionContent.ThreeDosesQuestionContent,
     questionKey: '10c',
     options: [
       { key: 'yes', label: 'Yes' },
@@ -291,11 +291,49 @@ export const getQuestions: ({
     ],
     actions: {
       yes: () => {
-        setToStep('10c');
-        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+        setJourneyEnd(null);
+        setToStep('11c');
       },
       no: () => {
         setToStep('10c');
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+      },
+    },
+  },
+  '11a': {
+    question: QuestionContent.IndigenousQuestion,
+    description: QuestionContent.IndigenousQuestionContent,
+    questionKey: '11a',
+    options: [
+      { key: 'yes', label: 'Yes' },
+      { key: 'no', label: 'No' },
+    ],
+    actions: {
+      yes: () => {
+        setToStep('11a');
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+      },
+      no: () => {
+        setToStep('11a');
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
+      },
+    },
+  },
+  '11c': {
+    question: QuestionContent.ThreeOrMoreConditionsQuestion,
+    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
+    questionKey: '11c',
+    options: [
+      { key: 'yes', label: 'Yes' },
+      { key: 'no', label: 'No' },
+    ],
+    actions: {
+      yes: () => {
+        setToStep('11c');
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+      },
+      no: () => {
+        setToStep('11c');
         setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
