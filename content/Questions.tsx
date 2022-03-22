@@ -1,4 +1,4 @@
-export const Q1Question = '1.	Please confirm you are 12 years or older (born 2010 or earlier.)';
+export const Q1Question = '1.	Please confirm you are 12 years or older (born 2010 or earlier)';
 export const Q1Description = null;
 
 export const Q2Question = (
