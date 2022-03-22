@@ -56,7 +56,7 @@ export default function Home() {
         </p>
         <ul>
           <li>Immunocompromised</li>
-          <li>Clinically extremely vulnerable</li>
+          <li>Clinically Extremely Vulnerable</li>
           <li>
             <div>
               70 years or older <span className='font-bold'>and</span> with three or more chronic
