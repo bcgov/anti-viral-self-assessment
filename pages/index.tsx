@@ -71,7 +71,7 @@ export default function Home() {
           <li>
             <div>
               Individuals who are unvaccinated or have not received their third booster dose{' '}
-              <span className='font-bold'>and any of</span>
+              <span className='font-bold'>and any of the following</span>
               <ul>
                 <li>
                   <div>Have three or more chronic conditions</div>
