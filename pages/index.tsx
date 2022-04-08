@@ -22,7 +22,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of March 23, 2022.</p>
+        <p>This guidance is based on known evidence as of April 12, 2022.</p>
 
         <div>
           <p>
