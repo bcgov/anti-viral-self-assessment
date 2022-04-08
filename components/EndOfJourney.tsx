@@ -111,7 +111,7 @@ const NoBenefitNoSymptoms: React.FC = () => (
 const NoBenefitExtended: React.FC = () => (
   <EndOfJourneyContainer>
     <p className='mb-2'>
-      Based on your answers, Sotrovimab or Paxlovid aren&apos;t the right treatments for you at this
+      Based on your answers, remdesivir or Paxlovid aren&apos;t the right treatments for you at this
       time. These treatments are currently being recommended for individuals who are identified as
       being at increased risk of hospitalization for COVID-19.
     </p>
