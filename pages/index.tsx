@@ -51,7 +51,7 @@ export default function Home() {
           <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
-          At this time, treatments like Paxlovid or remdesivir may be beneficial for people in{' '}
+          At this time, treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
           <span className='font-bold'>any</span> of the following situations:
         </p>
         <ul>
