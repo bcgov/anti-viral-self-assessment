@@ -22,7 +22,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of March 23, 2022.</p>
+        <p>This guidance is based on known evidence as of April 12, 2022.</p>
 
         <div>
           <p>
@@ -51,7 +51,7 @@ export default function Home() {
           <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
-          At this time, treatments like Paxlovid or Sotrovimab may be beneficial for people in{' '}
+          At this time, treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
           <span className='font-bold'>any</span> of the following situations:
         </p>
         <ul>
