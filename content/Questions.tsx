@@ -94,7 +94,7 @@ export const Q7Content = (
     <li>Have had a splenectomy (removal of your spleen)</li>
     <li>
       Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
-      Developmental Disability (IDD), or receiving supports from: Community Supports for Independent
+      Developmental Disability (IDD), or receiving supports from: Choice in Supports for Independent
       Living (CSIL) or Community Living British Columbia (CLBC)
     </li>
     <li>
