@@ -163,11 +163,11 @@ export const getQuestions: ({
     questionKey: '8',
     options: [
       {
-        key: 'under50',
+        key: 'under59',
         label: (
           <div>
-            <span className='block w-max '>I&apos;m 49 years or younger</span>
-            <span className='block'>(born 1973 to 2010)</span>
+            <span className='block w-max '>I&apos;m 59 years or younger</span>
+            <span className='block'>(born 1963 to 2010)</span>
           </div>
         ),
       },
@@ -175,8 +175,8 @@ export const getQuestions: ({
         key: 'under70',
         label: (
           <div>
-            <span className='block w-max '>I&apos;m 50 to 69 years old</span>
-            <span className='block'>(born 1972 to 1962)</span>
+            <span className='block w-max '>I&apos;m 60 to 69 years old</span>
+            <span className='block'>(born 1954 to 1963)</span>
           </div>
         ),
       },
