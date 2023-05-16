@@ -39,7 +39,7 @@ export const getQuestions: ({
       },
       no: () => {
         setToStep('1');
-        setJourneyEnd(EndJourneyType.NoBenefitUnder12);
+        setJourneyEnd(EndJourneyType.NoBenefitUnder18);
       },
     },
   },
