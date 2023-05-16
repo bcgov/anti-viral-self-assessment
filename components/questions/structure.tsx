@@ -191,7 +191,7 @@ export const getQuestions: ({
       },
     ],
     actions: {
-      under50: () => {
+      under59: () => {
         setJourneyEnd(null);
         setToStep('9a');
       },
