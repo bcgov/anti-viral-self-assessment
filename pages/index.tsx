@@ -22,7 +22,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-4 mb-4'>
-        <p>This guidance is based on known evidence as of April 12, 2022.</p>
+        <p>This guidance is based on known evidence as of May 29, 2023.</p>
 
         <div>
           <p>
@@ -30,28 +30,28 @@ export default function Home() {
             recently tested positive for COVID-19.
           </p>
           <p>
-            They have been shown to prevent COVID-19 from getting worse in high-risk patients with
-            mild to moderate symptoms, if taken within 5 to 7 days of symptoms starting.
+            They have been shown to prevent COVID-19 from getting worse in high-risk patients if taken within 7 days of symptoms starting.
           </p>
         </div>
 
         <div>
           <p>
-            These treatments do not prevent COVID-19, before or after an exposure. Important safety
+            These treatments do not prevent COVID-19. Important safety
             considerations, like how they interact with other medications, may limit their use for
             some people.
           </p>
-          <p>
-            Currently, these treatments are recommended for people who are identified as having an
-            increased risk for needing to go to the hospital for COVID-19.
-          </p>
+
         </div>
 
         <p>
           <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
-          At this time, treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
+            Currently, these treatments are recommended for people who are identified as having an
+            increased risk for needing to go to the hospital for COVID-19.
+          </p>
+        <p>
+          Treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
           <span className='font-bold'>any</span> of the following situations:
         </p>
         <ul>
@@ -59,25 +59,18 @@ export default function Home() {
           <li>Clinically Extremely Vulnerable</li>
           <li>
             <div>
-              70 years or older <span className='font-bold'>and</span> with three or more chronic
-              conditions
+              60 years or older <span className='font-bold'>and</span> self-identify as Indigenous
             </div>
           </li>
           <li>
             <div>
-              70 years or older <span className='font-bold'>and</span> self-identify as Indigenous
-            </div>
-          </li>
-          <li>
-            <div>
-              Individuals who are unvaccinated or have not received their third booster dose{' '}
-              <span className='font-bold'>and any of the following</span>
+              Any two of the following: 
               <ul>
                 <li>
-                  <div>Have three or more chronic conditions</div>
+                  <div>70 years or older</div>
                 </li>
-                <li>Are 50 years or older</li>
-                <li>Self-identify as Indigenous</li>
+                <li>Unvaccinated, or have not receivd two vaccine doses plus a booster in the past year</li>
+                <li>Have three or more serious chronic medical conditions</li>
               </ul>
             </div>
           </li>
