@@ -49,11 +49,11 @@ describe("getQuestions['1']", () => {
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 
-  it('has an action "no" that sets step to 1 and journey end to "NoBenefitUnder12"', () => {
+  it('has an action "no" that sets step to 1 and journey end to "NoBenefitUnder18"', () => {
     question.actions.no();
 
     expect(mockSetToStep).toHaveBeenCalledWith('1');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitUnder12);
+    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitUnder18);
   });
 });
 
