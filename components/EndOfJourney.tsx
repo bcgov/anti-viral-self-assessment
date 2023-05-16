@@ -1,7 +1,7 @@
 import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
-  NoBenefitUnder12,
+  NoBenefitUnder18,
   NoBenefitNoPositiveTest,
   NoBenefitNoSymptoms,
   NoBenefitExtended,
