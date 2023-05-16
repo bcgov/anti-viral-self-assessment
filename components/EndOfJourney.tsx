@@ -17,7 +17,7 @@ interface EndOfJourneyProps {
 export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
     case EndJourneyType.NoBenefitUnder18:
-      return <NoBenefitUnder12 />;
+      return <NoBenefitUnder18 />;
     case EndJourneyType.NoBenefitNoPositiveTest:
       return <NoBenefitNoPositiveTest />;
     case EndJourneyType.NoBenefitNoSymptoms:
