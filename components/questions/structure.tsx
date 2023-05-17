@@ -185,7 +185,7 @@ export const getQuestions: ({
         label: (
           <div>
             <span className='block w-max '>I&apos;m 70 years or older</span>
-            <span className='block'>(born in or before 1952)</span>
+            <span className='block'>(born in or before 1953)</span>
           </div>
         ),
       },
@@ -225,21 +225,21 @@ export const getQuestions: ({
     },
   },
   '9b': {
-    question: QuestionContent.ThreeDosesQuestion,
-    description: QuestionContent.ThreeDosesQuestionContent,
-    questionKey: '9b',
+    question: QuestionContent.IndigenousQuestion,
+    description: QuestionContent.IndigenousQuestionContent,
+    questionKey: '9c',
     options: [
       { key: 'yes', label: 'Yes' },
       { key: 'no', label: 'No' },
     ],
     actions: {
       yes: () => {
-        setToStep('9b');
-        setJourneyEnd(EndJourneyType.NoBenefitExtended);
+        setJourneyEnd(null);
+        setToStep('10b');
       },
       no: () => {
-        setToStep('9b');
-        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+        setJourneyEnd(null);
+        setToStep('10b');
       },
     },
   },
@@ -297,25 +297,6 @@ export const getQuestions: ({
       no: () => {
         setToStep('10c');
         setJourneyEnd(EndJourneyType.AntiviralBenefit);
-      },
-    },
-  },
-  '11a': {
-    question: QuestionContent.IndigenousQuestion,
-    description: QuestionContent.IndigenousQuestionContent,
-    questionKey: '11a',
-    options: [
-      { key: 'yes', label: 'Yes' },
-      { key: 'no', label: 'No' },
-    ],
-    actions: {
-      yes: () => {
-        setToStep('11a');
-        setJourneyEnd(EndJourneyType.AntiviralBenefit);
-      },
-      no: () => {
-        setToStep('11a');
-        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
   },
