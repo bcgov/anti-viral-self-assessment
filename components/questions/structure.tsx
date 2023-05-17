@@ -244,8 +244,8 @@ export const getQuestions: ({
     },
   },
   '9c': {
-    question: QuestionContent.IndigenousQuestion,
-    description: QuestionContent.IndigenousQuestionContent,
+    question: QuestionContent.ThreeDosesQuestion,
+    description: QuestionContent.ThreeDosesQuestionContent,
     questionKey: '9c',
     options: [
       { key: 'yes', label: 'Yes' },
@@ -254,7 +254,7 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setToStep('9c');
-        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
       no: () => {
         setJourneyEnd(null);
@@ -281,10 +281,10 @@ export const getQuestions: ({
       },
     },
   },
-  '10c': {
+  '10b': {
     question: QuestionContent.ThreeDosesQuestion,
     description: QuestionContent.ThreeDosesQuestionContent,
-    questionKey: '10c',
+    questionKey: '10b',
     options: [
       { key: 'yes', label: 'Yes' },
       { key: 'no', label: 'No' },
@@ -292,29 +292,48 @@ export const getQuestions: ({
     actions: {
       yes: () => {
         setJourneyEnd(null);
-        setToStep('11c');
+        setToStep('11b');
       },
       no: () => {
-        setToStep('10c');
+        setToStep('10b');
         setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
     },
   },
-  '11c': {
+  '10c': {
     question: QuestionContent.ThreeOrMoreConditionsQuestion,
     description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
-    questionKey: '11c',
+    questionKey: '10c',
     options: [
       { key: 'yes', label: 'Yes' },
       { key: 'no', label: 'No' },
     ],
     actions: {
       yes: () => {
-        setToStep('11c');
+        setToStep('10c');
         setJourneyEnd(EndJourneyType.AntiviralBenefit);
       },
       no: () => {
-        setToStep('11c');
+        setToStep('10c');
+        setJourneyEnd(EndJourneyType.NoBenefitExtended);
+      },
+    },
+  },
+    '11b': {
+    question: QuestionContent.ThreeOrMoreConditionsQuestion,
+    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
+    questionKey: '11b',
+    options: [
+      { key: 'yes', label: 'Yes' },
+      { key: 'no', label: 'No' },
+    ],
+    actions: {
+      yes: () => {
+        setToStep('11b');
+        setJourneyEnd(EndJourneyType.AntiviralBenefit);
+      },
+      no: () => {
+        setToStep('11b');
         setJourneyEnd(EndJourneyType.NoBenefitExtended);
       },
     },
