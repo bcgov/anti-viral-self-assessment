@@ -263,8 +263,8 @@ export const getQuestions: ({
     },
   },
   '10a': {
-    question: QuestionContent.ThreeOrMoreConditionsQuestion,
-    description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
+    question: QuestionContent.ChronicConditionsQuestion,
+    description: QuestionContent.ChronicConditionsQuestionContent,
     questionKey: '10a',
     options: [
       { key: 'yes', label: 'Yes' },
