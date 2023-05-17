@@ -66,7 +66,7 @@ const NoBenefitNoPositiveTest: React.FC = () => (
   </EndOfJourneyContainer>
 );
 
-const NoBenefitUnder12: React.FC = () => (
+const NoBenefitUnder18: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
       These treatments have only been approved for ages 12 years and older.
