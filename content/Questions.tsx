@@ -114,8 +114,8 @@ export const Q8Content = null;
 export const ThreeDosesQuestion = 'Have you had 2 doses of the vaccine, plus a booster in the past year?';
 export const ThreeDosesQuestionContent = null;
 
-export const ThreeOrMoreConditionsQuestion = 'Do you have a serious chronic medical condition?';
-export const ThreeOrMoreConditionsQuestionContent = (
+export const ChronicConditionsQuestion = 'Do you have a serious chronic medical condition?';
+export const ChronicConditionsQuestionContent = (
   <div>
     <p>Examples of chronic conditions include:</p>
     <ul>
