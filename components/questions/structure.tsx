@@ -319,7 +319,7 @@ export const getQuestions: ({
       },
     },
   },
-    '11b': {
+  '11b': {
     question: QuestionContent.ThreeOrMoreConditionsQuestion,
     description: QuestionContent.ThreeOrMoreConditionsQuestionContent,
     questionKey: '11b',

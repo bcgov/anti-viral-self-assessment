@@ -30,26 +30,25 @@ export default function Home() {
             recently tested positive for COVID-19.
           </p>
           <p>
-            They have been shown to prevent COVID-19 from getting worse in high-risk patients if taken within 7 days of symptoms starting.
+            They have been shown to prevent COVID-19 from getting worse in high-risk patients if
+            taken within 7 days of symptoms starting.
           </p>
         </div>
 
         <div>
           <p>
-            These treatments do not prevent COVID-19. Important safety
-            considerations, like how they interact with other medications, may limit their use for
-            some people.
+            These treatments do not prevent COVID-19. Important safety considerations, like how they
+            interact with other medications, may limit their use for some people.
           </p>
-
         </div>
 
         <p>
           <span className='font-bold'>Who can access treatments</span>
         </p>
         <p>
-            Currently, these treatments are recommended for people who are identified as having an
-            increased risk for needing to go to the hospital for COVID-19.
-          </p>
+          Currently, these treatments are recommended for people who are identified as having an
+          increased risk for needing to go to the hospital for COVID-19.
+        </p>
         <p>
           Treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
           <span className='font-bold'>any</span> of the following situations:
@@ -64,12 +63,15 @@ export default function Home() {
           </li>
           <li>
             <div>
-              Any two of the following: 
+              Any two of the following:
               <ul>
                 <li>
                   <div>70 years or older</div>
                 </li>
-                <li>Unvaccinated, or have not receivd two vaccine doses plus a booster in the past year</li>
+                <li>
+                  Unvaccinated, or have not receivd two vaccine doses plus a booster in the past
+                  year
+                </li>
                 <li>Have three or more serious chronic medical conditions</li>
               </ul>
             </div>
