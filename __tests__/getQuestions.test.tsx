@@ -441,11 +441,11 @@ describe("getQuestions['10a']", () => {
   });
 
   it('asks three or more conditions question', () => {
-    expect(question.question).toBe(QuestionContent.ThreeOrMoreConditionsQuestion);
+    expect(question.question).toBe(QuestionContent.ChronicConditionsQuestion);
   });
 
   it('has three or more conditions content', () => {
-    expect(question.description).toBe(QuestionContent.ThreeOrMoreConditionsQuestionContent);
+    expect(question.description).toBe(QuestionContent.ChronicConditionsQuestionContent);
   });
 
   it('has the question key "10a"', () => {
