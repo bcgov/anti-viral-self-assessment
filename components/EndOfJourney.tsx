@@ -1,7 +1,7 @@
 import { ServiceBCLink } from './ServiceBCLink';
 
 export enum EndJourneyType {
-  NoBenefitUnder12,
+  NoBenefitUnder18,
   NoBenefitNoPositiveTest,
   NoBenefitNoSymptoms,
   NoBenefitExtended,
@@ -16,8 +16,8 @@ interface EndOfJourneyProps {
 
 export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   switch (journeyEnd) {
-    case EndJourneyType.NoBenefitUnder12:
-      return <NoBenefitUnder12 />;
+    case EndJourneyType.NoBenefitUnder18:
+      return <NoBenefitUnder18 />;
     case EndJourneyType.NoBenefitNoPositiveTest:
       return <NoBenefitNoPositiveTest />;
     case EndJourneyType.NoBenefitNoSymptoms:
@@ -66,7 +66,7 @@ const NoBenefitNoPositiveTest: React.FC = () => (
   </EndOfJourneyContainer>
 );
 
-const NoBenefitUnder12: React.FC = () => (
+const NoBenefitUnder18: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
       These treatments have only been approved for ages 12 years and older.
