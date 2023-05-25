@@ -392,7 +392,7 @@ describe("getQuestions['9b']", () => {
   it('has an action "no" that sets step to 9c with no end journey', () => {
     question.actions.no();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('10d');
+    expect(mockSetToStep).toHaveBeenCalledWith('10c');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(null);
   });
 });
@@ -478,11 +478,11 @@ describe("getQuestions['10c']", () => {
   });
 
   it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.ChronicConditionsQuestion);
+    expect(question.question).toBe(QuestionContent.ThreeDosesQuestion);
   });
 
   it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.ChronicConditionsQuestionContent);
+    expect(question.description).toBe(QuestionContent.ThreeDosesQuestionContent);
   });
 
   it('has the question key "10c"', () => {
@@ -493,47 +493,10 @@ describe("getQuestions['10c']", () => {
     expect(question.options).toStrictEqual(yesNoOptions);
   });
 
-  it('has an action "yes" that sets journey end to "AntiviralBenefit"', () => {
-    question.actions.yes();
-
-    expect(mockSetToStep).toHaveBeenCalledWith('10c');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.AntiviralBenefit);
-  });
-
-  it('has an action "no" that sets journey end to "NoBenefitExtended"', () => {
-    question.actions.no();
-
-    expect(mockSetToStep).toHaveBeenCalledWith('10c');
-    expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
-  });
-});
-
-describe("getQuestions['10d']", () => {
-  const questionKey = '10d';
-  beforeEach(() => {
-    setQuestion(questionKey);
-  });
-
-  it('returns question 10', () => {
-    expect(question.question).toBe(QuestionContent.ChronicConditionsQuestion);
-  });
-
-  it('returns question 10 content', () => {
-    expect(question.description).toBe(QuestionContent.ChronicConditionsQuestionContent);
-  });
-
-  it('has the question key "10d"', () => {
-    expect(question.questionKey).toBe('10d');
-  });
-
-  it('to have options for yes and no', () => {
-    expect(question.options).toStrictEqual(yesNoOptions);
-  });
-
   it('has an action "yes" that sets journey end to "NoBenefitExtended"', () => {
     question.actions.yes();
 
-    expect(mockSetToStep).toHaveBeenCalledWith('10d');
+    expect(mockSetToStep).toHaveBeenCalledWith('10c');
     expect(mockSetJourneyEnd).toHaveBeenCalledWith(EndJourneyType.NoBenefitExtended);
   });
 

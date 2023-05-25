@@ -69,7 +69,7 @@ const NoBenefitNoPositiveTest: React.FC = () => (
 const NoBenefitUnder18: React.FC = () => (
   <EndOfJourneyContainer>
     <EndOfJourneyTitle>
-      These treatments have only been approved for ages 12 years and older.
+      These treatments have only been approved for ages 18 years and older.
     </EndOfJourneyTitle>
     <div className='flex flex-col gap-4'>
       <p>
