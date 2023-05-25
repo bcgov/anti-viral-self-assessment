@@ -23,16 +23,33 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
       const stepsTaken = stepStrings.slice(0, index + 1);
       // For the last 3 steps, we should only include matching branches
       let branch: string | null = null;
+      let rootQuestion: number | null = null;
       if (newStep.includes('9') || newStep.includes('10') || newStep.includes('11')) {
-        branch = newStep.slice(-1); // a, b, or c
+        branch = newStep.slice(-1); // a, b, c or d
+        if (newStep.length === 2) {
+          rootQuestion = parseInt(newStep.slice(0, 1));
+        } else {
+          rootQuestion = parseInt(newStep.slice(0, 2));
+        }
       }
-      const steps = stepsTaken.reduce(
-        (acc, step) => ({
+      const steps = stepsTaken.reduce((acc, indexedStep, stepNumber) => {
+        let result = true;
+        if (branch && stepNumber >= 8) {
+          const currentQuestion =
+            indexedStep.length === 2
+              ? parseInt(indexedStep.slice(0, 1))
+              : parseInt(indexedStep.slice(0, 2));
+          if (rootQuestion === currentQuestion) {
+            result = indexedStep === newStep;
+          } else {
+            result = indexedStep === newStep || Boolean(step[indexedStep]);
+          }
+        }
+        return {
           ...acc,
-          [step]: branch ? (step.length > 1 && step.slice(-1) !== branch ? false : true) : true,
-        }),
-        {}
-      );
+          [indexedStep]: result,
+        };
+      }, {});
       setStep(steps);
     } else {
       setStep({ 1: true });

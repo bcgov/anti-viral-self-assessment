@@ -120,7 +120,6 @@ export const ChronicConditionsQuestionContent = (
   <div>
     <p>Examples of chronic conditions include:</p>
     <ul>
-      <li>Obesity</li>
       <li>Diabetes</li>
       <li>Heart failure or heart disease</li>
       <li>Chronic respiratory condition</li>
