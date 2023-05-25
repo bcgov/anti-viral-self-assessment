@@ -58,21 +58,16 @@ export default function Home() {
           <li>Clinically Extremely Vulnerable</li>
           <li>
             <div>
-              60 years or older <span className='font-bold'>and</span> self-identify as Indigenous
-            </div>
-          </li>
-          <li>
-            <div>
               Any two of the following:
               <ul>
                 <li>
-                  <div>70 years or older</div>
+                  <div>70 years or older (or 60 years or older if you are Indigenous)</div>
                 </li>
                 <li>
                   Unvaccinated, or have not receivd two vaccine doses plus a booster in the past
                   year
                 </li>
-                <li>Have three or more serious chronic medical conditions</li>
+                <li>Have one or more serious chronic medical conditions</li>
               </ul>
             </div>
           </li>
