@@ -64,7 +64,7 @@ export default function Home() {
                   <div>70 years or older (or 60 years or older if you are Indigenous)</div>
                 </li>
                 <li>
-                  Unvaccinated, or have not receivd two vaccine doses plus a booster in the past
+                  Unvaccinated, or have not received two vaccine doses plus a booster in the past
                   year
                 </li>
                 <li>Have one or more serious chronic medical conditions</li>
