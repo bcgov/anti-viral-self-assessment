@@ -40,6 +40,7 @@
   },
   "resolutions": {
     "minimist": "1.2.6",
-    "@babel/traverse": "7.23.2"
+    "@babel/traverse": "7.23.2",
+    "json5": "1.0.2"
   }
 }
