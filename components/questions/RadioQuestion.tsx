@@ -31,7 +31,7 @@ export const RadioQuestion: React.FC<QuestionProps> = ({
               `,
                 {
                   'bg-blue-200': selectedOption === option.key,
-                }
+                },
               )}
               htmlFor={`inlineRadio-${questionKey}-${index}`}
             >
