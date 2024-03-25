@@ -27,7 +27,7 @@
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "autoprefixer": "10.4.2",
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8",
+    "eslint-config-next": "^14.1.4",
     "eslint-config-prettier": "8.3.0",
     "husky": "7.0.0",
     "jest": "27.4.7",
@@ -37,5 +37,8 @@
     "pretty-quick": "3.1.1",
     "tailwindcss": "3.4.1",
     "typescript": "4.5.5"
+  },
+  "resolutions": {
+    "minimist": "1.2.6"
   }
 }
