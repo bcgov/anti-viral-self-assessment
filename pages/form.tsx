@@ -11,7 +11,7 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
   const [step, setStep] = useState<Steps>(
     initialSteps || {
       1: true,
-    }
+    },
   );
 
   const questions = getQuestions({ setToStep, setJourneyEnd });
