@@ -43,35 +43,18 @@ export default function Home() {
         </div>
 
         <p>
-          <span className='font-bold'>Who can access treatments</span>
+          Currently, these treatments are recommended for people who are moderate-to-severely
+          immunocompromised, and/or 60 years or older with a high-risk chronic condition. For more
+          information, visit&nbsp;
+          <a
+            href='https://www2.qa.gov.bc.ca/gov/content?id=320DE824C27E41629E28734E2C6D9A43'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Paxlovid for B.C. residents
+          </a>
+          .
         </p>
-        <p>
-          Currently, these treatments are recommended for people who are identified as having an
-          increased risk for needing to go to the hospital for COVID-19.
-        </p>
-        <p>
-          Treatments like Paxlovid or Remdesivir may be beneficial for people in{' '}
-          <span className='font-bold'>any</span> of the following situations:
-        </p>
-        <ul>
-          <li>Immunocompromised</li>
-          <li>Clinically Extremely Vulnerable</li>
-          <li>
-            <div>
-              Any two of the following:
-              <ul>
-                <li>
-                  <div>70 years or older (or 60 years or older if you are Indigenous)</div>
-                </li>
-                <li>
-                  Unvaccinated, or have not received two vaccine doses plus a booster in the past
-                  year
-                </li>
-                <li>Have one or more serious chronic medical conditions</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
 
         <p className='text-bcBlueAccent font-bold text-lg'>
           Find out if you might benefit from treatment
