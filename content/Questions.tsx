@@ -102,29 +102,3 @@ export const Q7Content = (
     </li>
   </ul>
 );
-
-export const Q8Question = 'Please indicate which age group you belong to?';
-export const Q8Content = null;
-
-export const ThreeDosesQuestion =
-  'Have you had 2 doses of the vaccine, plus a booster in the past year?';
-export const ThreeDosesQuestionContent = null;
-
-export const ChronicConditionsQuestion = 'Do you have a serious chronic medical condition?';
-export const ChronicConditionsQuestionContent = (
-  <div>
-    <p>Examples of chronic conditions include:</p>
-    <ul>
-      <li>Diabetes</li>
-      <li>Heart failure or heart disease</li>
-      <li>Chronic respiratory condition</li>
-      <li>Liver disease</li>
-      <li>Kidney disease</li>
-      <li>Previous stroke</li>
-      <li>Neurological condition such as Parkinson's</li>
-    </ul>
-  </div>
-);
-
-export const IndigenousQuestion = 'Do you self-identify as Indigenous?';
-export const IndigenousQuestionContent = null;
