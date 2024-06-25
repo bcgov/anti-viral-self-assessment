@@ -22,13 +22,10 @@ const Form: React.FC<FormProps> = ({ initialSteps }) => {
     if (index > -1) {
       const stepsTaken = stepStrings.slice(0, index + 1);
       // For the last 3 steps, we should only include matching branches
-      let branch: string | null = null;
-      let rootQuestion: number | null = null;
-      const steps = stepsTaken.reduce((acc, indexedStep, stepNumber) => {
-        let result = true;
+      const steps = stepsTaken.reduce((acc, indexedStep) => {
         return {
           ...acc,
-          [indexedStep]: result,
+          [indexedStep]: true,
         };
       }, {});
       setStep(steps);
