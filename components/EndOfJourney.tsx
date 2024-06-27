@@ -209,7 +209,7 @@ const AntiviralBenefit: React.FC = () => (
     <EndOfJourneyTitle>You may benefit from COVID-19 treatment.</EndOfJourneyTitle>
     <p className='mb-2'>
       If you have a family doctor, nurse practitioner or specialist, please contact them within the
-      first three days of symptom onset so they can continue the assessment process.
+      first five days of symptom onset so they can continue the assessment process.
     </p>
     <p className='mb-2'>
       If you do not have a family doctor, nurse practitioner or specialist, or you are unable to see

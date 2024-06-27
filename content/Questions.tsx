@@ -1,4 +1,4 @@
-export const Q1Question = '1.	Please confirm you are 18 years or older (born 2005 or earlier)';
+export const Q1Question = '1.	Please confirm you are 18 years or older';
 export const Q1Description = null;
 
 export const Q2Question = (
@@ -70,10 +70,6 @@ export const Q6Content = (
       (e.g. epratuzumab, belimumab, atacicept, anti-BR3, alemtuzamab), or immune-suppressing agents
       (e.g. cyclophosphamide, cisplatin, methotrexate)
     </li>
-    <li>
-      Have received a letter from Dr. Bonnie Henry stating that you are Clinically Extremely
-      Vulnerable (CEV) because you are immunocompromised
-    </li>
   </ul>
 );
 
@@ -91,7 +87,6 @@ export const Q7Content = (
       hypertension; severe pulmonary fibrosis/interstitial lung disease
     </li>
     <li>Diagnosed with a rare blood disorder</li>
-    <li>Have had a splenectomy (removal of your spleen)</li>
     <li>
       Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
       Developmental Disability (IDD), or receiving supports from: Choice in Supports for Independent
@@ -100,59 +95,6 @@ export const Q7Content = (
     <li>
       Pregnant and have a serious heart disease, congenital or acquired, that requires observation
       by a cardiac specialist throughout pregnancy
-    </li>
-    <li>
-      Neurological or other conditions causing significant muscle weakness around lungs requiring
-      the use of a ventilator of continuous Bi-level positive airway pressure (Bi-PAP)
-    </li>
-  </ul>
-);
-
-export const Q8Question = 'Please indicate which age group you belong to?';
-export const Q8Content = null;
-
-export const ThreeDosesQuestion =
-  'Have you had 2 doses of the vaccine, plus a booster in the past year?';
-export const ThreeDosesQuestionContent = null;
-
-export const ChronicConditionsQuestion = 'Do you have a serious chronic medical condition?';
-export const ChronicConditionsQuestionContent = (
-  <div>
-    <p>Examples of chronic conditions include:</p>
-    <ul>
-      <li>Diabetes</li>
-      <li>Heart failure or heart disease</li>
-      <li>Chronic respiratory condition</li>
-      <li>Liver disease</li>
-      <li>Kidney disease</li>
-      <li>Previous stroke</li>
-      <li>Neurological condition such as Parkinson's</li>
-    </ul>
-  </div>
-);
-
-export const IndigenousQuestion = 'Do you self-identify as Indigenous?';
-export const IndigenousQuestionContent = null;
-
-export const Q11Content = (
-  <ul>
-    <li>Cystic fibrosis</li>
-    <li>Severe COPD or asthma requiring hospitalization in the last year</li>
-    <li>
-      You are taking biologics for asthma, severe lung disease and at least one of the following:
-      long-term home oxygen; assessment for a lung transplant; severe pulmonary arterial
-      hypertension; severe pulmonary fibrosis/interstitial lung disease
-    </li>
-    <li>
-      Diagnosed with a rare blood disorder: urea cycle defects; methylmalonic aciduria; propionic
-      aciduria; glutaric aciduria; maple syrup urine disease
-    </li>
-    <li>Have had a splenectomy (removal of your spleen) </li>
-    <li>Diabetes treated with Insulin</li>
-    <li>
-      Significant developmental disabilities: Down Syndrome, or Cerebral Palsy, or Intellectual
-      Developmental Disability (IDD), or receiving supports from: Community Supports for Independent
-      Living (CSIL) or Community Living British Columbia (CLBC)
     </li>
     <li>
       Neurological or other conditions causing significant muscle weakness around lungs requiring
