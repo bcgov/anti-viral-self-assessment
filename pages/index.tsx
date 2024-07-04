@@ -47,7 +47,7 @@ export default function Home() {
           immunocompromised, and/or 60 years or older with a high-risk chronic condition. For more
           information, visit&nbsp;
           <a
-            href='https://www2.qa.gov.bc.ca/gov/content?id=320DE824C27E41629E28734E2C6D9A43'
+            href='https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/pharmacare-for-bc-residents/what-we-cover/paxlovid-for-bc-residents'
             target='_blank'
             rel='noopener noreferrer'
           >
