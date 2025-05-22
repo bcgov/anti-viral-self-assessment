@@ -6,10 +6,10 @@ export interface Steps {
 }
 
 export interface Question {
-  question: React.ReactElement | string;
-  description: React.ReactElement | null;
+  question: React.ReactElement<any> | string;
+  description: React.ReactElement<any> | null;
   questionKey: string;
-  options: { key: string; label: React.ReactElement | string }[];
+  options: { key: string; label: React.ReactElement<any> | string }[];
   actions: {
     [key: string]: () => void;
   };
