@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const serviceBCNumber = '1-888-268-4319';
+const serviceBCNumber = '1-833-838-2323';
 
 export const ServiceBCLink: React.FC = () => {
   return (
