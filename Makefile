@@ -70,7 +70,7 @@ format-check:
 
 build:
 	@echo "+\n++ Make: Building static files...\n+"
-	@yarn build && yarn export
+	@yarn build
 
 test: 
 	@echo "+\n++ Make: Running unit tests...\n+"

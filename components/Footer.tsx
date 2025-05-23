@@ -1,13 +1,18 @@
 import Link from 'next/link';
 
-const FooterLink: React.FC<{ href: string; label?: string }> = ({ href, label, children }) => {
+const FooterLink: React.FC<{ href: string; label?: string; children: React.ReactNode }> = ({
+  href,
+  label,
+  children,
+}) => {
   return (
     <div className='md:mr-8 mt-2 md:mt-0'>
       {label ? <p className='block text-xs mt-4 lg:mt-0 mb-1'>{label}</p> : null}
-      <Link href={href}>
-        <a className='w-full md:w-auto flex items-center justify-center button rounded-md px-6 py-2 border text-bcBluePrimary border-bcBluePrimary font-bold no-underline'>
-          {children}
-        </a>
+      <Link
+        href={href}
+        className='w-full md:w-auto flex items-center justify-center button rounded-md px-6 py-2 border text-bcBluePrimary border-bcBluePrimary font-bold no-underline'
+      >
+        {children}
       </Link>
     </div>
   );

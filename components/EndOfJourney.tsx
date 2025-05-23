@@ -35,11 +35,11 @@ export const EndOfJourney: React.FC<EndOfJourneyProps> = ({ journeyEnd }) => {
   }
 };
 
-const EndOfJourneyContainer: React.FC = ({ children }) => {
+const EndOfJourneyContainer: React.FC<React.PropsWithChildren> = ({ children }) => {
   return <div className='w-full p-6 bg-bcLightBlueBackground rounded'>{children}</div>;
 };
 
-const EndOfJourneyTitle: React.FC = ({ children }) => {
+const EndOfJourneyTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <p className='text-bcBlueLink font-bold mb-2'>{children}</p>;
 };
 
