@@ -1,10 +1,10 @@
 export interface QuestionProps {
-  description: React.ReactElement | null;
-  question: React.ReactElement | string;
+  description: React.ReactNode | null;
+  question: React.ReactNode | string;
   questionKey: string;
   options: {
     key: string;
-    label: React.ReactElement | string;
+    label: React.ReactNode | string;
   }[];
   inline?: boolean;
   onAnswer: (answer: string) => void;
