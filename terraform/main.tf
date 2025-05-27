@@ -5,10 +5,9 @@ terraform {
       version = "3.49.0"
     }
   }
-
-  backend "remote" {
-    required_version = "0.14.7"
-  }
+backend "s3" {
+    encrypt = true   
+  } 
 }
 
 provider "aws" {

@@ -14,7 +14,7 @@ env:
 
 jobs:
   deploy:
-    name: Build and Deploy App to Dev
+    name: Build and Deploy App
     runs-on: 'ubuntu-latest'
     timeout-minutes: 10
     concurrency:
