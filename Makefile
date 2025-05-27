@@ -19,7 +19,7 @@ endif
 
 ifeq ($(ENV_NAME), dev)
 CLOUDFRONT_ID=EUET6FYAYCRFC
-AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/PBMMOps-BCGOV_dev_Project_Role_AVSA_SA_Role
+AWS_SA_ROLE_ARN=arn:aws:iam::433404605500:role/anti_viral_deploy_role
 endif
 
 ifeq ($(ENV_NAME), test)
