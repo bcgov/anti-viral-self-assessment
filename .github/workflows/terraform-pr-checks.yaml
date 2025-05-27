@@ -16,10 +16,6 @@ jobs:
       - name: Print local env
         run: make print-env
 
-      - uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: ${{ env.TF_VERSION }}
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -30,6 +26,9 @@ jobs:
           role-to-assume: ${{ env.AWS_SA_ROLE_ARN }}
           role-duration-seconds: 900
           role-session-name: ci-deployment
+
+      - name: setup terraform
+        uses: hashicorp/setup-terraform@v3
 
       - name: Deploy app
         run: make plan
