@@ -40,9 +40,9 @@ endef
 export TFVARS_DATA
 
 define TF_BACKEND_CFG
-workspaces { name = "$(TF_WORKSPACE_NAME)" }
-hostname     = "app.terraform.io"
-organization = "bcgov"
+bucket = "terraform-remote-state-${LZ2_PROJECT}-${ENV_NAME}"
+key = ".terraform/terraform.tfstate"
+dynamodb_table ="terraform-remote-state-lock-${LZ2_PROJECT}"
 endef
 export TF_BACKEND_CFG
 
@@ -134,13 +134,11 @@ get-sa-role-arn:
 	@echo $(AWS_SA_ROLE_ARN)
 	
 init-tf: write-config-tf
-	# Initializing the terraform environment
 	@terraform -chdir=$(TERRAFORM_DIR) init -input=false \
 		-reconfigure \
 		-backend-config=backend.hcl
 
 deploy: init-tf 
-	# Creating all AWS infrastructure.
 	@terraform -chdir=$(TERRAFORM_DIR) apply -auto-approve -input=false
 
 deploy-app:
@@ -152,7 +150,7 @@ plan: init-tf
 	@terraform -chdir=$(TERRAFORM_DIR) plan
 
 force-unlock: init-tf
-	terraform -chdir=$(TERRAFORM_DIR) force-unlock $(LOCK_ID)
+	terraform -chdir=$(TERRAFORM_DIR) force-unlock 521d7b68-85d3-a49f-5478-a9984ce900ce
 
 destroy: init-tf
 	terraform -chdir=$(TERRAFORM_DIR) destroy
